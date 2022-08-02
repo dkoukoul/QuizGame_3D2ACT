@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">3D2ACT Quiz</string>
+    <!--Buttons-->
+    <string name="button_next">NEXT</string>
+    <string name="button_try">TRY AGAIN</string>
+    <string name="button_start">START</string>
+    <!--Section Generic-->
+    <string name="section_why">WHY?</string>
+    <string name="section_how">HOW?</string>
+    <string name="section_next">NEXT</string>
+    <!--Project description-->
+    <string name="project_description">Digitalization and industry 4.0 are perhaps the most important drivers behind the profound transformation of the labour market, the way people work and the new digital skills required to meet the needs of the digitalized market. VET is valued for fostering job-specific and transversal skills, facilitating the transition into employment and maintaining and updating the skills of the workforce according to sectoral, regional and local needs.\nThe 3D2ACT project supports VET trainers and educators in an attempt to strengthen their profiles with the acquisition of new skills, the development of targeted material, the collection of tools and resources, while at the same time creating opportunities for linking VET schools with the labour market building on synergies and partnerships with established organizations using industry 4.0 and automation or 3D printing.\nThe aim of this app is to promote key competencies targeted on entrepreneurial skills, but with a social impact as they are responding to social challenges/needs and have a benefit for the community, the environment, or culture. Having an entrepreneurial mindset is a great advantage in today’s job market since it is what makes ideas come true and become a reality. Creativity is the engine of entrepreneurship.</string>
+    <!--Section 1. Choose a social issue -->
+    <string name="section1_title">1. choose a social issue</string>
+    <string name="section1_why_text">In order to have a clear vision and a specific mission for a social enterprise, the very first step is to define the social problem, which exists. From then on, you could see how your social enterprise could contribute to solving that social problem. What is the social need exactly and which is the specific target group(s)? Is it a big problem or a small one but still worthwhile solving? What is the cause of the problem being there? What are your thoughts on how to contribute to the solution of that specific problem?</string>
+    <string name="section1_how_text">Before answering most of the questions above, first of all, time needs to be dedicated to finding what you are passionate about as a social issue to solve. But how to do that? If you have no clue, but you do know that you would like to use 3D printing techniques, then start with checking what social/environmental values are the closest to your heart.</string>
+    <string name="section1_next_text">Do you have THE social business idea that involves 3D printing techniques to enhance the solution? Great job! Now you can “test” your idea by discussing it with preferably people from your target group(s). Check with them what they think about it and ask for feedback in order to improve the idea, so that it’s the perfect solution for the target group(s).</string>
+    <!--Section 2. research your issue -->
+    <string name="section2_title">2. research your issue</string>
+    <string name="section2_why_text">After identifying what you would like to pursue with your social enterprise, it is important to have extensive research on everything regarding the social issue you would like to solve. Not only the facts about the target group(s) and their struggles, but also research on your potential competition. Are there any social businesses already trying to tackle the social issue you are aiming at tackling as well?</string>
+    <string name="section2_how_text">Now it is important to dig deeper into everything relevant to your social issue and not forget, how 3D printing can be involved here. Make a study out of your research, by really focusing on the problem, why this problem exists, what the consequences of the social issue are, what are the costs that come along with your specific social issue and thus which you could minimise? Also pay enough attention to the target groups and all beneficiaries: what are the direct targets of your project, what are the human and financial consequences of the social issue, what are the characteristics of your beneficiaries, how many people are involved concerning this social issue?</string>
+    <string name="section2_next_text">After the research on your social business idea, check how you could incorporate your 3D printer into your social business. That might be your key selling point here and differentiate you from your potential competition. What other benefits could you think of when producing with a 3D printer?</string>
+    <!--Section 3. Choose a social issue -->
+    <string name="section3_title">3. get a global viewpoint</string>
+    <string name="section3_why_text">After researching your issue, check again and more globally, what it is that you would like to have as a product/service related to 3D printing. This is important in order to have a clear view of what you are going to provide to the target group(s) selected and how you would like to differentiate your social business. After getting this done, you can check whether you like the way your 3D printing-related social business is set up according to your wishes and whether it is presented accordingly to the target group(s).</string>
+    <string name="section3_how_text">You can start by identifying your Positioning Statement. This means basically comparing your 3D printing-related social business to other relevant businesses out there and what you would like to have others thinking about your business. A Positioning Statement is an answer to why your 3D printing-based product/service is better than the other relevant ones existing.</string>
+    <string name="section3_next_text">After you have identified your Positioning Statement, slogan and metaphor, you have a global viewpoint on your social business. You can then dig deeper into other matters like legal structures and funding opportunities. Try to remember what creating a social value means to you, what value it is exactly and how you can contribute to a social cause differently than others.</string>
+    <!--Section 4. Choose a social issue -->
+    <string name="section4_title">4. grasp legal structures</string>
+    <string name="section4_why_text">Before starting any business, it is also important to pay enough attention to the legislation, to what is possible and what you should be cautious about, in your own country/region. This will prevent you from getting unpleasant surprises, which will only be an obstacle to running your social business properly. Thus, having all the important facts and information on legislation issues for your business is a must.</string>
+    <string name="section4_how_text">Legislation is a complex subject here, as it differs per country. However, you can start with the basic information, which is similar in all countries. There are three different ‘types’ of legal forms used by social enterprises:\n\t1.	Non-Profit Organisations: may be democratic or controlled by managers, they do not distribute profit and trade for a social purpose.\n\t2.	Co-operatives: are generally owned and controlled on a democratic basis by members. They distribute profit from trading activities to members. They may have a social purpose beyond benefitting members, which is written into the constitution, or they carry out a service of general interest.\n\t3.	Share Companies: are generally owned and controlled by shareholders on a pro-rata basis. This may be traded in furtherance of a social purpose and may also have other governance features to subordinate profit for purpose.</string>
+    <string name="section4_next_text">Of course, basic information is important, but try to go even further by contacting organisations that could help you further when it comes to legal structures. You can contact business support organisations for that matter, but also check within your network who might help you out. An idea could be to block a day in your agenda to spend it on your country’s information about the legal structures you need for your social enterprise.</string>
+    <!--Section 5. Choose a social issue -->
+    <string name="section5_title">5. establish a solid social business plan</string>
+    <string name="section5_why_text">After establishing the legal structure, it is important to create a business plan. Without a business plan one can get lost along the way. Certainly, as a start-up you are at risk of becoming consumed with practical tasks. Besides, making a business plan helps you think about where you want to be with your company. This can motivate you even more to reach your goals. A business plan will give you the clarity necessary to start your company and make it successful.</string>
+    <string name="section5_how_text">To make a clear business plan it is important to keep in mind where you want your company to go. A business plan has to be as close to your wishes as it can be. Make sure that the mission and vision you have for your company are clear. The mission is what the company does, and the vision is where you want the company to be. You should think about how many 3D printers you want to have, how long can they last, and where you want to be in five years. How much time do you want to invest in marketing? When do you need to hire employees? There are many questions to consider, so you should start with want you want and then look at what you need to make your goal possible.</string>
+    <string name="section6_next_text">Now that you know what your company does and where it wants to go, you have the basis for the next step, funding. With the goals set for your company you can now figure out how much you need to make your goals possible.</string>
+
+    <!--Quiz Generics-->
+    <string name="voice_recognition_confirm_message">Otherwise correct and submit your answer.</string>
+    <string name="voice_recognition_confirm_title">Did we understand you correctly?</string>
+    <string name="alert_submit_button">Submit</string>
+    <string name="alert_cancel_button">Cancel</string>
+    <!--QnA-->
+    <!--1.1-->
+    <string name="q1_1_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for "Step 1" and a second chance to click.</string>
+    <string name="q1.1">1. George has just bought a 3D printer and seriously considers starting a social enterprise, the main product/service of which should be developed by a 3D printer. What should his first step be?</string>
+    <string name="a1.1_a">Checking online for inspiration</string>
+    <string name="a1.1_af">Good try, but the right answer is asking himself what social/environmental values are the closest to his heart.</string>
+    <string name="a1.1_b">Asking everybody he knows for ideas</string>
+    <string name="a1.1_bf">Good idea, but the right answer is asking himself what social/environmental values are the closest to his heart.</string>
+    <string name="a1.1_c">Asking himself what social/environmental values are the closest to his heart</string>
+    <string name="a1.1_cf">Yes, you got it right!</string>
+    <!--1.2-->
+    <string name="q1.2_instruction">Choose answer by rotating device to the left: 90o for a, 180o for b, 270o for c. In case it is wrong, a shorter revision of info for “Step 1” and a second chance to rotate. </string>
+    <string name="q1.2">What’s next for George?</string>
+    <string name="a1.2_a">Registering in the Chamber of Commerce</string>
+    <string name="a1.2_af">Good try, but the right answer is checking his idea with his potential target group</string>
+    <string name="a1.2_b">Searching for a 3D printer</string>
+    <string name="a1.2_bf">Good idea, but the right answer is checking his idea with his potential target group</string>
+    <string name="a1.2_c">Checking his idea with his potential target group</string>
+    <string name="a1.2_cf">Yes, that’s the right answer!</string>
+    <!--1.3-->
+    <string name="q1.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. Images will appear only for answer a (wrong but the image corresponds to the correct answer in question 3 of step 6) and answer c (correct and the image corresponds also to a wrong answer in question 2 of step 2). In case it is wrong, a shorter revision of info for “Step 1” and a second chance to choose.</string>
+    <string name="q1.3">What could George do after that?</string>
+    <string name="a1.3_a">Search for investors</string>
+    <string name="a1.3_af">Good try, but the right answer is to modify the idea based on the feedback from the target group</string>
+    <string name="a1.3_b">Buy a 3D printer</string>
+    <string name="a1.3_bf">Good idea, but the right answer is to modify the idea based on the feedback from the target group</string>
+    <string name="a1.3_c">Modify the idea based on the feedback from the target group</string>
+    <string name="a1.3_cf">Yes, you got it right!</string>
+    <!--4-->
+    <string name="q4_instruction"></string>
+    <string name="q4"></string>
+    <string name="a4_a"></string>
+    <string name="a4_af"></string>
+    <string name="a4_b"></string>
+    <string name="a4_bf"></string>
+    <string name="a4_c"></string>
+    <string name="a4_cf"></string>
+    <!--5-->
+    <string name="q5_instruction"></string>
+    <string name="q5"></string>
+    <string name="a5_a"></string>
+    <string name="a5_af"></string>
+    <string name="a5_b"></string>
+    <string name="a5_bf"></string>
+    <string name="a5_c"></string>
+    <string name="a5_cf"></string>
+</resources>
