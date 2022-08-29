@@ -11,9 +11,9 @@ object Globals {
     private var currentQuestion = 0
     var lastAnswer = 0
 
-    val types1 = arrayListOf(CLICK,SCAN,SPEAK)
-    val types2 = arrayListOf(CLICK,SCAN,SPEAK)
-    val types3 = arrayListOf(CLICK,SCAN,SPEAK)
+    val types1 = arrayListOf(SHAKE,SPEAK,SHAKE)
+    val types2 = arrayListOf(SCAN,SCAN,CLICK)
+    val types3 = arrayListOf(SPEAK,SHAKE,SPEAK)
     val types4 = arrayListOf(CLICK,SCAN,SPEAK)
     val types5 = arrayListOf(CLICK,SCAN,SPEAK)
     val questionTypes = arrayListOf(types1,types2,types3,types4,types5)

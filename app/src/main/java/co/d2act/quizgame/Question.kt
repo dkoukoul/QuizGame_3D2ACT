@@ -14,7 +14,6 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.speech.RecognizerIntent
-import android.text.InputType
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -30,6 +29,7 @@ import com.google.zxing.integration.android.IntentIntegrator
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
+import java.lang.Math.abs
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -49,18 +49,166 @@ class Question : AppCompatActivity(), SensorEventListener {
     private var mCurrentPhotoPath = ""
     private var imageUri: Uri? = null
     private var feedback: ArrayList<ArrayList<ArrayList<String>>> = arrayListOf(arrayListOf(arrayListOf()))
-    private var secondTry = false;
+    private var secondTry = false
+    private var shakingAnswer = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
+
         initFeedback()
 
+        updateContent()
+
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+    }
+
+    fun initFeedback() {
+        val feedback11 = arrayListOf(getString(R.string.a1_1_af),getString(R.string.a1_1_bf),getString(R.string.a1_1_cf))
+        val feedback12 = arrayListOf(getString(R.string.a1_2_af),getString(R.string.a1_2_bf),getString(R.string.a1_2_cf))
+        val feedback13 = arrayListOf(getString(R.string.a1_3_af),getString(R.string.a1_3_bf),getString(R.string.a1_3_cf))
+        val feedback1 = arrayListOf(feedback11,feedback12,feedback13)
+        feedback = arrayListOf(feedback1)
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
+    private fun updateContent() {
+        val qInstruction = findViewById<TextView>(R.id.question_instruction)
+        val question = findViewById<TextView>(R.id.question)
         val answer1 = findViewById<Button>(R.id.answer1)
         val answer2 = findViewById<Button>(R.id.answer2)
         val answer3 = findViewById<Button>(R.id.answer3)
+        when(Globals.getSection()) {
+            1 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q1_1_instruction)
+                        question.text = getString(R.string.q1_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_1_c)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q1_2_instruction)
+                        question.text = getString(R.string.q1_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_2_c)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q1_3_instruction)
+                        question.text = getString(R.string.q1_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_3_c)
+                    }
+                }
+            }
+            2 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q2_1_instruction)
+                        question.text = getString(R.string.q2_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a2_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a2_1_b)
+                        answer3.text = getString(R.string.a2_1_c)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q1_2_instruction)
+                        question.text = getString(R.string.q2_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a2_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a2_2_b)
+                        answer3.text = getString(R.string.a2_2_c)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q2_3_instruction)
+                        question.text = getString(R.string.q2_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a2_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a2_3_b)
+                        answer3.text = getString(R.string.a2_3_c)
+                    }
+                }
+            }
+            3 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q3_1_instruction)
+                        question.text = getString(R.string.q3_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a3_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a3_1_b)
+                        answer3.text = getString(R.string.a3_1_c)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q3_2_instruction)
+                        question.text = getString(R.string.q3_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a3_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a3_2_b)
+                        answer3.text = getString(R.string.a3_2_c)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q3_3_instruction)
+                        question.text = getString(R.string.q3_3)
+                        answer1.text = getString(R.string.a) +" " + getString(R.string.a3_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a3_3_b)
+                        answer3.text = getString(R.string.a3_3_c)
+                    }
+                }
+            }
+            4 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q1_1_instruction)
+                        question.text = getString(R.string.q1_1)
+                        answer1.text = getString(R.string.a1_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
+                        answer3.text = getString(R.string.a1_1_c)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q1_2_instruction)
+                        question.text = getString(R.string.q1_2)
+                        answer1.text = getString(R.string.a1_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
+                        answer3.text = getString(R.string.a1_2_c)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q1_3_instruction)
+                        question.text = getString(R.string.q1_3)
+                        answer1.text = getString(R.string.a1_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
+                        answer3.text = getString(R.string.a1_3_c)
+                    }
+                }
+            }
+            5 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q1_1_instruction)
+                        question.text = getString(R.string.q1_1)
+                        answer1.text = getString(R.string.a1_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
+                        answer3.text = getString(R.string.a1_1_c)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q1_2_instruction)
+                        question.text = getString(R.string.q1_2)
+                        answer1.text = getString(R.string.a1_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
+                        answer3.text = getString(R.string.a1_2_c)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q1_3_instruction)
+                        question.text = getString(R.string.q1_3)
+                        answer1.text = getString(R.string.a1_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
+                        answer3.text = getString(R.string.a1_3_c)
+                    }
+                }
+            }
+        }
         val answerButton = findViewById<ImageButton>(R.id.button_answer)
-        when(questionTypes[Globals.getSection()][Globals.getQuestion()]) {
+        //Set answer type
+        when(questionTypes[Globals.getSection()-1][Globals.getQuestion()-1]) {
             CLICK -> {
                 answerButton.visibility = View.GONE
                 answer1.setOnClickListener {
@@ -74,9 +222,24 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answer3.setOnClickListener {
                     checkAnswer(3)
                 }
+                answer1.isEnabled = true
+                answer2.isEnabled = true
+                answer3.isEnabled = true
             }
             SHAKE -> {
                 answerButton.visibility = View.GONE
+                answer1.isEnabled = false
+                answer2.isEnabled = false
+                answer3.isEnabled = false
+                answer1.setOnClickListener {
+                    checkAnswer(1)
+                }
+                answer2.setOnClickListener {
+                    checkAnswer(2)
+                }
+                answer3.setOnClickListener {
+                    checkAnswer(3)
+                }
             }
             SPEAK -> {
                 answerButton.visibility = View.VISIBLE
@@ -84,6 +247,9 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answerButton.setOnClickListener {
                     voiceRecognition()
                 }
+                answer1.isEnabled = false
+                answer2.isEnabled = false
+                answer3.isEnabled = false
             }
             SCAN -> {
                 answerButton.visibility = View.VISIBLE
@@ -91,6 +257,9 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answerButton.setOnClickListener {
                     scanCode()
                 }
+                answer1.isEnabled = false
+                answer2.isEnabled = false
+                answer3.isEnabled = false
             }
             COLOR -> {
                 answerButton.visibility = View.VISIBLE
@@ -98,19 +267,12 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answerButton.setOnClickListener {
                     captureImage()
                 }
+                answer1.isEnabled = false
+                answer2.isEnabled = false
+                answer3.isEnabled = false
             }
         }
 
-        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
-        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-    }
-
-    fun initFeedback() {
-        val feedback11 = arrayListOf(getString(R.string.a1_1_af),getString(R.string.a1_1_bf),getString(R.string.a1_1_cf))
-        val feedback12 = arrayListOf(getString(R.string.a1_2_af),getString(R.string.a1_2_bf),getString(R.string.a1_2_cf))
-        val feedback13 = arrayListOf(getString(R.string.a1_3_af),getString(R.string.a1_3_bf),getString(R.string.a1_3_cf))
-        val feedback1 = arrayListOf(feedback11,feedback12,feedback13)
-        feedback = arrayListOf(feedback1)
     }
 
     /**
@@ -171,20 +333,24 @@ class Question : AppCompatActivity(), SensorEventListener {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle(getString(R.string.voice_recognition_confirm_title))
         builder.setMessage(getString(R.string.voice_recognition_confirm_message))
-        val input = EditText(this)
-        val lp = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
-        input.layoutParams = lp
-        builder.setView(input)
-        input.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS
+        val dialogView = layoutInflater.inflate(R.layout.voice_egognition_layout, null)
+        builder.setView(dialogView)
 
+        val editText = dialogView.findViewById<EditText>(R.id.voice_regognition_text)
+        editText.setText(words.joinToString(" "))
         builder.setPositiveButton(getString(R.string.alert_submit_button)) { dialog, _ ->
             val answer1 = findViewById<Button>(R.id.answer1)
             val answer2 = findViewById<Button>(R.id.answer2)
             val answer3 = findViewById<Button>(R.id.answer3)
-            when(input.text.toString()) {
-                answer1.text -> checkAnswer(1)
-                answer2.text -> checkAnswer(2)
-                answer3.text -> checkAnswer(3)
+            val answer = editText.text.toString()
+            if (answer.equals(answer1.text.toString().substring(3), ignoreCase = true)) {
+                checkAnswer(1)
+            } else if (answer.equals(answer2.text.toString().substring(3), ignoreCase = true)) {
+                checkAnswer(2)
+            } else if (answer.equals(answer3.text.toString().substring(3), ignoreCase = true)) {
+                checkAnswer(3)
+            } else {
+               //
             }
             dialog.dismiss()
         }
@@ -234,7 +400,7 @@ class Question : AppCompatActivity(), SensorEventListener {
      *
      */
     private fun getColorFromImage() {
-        if (mCurrentPhotoPath.isNullOrEmpty()) {
+        if (mCurrentPhotoPath.isEmpty()) {
             return
         }
         val cr = contentResolver
@@ -248,13 +414,13 @@ class Question : AppCompatActivity(), SensorEventListener {
     }
 
     private fun checkAnswer(answer: Int) {
-        val section = Globals.getSection()
-        val question = Globals.getQuestion()
+        val section = Globals.getSection()-1
+        val question = Globals.getQuestion()-1
 
         if (Globals.answers[section][question] == answer) {
-            correctAnswer(feedback[section][question][(answer-1)])
+            correctAnswer(feedback[section][question][answer-1])
         } else {
-            wrongAnswer(feedback[section][question][(answer-1)])
+            wrongAnswer(feedback[section][question][answer-1])
         }
     }
 
@@ -274,6 +440,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         if (correct) {
             builder.setPositiveButton(getString(R.string.button_next)) { dialog, _ ->
                 dialog.dismiss()
+                Globals.nextQuestion()
                 val questionActivity = Intent(applicationContext, Question::class.java)
                 startActivity(questionActivity)
                 finish()
@@ -292,6 +459,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         alert.show()
     }
 
+    @SuppressLint("SimpleDateFormat")
     @Throws(IOException::class)
     private fun createImageFile(): File {
         // Create an image file name
@@ -320,46 +488,51 @@ class Question : AppCompatActivity(), SensorEventListener {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onSensorChanged(event: SensorEvent?) {
-
-        /* Orientation
-        if (event != null) {
-            val answer3 = findViewById<Button>(R.id.answer3)
-            val answer2 = findViewById<Button>(R.id.answer2)
-            val answer1 = findViewById<Button>(R.id.answer1)
-            if (event.values[0] in 80f..100f ) {
-                findViewById<TextView>(R.id.status).text = "90"
-                answer3.background = getDrawable(R.color.black)
-            } else if (event.values[0] in 350f..10f ) {
-                findViewById<TextView>(R.id.status).text = "0"
-                answer2.background = getDrawable(R.color.black)
-            } else if (event.values[0] in 260f..280f ) {
-                findViewById<TextView>(R.id.status).text = "270"
-                answer1.background = getDrawable(R.color.black)
-            } else {
-                findViewById<TextView>(R.id.status).text = event.values[0].toString()
-            }
-        }*/
         /* shaking */
-       /* if (event != null) {
+        if (event != null) {
+            val answer1 = findViewById<Button>(R.id.answer1)
+            val answer2 = findViewById<Button>(R.id.answer2)
+            val answer3 = findViewById<Button>(R.id.answer3)
             val curTime :Long = System.currentTimeMillis()
-            // only allow one update every 100ms.
-            if (curTime - lastUpdate > 100) {
+
+            if (curTime - lastUpdate > 800) {
                 val diffTime: Long = curTime - lastUpdate
                 lastUpdate = curTime
                 val x = event.values[0]
                 val y = event.values[1]
                 val z = event.values[2]
-                val speed: Float = abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
+                val speed: Float = kotlin.math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
                 if (speed > shakeThreshold) {
-                    findViewById<TextView>(R.id.status).text = "SHAKE DETECTED"
-                } else {
-                    findViewById<TextView>(R.id.status).text = ""
+                    shakingAnswer++
+                    when(shakingAnswer) {
+                        1 -> {
+                            answer1.isEnabled = true
+                            answer2.isEnabled = false
+                            answer3.isEnabled = false
+                        }
+                        2 -> {
+                            answer1.isEnabled = false
+                            answer2.isEnabled = true
+                            answer3.isEnabled = false
+                        }
+                        3 -> {
+                            answer1.isEnabled = false
+                            answer2.isEnabled = false
+                            answer3.isEnabled = true
+                        }
+                        4 -> {
+                            shakingAnswer = 0
+                            answer1.isEnabled = false
+                            answer2.isEnabled = false
+                            answer3.isEnabled = false
+                        }
+                    }
                 }
                 last_x = x
                 last_y = y
                 last_z = z
             }
-        }*/
+        }
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {

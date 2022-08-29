@@ -8,6 +8,10 @@
     <string name="section_why">WHY?</string>
     <string name="section_how">HOW?</string>
     <string name="section_next">NEXT</string>
+
+    <string name="a">a)</string>
+    <string name="b">b)</string>
+    <string name="c">c)</string>
     <!--Project description-->
     <string name="project_description">Digitalization and industry 4.0 are perhaps the most important drivers behind the profound transformation of the labour market, the way people work and the new digital skills required to meet the needs of the digitalized market. VET is valued for fostering job-specific and transversal skills, facilitating the transition into employment and maintaining and updating the skills of the workforce according to sectoral, regional and local needs.\nThe 3D2ACT project supports VET trainers and educators in an attempt to strengthen their profiles with the acquisition of new skills, the development of targeted material, the collection of tools and resources, while at the same time creating opportunities for linking VET schools with the labour market building on synergies and partnerships with established organizations using industry 4.0 and automation or 3D printing.\nThe aim of this app is to promote key competencies targeted on entrepreneurial skills, but with a social impact as they are responding to social challenges/needs and have a benefit for the community, the environment, or culture. Having an entrepreneurial mindset is a great advantage in today’s job market since it is what makes ideas come true and become a reality. Creativity is the engine of entrepreneurship.</string>
     <!--Section 1. Choose a social issue -->
@@ -53,7 +57,7 @@
     <string name="a1.1_cf">Yes, you got it right!</string>
     <!--1.2-->
     <string name="q1.2_instruction">Choose answer by rotating device to the left: 90o for a, 180o for b, 270o for c. In case it is wrong, a shorter revision of info for “Step 1” and a second chance to rotate. </string>
-    <string name="q1.2">What’s next for George?</string>
+    <string name="q1.2">2. What’s next for George?</string>
     <string name="a1.2_a">Registering in the Chamber of Commerce</string>
     <string name="a1.2_af">Good try, but the right answer is checking his idea with his potential target group</string>
     <string name="a1.2_b">Searching for a 3D printer</string>
@@ -62,29 +66,119 @@
     <string name="a1.2_cf">Yes, that’s the right answer!</string>
     <!--1.3-->
     <string name="q1.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. Images will appear only for answer a (wrong but the image corresponds to the correct answer in question 3 of step 6) and answer c (correct and the image corresponds also to a wrong answer in question 2 of step 2). In case it is wrong, a shorter revision of info for “Step 1” and a second chance to choose.</string>
-    <string name="q1.3">What could George do after that?</string>
+    <string name="q1.3">3. What could George do after that?</string>
     <string name="a1.3_a">Search for investors</string>
     <string name="a1.3_af">Good try, but the right answer is to modify the idea based on the feedback from the target group</string>
     <string name="a1.3_b">Buy a 3D printer</string>
     <string name="a1.3_bf">Good idea, but the right answer is to modify the idea based on the feedback from the target group</string>
     <string name="a1.3_c">Modify the idea based on the feedback from the target group</string>
     <string name="a1.3_cf">Yes, you got it right!</string>
-    <!--4-->
-    <string name="q4_instruction"></string>
-    <string name="q4"></string>
-    <string name="a4_a"></string>
-    <string name="a4_af"></string>
-    <string name="a4_b"></string>
-    <string name="a4_bf"></string>
-    <string name="a4_c"></string>
-    <string name="a4_cf"></string>
-    <!--5-->
-    <string name="q5_instruction"></string>
-    <string name="q5"></string>
-    <string name="a5_a"></string>
-    <string name="a5_af"></string>
-    <string name="a5_b"></string>
-    <string name="a5_bf"></string>
-    <string name="a5_c"></string>
-    <string name="a5_cf"></string>
+    <!--2.1-->
+    <string name="q2_1_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for "Step 1" and a second chance to click.</string>
+    <string name="q2.1">1. George has now a clear idea for his social enterprise using his 3D printer. He is now about to research everything he has to know before starting his social business. What should be the main 2 topics George should focus on?</string>
+    <string name="a2.1_a">3D printing and social business model canvas</string>
+    <string name="a2.1_af">Good try, but the right answer is the problem to solve and the concerning target groups.</string>
+    <string name="a2.1_b">The problem to solve and the concerning target groups</string>
+    <string name="a2.1_bf">Yes, that’s the right answer!</string>
+    <string name="a2.1_c">Social inclusion and environmental issues</string>
+    <string name="a2.1_cf">Good idea, but the right answer is the problem to solve and the concerning target groups</string>
+    <!--2.2-->
+    <string name="q2.2_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. Images will appear only for answer b (correct and the image corresponds also to a wrong answer in question 3 of step 2) and answer c (wrong and the image corresponds the correct answer in question 3 of step 1). In case it is wrong, a shorter revision of info for “Step 2” and a second chance to choose.</string>
+    <string name="q2.2">2. What should George not forget when researching his social issue?</string>
+    <string name="a2.2_a">Finances</string>
+    <string name="a2.2_af">Good try, but the right answer is target groups and all beneficiaries</string>
+    <string name="a2.2_b">Target groups and all beneficiaries</string>
+    <string name="a2.2_bf">Yes, you got it right!</string>
+    <string name="a2.2_c">How to fit in the 3D printer as an asset to solve the social issue</string>
+    <string name="a2.2_cf">Good idea, but the right answer is target groups and all beneficiaries</string>
+    <!--2.3-->
+    <string name="q2.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 2” and a second chance to click</string>
+    <string name="q2.3">3. What could be George’s key selling point?</string>
+    <string name="a2.3_a">Having a 3D printer as the main asset to solve your social issue</string>
+    <string name="a2.3_af">Good try, but the right answer is having a very innovative product/service</string>
+    <string name="a2.3_b">Having a very innovative product/service</string>
+    <string name="a2.3_bf">Yes, that’s the right answer!</string>
+    <string name="a2.3_c">Collaboration with other companies on his social issue</string>
+    <string name="a2.3_cf">Good idea, but the right answer is having a very innovative product/service</string>
+    <!--3.1-->
+    <string name="q3_1_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info for “Step 3” and a second chance to read.</string>
+    <string name="q3.1">1.	George wants to get a global viewpoint on his social enterprise based on 3D printing. He starts with the Positioning Statement of his business. What important question should he ask himself?</string>
+    <string name="a3.1_a">Why is my social business better than the other relevant ones?</string>
+    <string name="a3.1_af">Yes, you got it right!</string>
+    <string name="a3.1_b">What precisely am I going to offer?</string>
+    <string name="a3.1_bf">Good try, but the right answer is asking himself the question why his social business is better than the other relevant ones?</string>
+    <string name="a3.1_c">What is the social aspect in my social business?</string>
+    <string name="a3.1_cf">Good idea, but the right answer is asking himself the question why his social business is better than the other relevant ones?</string>
+    <!--3.2-->
+    <string name="q3.2_instruction">Choose answer by shaking the device!  Once for a, twice for b and thrice for c. Textual verification of the corresponding answer will be provided. In case it is wrong, a shorter revision of info for “Step 3” and a second chance to shake.</string>
+    <string name="q3.2">2.	What should George always keep in mind?</string>
+    <string name="a3.2_a">How he aims to write his business plan</string>
+    <string name="a3.2_af">Good try, but the right answer is how George is contributing to a social cause differently than others</string>
+    <string name="a3.2_b">How he is contributing to a social cause differently than others</string>
+    <string name="a3.2_bf">Yes, that’s the right answer!</string>
+    <string name="a3.2_c">What costs are involved with his business</string>
+    <string name="a3.2_cf">Good idea, but the right answer is how George is contributing to a social cause differently than others</string>
+    <!--3.3-->
+    <string name="q3.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 3” and a second chance to click.</string>
+    <string name="q3.3">3.	What can be done now even further?</string>
+    <string name="a3.3_a">Contact target groups</string>
+    <string name="a3.3_af">Good try, but the right answer is dig deeper into other matters, like legal structures and funding opportunities</string>
+    <string name="a3.3_b">Do more research</string>
+    <string name="a3.3_bf">Good idea, but the right answer is dig deeper into other matters, like legal structures and funding opportunities</string>
+    <string name="a3.3_c">Dig deeper into other matters, like legal structures and funding opportunities</string>
+    <string name="a3.3_cf">Yes, you got it right!</string>
+    <!--4.1-->
+    <string name="q4_1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. Images will appear for all three answers.  In case of a wrong choice, feedback regarding the legal form that corresponds to the wrong choice will be provided along with a second chance to scan.</string>
+    <string name="q4.1">1.	George wonders which type of legal forms his social enterprise should entail. Which is one of the existing types?</string>
+    <string name="a4.1_a">Share companies</string>
+    <string name="a4.1_af">Yes, that’s the right answer!</string>
+    <string name="a4.1_b">Profit organisations</string>
+    <string name="a4.1_bf">Good idea, but the right answer is share companies</string>
+    <string name="a4.1_c">Non operative organisations</string>
+    <string name="a4.1_cf">Good idea, but the right answer is share companies</string>
+    <!--4.2-->
+    <string name="q4.2_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info for “Step 4” and a second chance to read.</string>
+    <string name="q4.2">2.	Co-operatives are generally owned and controlled on a democratic basis by…?</string>
+    <string name="a4.2_a">Stakeholders</string>
+    <string name="a4.2_af">Good idea, but the right answer is members</string>
+    <string name="a4.2_b">Different entities</string>
+    <string name="a4.2_bf">Good idea, but the right answer is members</string>
+    <string name="a4.2_c">Members</string>
+    <string name="a4.2_cf">Yes, you got it right!</string>
+    <!--4.3-->
+    <string name="q4.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. An image will appear only for the correct answer and will be comprised of a sketch containing examples of business support organizations.  In case of a wrong choice, a shorter revision of info for “Step 4” and a second chance to scan.</string>
+    <string name="q4.3">3.	What can George do in order to have a deeper understanding of the legal structures in his country in terms of having a social enterprise?</string>
+    <string name="a4.3_a">Google everything</string>
+    <string name="a4.3_af">Good idea, but the right answer is contact a business support organisation</string>
+    <string name="a4.3_b">Contact a business support organisation</string>
+    <string name="a4.3_bf">Yes, that’s the right answer!</string>
+    <string name="a4.3_c">Read books about it</string>
+    <string name="a4.3_cf">Good idea, but the right answer is contact a business support organisation</string>
+    <!--5.1-->
+    <string name="q5_1_instruction"></string>
+    <string name="q5.1"></string>
+    <string name="a5.1_a"></string>
+    <string name="a5.1_af"></string>
+    <string name="a5.1_b"></string>
+    <string name="a5.1_bf"></string>
+    <string name="a5.1_c"></string>
+    <string name="a5.1_cf"></string>
+    <!--5.2-->
+    <string name="q5.2_instruction"></string>
+    <string name="q5.2"></string>
+    <string name="a5.2_a"></string>
+    <string name="a5.2_af"></string>
+    <string name="a5.2_b"></string>
+    <string name="a5.2_bf"></string>
+    <string name="a5.2_c"></string>
+    <string name="a5.2_cf"></string>
+    <!--5.3-->
+    <string name="q5.3_instruction"></string>
+    <string name="q5.3"></string>
+    <string name="a5.3_a"></string>
+    <string name="a5.3_af"></string>
+    <string name="a5.3_b"></string>
+    <string name="a5.3_bf"></string>
+    <string name="a5.3_c"></string>
+    <string name="a5.3_cf"></string>
 </resources>

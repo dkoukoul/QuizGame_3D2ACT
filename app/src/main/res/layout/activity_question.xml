@@ -51,19 +51,19 @@
             android:id="@+id/answer1"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="@color/dark_green"
+            style="@style/ButtonStyle"
             android:text="@string/a1.1_a"/>
         <Button
             android:id="@+id/answer2"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="@color/dark_green"
+            style="@style/ButtonStyle"
             android:text="@string/a1.2_a"/>
         <Button
             android:id="@+id/answer3"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="@color/dark_green"
+            style="@style/ButtonStyle"
             android:text="@string/a1.3_a"/>
         <ImageButton
             android:id="@+id/button_answer"
