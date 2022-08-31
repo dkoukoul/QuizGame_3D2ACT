@@ -11,11 +11,12 @@ object Globals {
     private var currentQuestion = 0
     var lastAnswer = 0
 
-    val types1 = arrayListOf(SHAKE,SPEAK,SHAKE)
-    val types2 = arrayListOf(SCAN,SCAN,CLICK)
-    val types3 = arrayListOf(SPEAK,SHAKE,SPEAK)
-    val types4 = arrayListOf(CLICK,SCAN,SPEAK)
-    val types5 = arrayListOf(CLICK,SCAN,SPEAK)
+    //val types1 = arrayListOf(CLICK,SHAKE,SCAN)
+    val types1 = arrayListOf(CLICK,CLICK,CLICK)
+    val types2 = arrayListOf(SCAN,COLOR,CLICK)
+    val types3 = arrayListOf(SPEAK,SHAKE,CLICK)
+    val types4 = arrayListOf(SCAN,SPEAK,SCAN)
+    val types5 = arrayListOf(CLICK,COLOR,CLICK)
     val questionTypes = arrayListOf(types1,types2,types3,types4,types5)
     val answers1 = arrayListOf(3,3,3)
     val answers2 = arrayListOf(2,2,2)
@@ -31,6 +32,7 @@ object Globals {
     fun nextQuestion() {
         if (currentQuestion == 3) {
             currentQuestion = 1
+            nextSection()
         } else {
             currentQuestion++
         }
