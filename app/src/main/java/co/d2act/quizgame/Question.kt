@@ -29,7 +29,6 @@ import com.google.zxing.integration.android.IntentIntegrator
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
-import java.lang.Math.abs
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -43,7 +42,8 @@ class Question : AppCompatActivity(), SensorEventListener {
     var last_x = 0f
     var last_y = 0f
     var last_z = 0f
-    val shakeThreshold = 1000
+    private val shakeThreshold = 1000
+    private val shakeDuration = 600
     private val CAMERA_CAPTURE_IMAGE_REQUEST = 102
     private val SPEECH_TO_TEXT_REQUEST = 103
     private var mCurrentPhotoPath = ""
@@ -112,21 +112,21 @@ class Question : AppCompatActivity(), SensorEventListener {
                         question.text = getString(R.string.q2_1)
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_1_b)
-                        answer3.text = getString(R.string.a2_1_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a2_1_c)
                     }
                     2 -> {
                         qInstruction.text = getString(R.string.q1_2_instruction)
                         question.text = getString(R.string.q2_2)
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_2_b)
-                        answer3.text = getString(R.string.a2_2_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a2_2_c)
                     }
                     3 -> {
                         qInstruction.text = getString(R.string.q2_3_instruction)
                         question.text = getString(R.string.q2_3)
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_3_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_3_b)
-                        answer3.text = getString(R.string.a2_3_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a2_3_c)
                     }
                 }
             }
@@ -137,21 +137,21 @@ class Question : AppCompatActivity(), SensorEventListener {
                         question.text = getString(R.string.q3_1)
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a3_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a3_1_b)
-                        answer3.text = getString(R.string.a3_1_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a3_1_c)
                     }
                     2 -> {
                         qInstruction.text = getString(R.string.q3_2_instruction)
                         question.text = getString(R.string.q3_2)
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a3_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a3_2_b)
-                        answer3.text = getString(R.string.a3_2_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a3_2_c)
                     }
                     3 -> {
                         qInstruction.text = getString(R.string.q3_3_instruction)
                         question.text = getString(R.string.q3_3)
                         answer1.text = getString(R.string.a) +" " + getString(R.string.a3_3_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a3_3_b)
-                        answer3.text = getString(R.string.a3_3_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a3_3_c)
                     }
                 }
             }
@@ -160,23 +160,23 @@ class Question : AppCompatActivity(), SensorEventListener {
                     1 -> {
                         qInstruction.text = getString(R.string.q1_1_instruction)
                         question.text = getString(R.string.q1_1)
-                        answer1.text = getString(R.string.a1_1_a)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
-                        answer3.text = getString(R.string.a1_1_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_1_c)
                     }
                     2 -> {
                         qInstruction.text = getString(R.string.q1_2_instruction)
                         question.text = getString(R.string.q1_2)
-                        answer1.text = getString(R.string.a1_2_a)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
-                        answer3.text = getString(R.string.a1_2_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_2_c)
                     }
                     3 -> {
                         qInstruction.text = getString(R.string.q1_3_instruction)
                         question.text = getString(R.string.q1_3)
-                        answer1.text = getString(R.string.a1_3_a)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_3_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
-                        answer3.text = getString(R.string.a1_3_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_3_c)
                     }
                 }
             }
@@ -185,23 +185,23 @@ class Question : AppCompatActivity(), SensorEventListener {
                     1 -> {
                         qInstruction.text = getString(R.string.q1_1_instruction)
                         question.text = getString(R.string.q1_1)
-                        answer1.text = getString(R.string.a1_1_a)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
-                        answer3.text = getString(R.string.a1_1_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_1_c)
                     }
                     2 -> {
                         qInstruction.text = getString(R.string.q1_2_instruction)
                         question.text = getString(R.string.q1_2)
-                        answer1.text = getString(R.string.a1_2_a)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
-                        answer3.text = getString(R.string.a1_2_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_2_c)
                     }
                     3 -> {
                         qInstruction.text = getString(R.string.q1_3_instruction)
                         question.text = getString(R.string.q1_3)
-                        answer1.text = getString(R.string.a1_3_a)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_3_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
-                        answer3.text = getString(R.string.a1_3_c)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_3_c)
                     }
                 }
             }
@@ -268,8 +268,11 @@ class Question : AppCompatActivity(), SensorEventListener {
                     captureImage()
                 }
                 answer1.isEnabled = false
+                answer1.text = answer1.text.toString() + " (RED)"
                 answer2.isEnabled = false
+                answer2.text = answer1.text.toString() + " (GREEN)"
                 answer3.isEnabled = false
+                answer3.text = answer1.text.toString() + " (BLUE)"
             }
         }
 
@@ -317,11 +320,27 @@ class Question : AppCompatActivity(), SensorEventListener {
                 if (intentResult.contents == null) {
                     Toast.makeText(baseContext, "Cancelled", Toast.LENGTH_SHORT).show()
                 } else {
+                    qrCodeHandler(intentResult.contents)
                     findViewById<TextView>(R.id.status).text = intentResult.contents
                 }
             }
         }
 
+    }
+
+    private fun qrCodeHandler(contents: String) {
+        try {
+            val section = contents.split("_")[0].toInt()
+            val question = contents.split("_")[1].toInt()
+            val answer = contents.split("_")[2].toInt()
+            if (section == Globals.getSection() && question == Globals.getQuestion()) {
+                checkAnswer(answer)
+            } else {
+                Toast.makeText(baseContext, "Wrong QR Code", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            Toast.makeText(baseContext, "Invalid QR Code", Toast.LENGTH_SHORT).show()
+        }
     }
 
     /**
@@ -409,7 +428,17 @@ class Question : AppCompatActivity(), SensorEventListener {
         options.inSampleSize = 8
         val bmp = BitmapFactory.decodeStream(`in`, null, options)
         if (bmp != null) {
-            findViewById<TextView>(R.id.status).text = getDominantColor(bmp)
+            val colorAnswer = getDominantColor(bmp)
+            findViewById<TextView>(R.id.status).text = colorAnswer
+            if (colorAnswer.equals("red", ignoreCase = true)) {
+                checkAnswer(1)
+            } else if (colorAnswer.equals("green", ignoreCase = true)) {
+                checkAnswer(2)
+            } else if (colorAnswer.equals("blue", ignoreCase = true)) {
+                checkAnswer(3)
+            } else {
+
+            }
         }
     }
 
@@ -440,9 +469,19 @@ class Question : AppCompatActivity(), SensorEventListener {
         if (correct) {
             builder.setPositiveButton(getString(R.string.button_next)) { dialog, _ ->
                 dialog.dismiss()
+                var gotoNextSession = false
+                if (Globals.getQuestion() == 3) gotoNextSession = true
                 Globals.nextQuestion()
-                val questionActivity = Intent(applicationContext, Question::class.java)
-                startActivity(questionActivity)
+                //Go to next section
+                if (gotoNextSession) {
+                    val sectionActivity = Intent(applicationContext, Section::class.java)
+                    startActivity(sectionActivity)
+                }
+                //Go to next question
+                else {
+                    val questionActivity = Intent(applicationContext, Question::class.java)
+                    startActivity(questionActivity)
+                }
                 finish()
             }
         } else if (secondTry) {
@@ -495,7 +534,7 @@ class Question : AppCompatActivity(), SensorEventListener {
             val answer3 = findViewById<Button>(R.id.answer3)
             val curTime :Long = System.currentTimeMillis()
 
-            if (curTime - lastUpdate > 800) {
+            if (curTime - lastUpdate > shakeDuration) {
                 val diffTime: Long = curTime - lastUpdate
                 lastUpdate = curTime
                 val x = event.values[0]
