@@ -14,18 +14,18 @@ class Section : AppCompatActivity() {
         showSectionContent()
         val nextButton = findViewById<Button>(R.id.section_button_next)
         nextButton.setOnClickListener {
+            Globals.firstQuestion()
             val questionActivity = Intent(applicationContext, Question::class.java)
             startActivity(questionActivity)
         }
     }
 
     private fun showSectionContent() {
-        val index = Globals.getSection()
         val header = findViewById<TextView>(R.id.section_header)
         val whyText = findViewById<TextView>(R.id.section_why_text)
         val howText = findViewById<TextView>(R.id.section_how_text)
         val nextText = findViewById<TextView>(R.id.section_next_text)
-        when(index) {
+        when(Globals.getSection()) {
             1-> {
                 header.text = getString(R.string.section1_title)
                 whyText.text = getString(R.string.section1_why_text)
@@ -45,11 +45,26 @@ class Section : AppCompatActivity() {
                 nextText.text = getString(R.string.section3_next_text)
             }
             4-> {
-
+                header.text = getString(R.string.section4_title)
+                whyText.text = getString(R.string.section4_why_text)
+                howText.text = getString(R.string.section4_how_text)
+                nextText.text = getString(R.string.section4_next_text)
             }
             5-> {
-
+                header.text = getString(R.string.section5_title)
+                whyText.text = getString(R.string.section5_why_text)
+                howText.text = getString(R.string.section5_how_text)
+                nextText.text = getString(R.string.section5_next_text)
             }
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (Globals.getSection() > 1) {
+            Globals.goBack()
+            val questionActivity = Intent(applicationContext, Question::class.java)
+            startActivity(questionActivity)
         }
     }
 }

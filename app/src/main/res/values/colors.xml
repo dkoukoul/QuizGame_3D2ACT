@@ -8,4 +8,10 @@
     <color name="dark_green">#2F5F5C</color>
     <color name="light_grey">#AAAAAA</color>
     <color name="dark_grey">#FF222222</color>
+
+    <color name="pale_red">#FFDE8787</color>
+    <color name="pale_green">#FFAADE87</color>
+    <color name="pale_blue">#FF87AADE</color>
+    <color name="dark_red">#FF782121</color>
+    <color name="dark_blue">#FF214478</color>
 </resources>

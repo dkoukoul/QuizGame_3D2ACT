@@ -38,13 +38,15 @@
     <string name="section5_title">5. establish a solid social business plan</string>
     <string name="section5_why_text">After establishing the legal structure, it is important to create a business plan. Without a business plan one can get lost along the way. Certainly, as a start-up you are at risk of becoming consumed with practical tasks. Besides, making a business plan helps you think about where you want to be with your company. This can motivate you even more to reach your goals. A business plan will give you the clarity necessary to start your company and make it successful.</string>
     <string name="section5_how_text">To make a clear business plan it is important to keep in mind where you want your company to go. A business plan has to be as close to your wishes as it can be. Make sure that the mission and vision you have for your company are clear. The mission is what the company does, and the vision is where you want the company to be. You should think about how many 3D printers you want to have, how long can they last, and where you want to be in five years. How much time do you want to invest in marketing? When do you need to hire employees? There are many questions to consider, so you should start with want you want and then look at what you need to make your goal possible.</string>
-    <string name="section6_next_text">Now that you know what your company does and where it wants to go, you have the basis for the next step, funding. With the goals set for your company you can now figure out how much you need to make your goals possible.</string>
+    <string name="section5_next_text">Now that you know what your company does and where it wants to go, you have the basis for the next step, funding. With the goals set for your company you can now figure out how much you need to make your goals possible.</string>
 
     <!--Quiz Generics-->
     <string name="voice_recognition_confirm_message">Otherwise correct and submit your answer.</string>
     <string name="voice_recognition_confirm_title">Did we understand you correctly?</string>
     <string name="alert_submit_button">Submit</string>
     <string name="alert_cancel_button">Cancel</string>
+    <string name="toast_wrong_answer">Wrong answer</string>
+    <string name="toast_wrong_color">Could not identify red, green or blue. Please try again.</string>
     <!--QnA-->
     <!--1.1-->
     <string name="q1_1_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for "Step 1" and a second chance to click.</string>

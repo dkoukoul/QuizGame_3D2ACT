@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         val buttonStart = findViewById<Button>(R.id.button_start)
         buttonStart.setOnClickListener {
             //Launch 1st section
-            Globals.nextSection()
-            Globals.nextQuestion()
+            Globals.start()
             val sectionActivity = Intent(applicationContext, Section::class.java)
             startActivity(sectionActivity)
         }

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Question"
     android:orientation="vertical"
-    android:layout_margin="20dp">
+    android:layout_margin="10dp">
     <TextView
         android:id="@+id/status"
         android:layout_width="match_parent"
@@ -29,49 +29,71 @@
         android:id="@+id/question_instruction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:text="Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for 'Step 1' and a second chance to click."/>
+        android:padding="10dp"
+        android:text="Choose answer by scanning a blue surface from around to choose a, a red to choose b, or a green to choose c. "/>
     </LinearLayout>
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/dark_green"
         android:text="@string/q1.1"/>
     <LinearLayout
+        android:id="@+id/feedback_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_help_center"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            tools:ignore="UseAppTint" />
+        <TextView
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:text="@string/a1.1_af"/>
+    </LinearLayout>
+    <LinearLayout
         android:id="@+id/layout_answers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
         <Button
             android:id="@+id/answer1"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             style="@style/ButtonStyle"
+            android:enabled="true"
             android:text="@string/a1.1_a"/>
         <Button
             android:id="@+id/answer2"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             style="@style/ButtonStyle"
-            android:text="@string/a1.2_a"/>
+            android:text="@string/a1.1_b"/>
         <Button
             android:id="@+id/answer3"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             style="@style/ButtonStyle"
-            android:text="@string/a1.3_a"/>
+            android:text="@string/a1.1_c"/>
         <ImageButton
             android:id="@+id/button_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/dark_green"
             android:layout_gravity="center"
-            android:visibility="visible"
+            android:visibility="gone"
             android:src="@drawable/ic_qr_code"/>
     </LinearLayout>
 </LinearLayout>

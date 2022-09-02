@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -19,6 +20,7 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import androidx.core.graphics.drawable.DrawableCompat
 import co.d2act.quizgame.Globals.CLICK
 import co.d2act.quizgame.Globals.COLOR
 import co.d2act.quizgame.Globals.SCAN
@@ -31,19 +33,20 @@ import java.io.IOException
 import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class Question : AppCompatActivity(), SensorEventListener {
 
+    private val DEBUG = true
     private lateinit var sensorManager: SensorManager
     private lateinit var sensor: Sensor
     var lastUpdate: Long = 0
     var last_x = 0f
     var last_y = 0f
     var last_z = 0f
-    private val shakeThreshold = 1000
-    private val shakeDuration = 600
+    private val shakeThreshold = 600
+    private val shakeSpeedThreshold = 1000
+    private var shakeDuration = 0
     private val CAMERA_CAPTURE_IMAGE_REQUEST = 102
     private val SPEECH_TO_TEXT_REQUEST = 103
     private var mCurrentPhotoPath = ""
@@ -57,11 +60,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         setContentView(R.layout.activity_question)
 
         initFeedback()
-
         updateContent()
-
-        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
-        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
     }
 
     fun initFeedback() {
@@ -72,10 +71,13 @@ class Question : AppCompatActivity(), SensorEventListener {
         feedback = arrayListOf(feedback1)
     }
 
+
     @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     private fun updateContent() {
         val qInstruction = findViewById<TextView>(R.id.question_instruction)
         val question = findViewById<TextView>(R.id.question)
+        val feedbackLayout = findViewById<LinearLayout>(R.id.feedback_layout)
+        feedbackLayout.visibility = View.GONE
         val answer1 = findViewById<Button>(R.id.answer1)
         val answer2 = findViewById<Button>(R.id.answer2)
         val answer3 = findViewById<Button>(R.id.answer3)
@@ -227,6 +229,9 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answer3.isEnabled = true
             }
             SHAKE -> {
+                sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+                sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+                sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI)
                 answerButton.visibility = View.GONE
                 answer1.isEnabled = false
                 answer2.isEnabled = false
@@ -268,11 +273,26 @@ class Question : AppCompatActivity(), SensorEventListener {
                     captureImage()
                 }
                 answer1.isEnabled = false
-                answer1.text = answer1.text.toString() + " (RED)"
                 answer2.isEnabled = false
-                answer2.text = answer1.text.toString() + " (GREEN)"
                 answer3.isEnabled = false
-                answer3.text = answer1.text.toString() + " (BLUE)"
+                answer1.setTextColor(getColor(R.color.white))
+                answer2.setTextColor(getColor(R.color.white))
+                answer3.setTextColor(getColor(R.color.white))
+
+                //Change button background color
+                var buttonDrawableBlue: Drawable = answer1.background
+                buttonDrawableBlue = DrawableCompat.wrap(buttonDrawableBlue)
+                DrawableCompat.setTint(buttonDrawableBlue, getColor(R.color.dark_blue))
+                var buttonDrawableRed: Drawable = answer2.background
+                buttonDrawableRed = DrawableCompat.wrap(buttonDrawableRed)
+                DrawableCompat.setTint(buttonDrawableRed, getColor(R.color.dark_red))
+                var buttonDrawableGreen: Drawable = answer3.background
+                buttonDrawableGreen = DrawableCompat.wrap(buttonDrawableGreen)
+                DrawableCompat.setTint(buttonDrawableGreen, getColor(R.color.dark_green))
+
+                answer1.background = buttonDrawableBlue
+                answer2.background = buttonDrawableRed
+                answer3.background = buttonDrawableGreen
             }
         }
 
@@ -321,7 +341,9 @@ class Question : AppCompatActivity(), SensorEventListener {
                     Toast.makeText(baseContext, "Cancelled", Toast.LENGTH_SHORT).show()
                 } else {
                     qrCodeHandler(intentResult.contents)
-                    findViewById<TextView>(R.id.status).text = intentResult.contents
+                    if (DEBUG) {
+                        findViewById<TextView>(R.id.status).text = intentResult.contents
+                    }
                 }
             }
         }
@@ -385,10 +407,10 @@ class Question : AppCompatActivity(), SensorEventListener {
      * (Red, Green or Blue) of a given bitmap
      */
     private fun getDominantColor(bitmap: Bitmap): String{
-        var  redBucket: Int = 0
-        var  greenBucket: Int = 0
-        var  blueBucket: Int = 0
-        var  pixelCount: Int = 0
+        var  redBucket = 0
+        var  greenBucket = 0
+        var  blueBucket = 0
+        var  pixelCount = 0
         for (y in 0 until bitmap.height) {
             for (x in 0 until bitmap.width) {
                 val c: Int = bitmap.getPixel(x, y)
@@ -396,23 +418,25 @@ class Question : AppCompatActivity(), SensorEventListener {
                 redBucket += Color.red(c)
                 greenBucket += Color.green(c)
                 blueBucket += Color.blue(c)
-                // does alpha matter?
             }
         }
 
         val red = redBucket / pixelCount
         val green = greenBucket / pixelCount
         val blue = blueBucket / pixelCount
-        if ((red > green) && (red > blue)) {
+        val colorDiff = 30
+        if (DEBUG) {
+            findViewById<TextView>(R.id.status).text = "R: $red G: $green B: $blue"
+        }
+        if ((red > green+colorDiff) && (red > blue+colorDiff)) {
             return "red"
-        } else if ((green > red) && (green > blue)) {
+        } else if ((green > red+colorDiff) && (green > blue+colorDiff)) {
             return "green"
-        } else if ((blue > red) && (blue > green)) {
+        } else if ((blue > red+colorDiff) && (blue > green+colorDiff)) {
             return "blue"
         } else {
-            return "unknown"
+            return "other"
         }
-        //val averageColor: Int = Color.rgb(red, green, blue)
     }
 
     /**
@@ -429,15 +453,14 @@ class Question : AppCompatActivity(), SensorEventListener {
         val bmp = BitmapFactory.decodeStream(`in`, null, options)
         if (bmp != null) {
             val colorAnswer = getDominantColor(bmp)
-            findViewById<TextView>(R.id.status).text = colorAnswer
-            if (colorAnswer.equals("red", ignoreCase = true)) {
+            if (colorAnswer.equals("blue", ignoreCase = true)) {
                 checkAnswer(1)
-            } else if (colorAnswer.equals("green", ignoreCase = true)) {
+            } else if (colorAnswer.equals("red", ignoreCase = true)) {
                 checkAnswer(2)
-            } else if (colorAnswer.equals("blue", ignoreCase = true)) {
+            } else if (colorAnswer.equals("green", ignoreCase = true)) {
                 checkAnswer(3)
-            } else {
-
+            } else {//other
+                Toast.makeText(this,getString(R.string.toast_wrong_color), Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -459,7 +482,13 @@ class Question : AppCompatActivity(), SensorEventListener {
     }
 
     private fun wrongAnswer(message:String) {
-        showDialog(message, false)
+        /*showDialog(message, false)*/
+        //show feedback
+        val feedbackLayout = findViewById<LinearLayout>(R.id.feedback_layout)
+        val feedback = findViewById<TextView>(R.id.feedback)
+        feedback.text = message
+        feedbackLayout.visibility = View.VISIBLE
+        Toast.makeText(this,getString(R.string.toast_wrong_answer),Toast.LENGTH_LONG).show()
     }
 
     private fun showDialog(message: String, correct: Boolean) {
@@ -529,42 +558,32 @@ class Question : AppCompatActivity(), SensorEventListener {
     override fun onSensorChanged(event: SensorEvent?) {
         /* shaking */
         if (event != null) {
-            val answer1 = findViewById<Button>(R.id.answer1)
-            val answer2 = findViewById<Button>(R.id.answer2)
-            val answer3 = findViewById<Button>(R.id.answer3)
             val curTime :Long = System.currentTimeMillis()
-
-            if (curTime - lastUpdate > shakeDuration) {
+            if (curTime - lastUpdate > 100) {
                 val diffTime: Long = curTime - lastUpdate
                 lastUpdate = curTime
                 val x = event.values[0]
                 val y = event.values[1]
                 val z = event.values[2]
                 val speed: Float = kotlin.math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
-                if (speed > shakeThreshold) {
+                if (speed > shakeSpeedThreshold) {
+                    //Capture a shake
+                    shakeDuration += 100
+                }
+                //check if shake was long enough
+                if (shakeDuration > shakeThreshold) {
+                    if (DEBUG) {
+                        findViewById<TextView>(R.id.status).text = "SHAKE!!!"
+                    }
+                    //avoid double jump
+                    lastUpdate += 800
                     shakingAnswer++
-                    when(shakingAnswer) {
-                        1 -> {
-                            answer1.isEnabled = true
-                            answer2.isEnabled = false
-                            answer3.isEnabled = false
-                        }
-                        2 -> {
-                            answer1.isEnabled = false
-                            answer2.isEnabled = true
-                            answer3.isEnabled = false
-                        }
-                        3 -> {
-                            answer1.isEnabled = false
-                            answer2.isEnabled = false
-                            answer3.isEnabled = true
-                        }
-                        4 -> {
-                            shakingAnswer = 0
-                            answer1.isEnabled = false
-                            answer2.isEnabled = false
-                            answer3.isEnabled = false
-                        }
+                    setButtonOnShake(shakingAnswer)
+                    //Reset
+                    shakeDuration = 0
+                } else {
+                    if (DEBUG) {
+                        findViewById<TextView>(R.id.status).text = "shaking was $shakeDuration"
                     }
                 }
                 last_x = x
@@ -574,12 +593,57 @@ class Question : AppCompatActivity(), SensorEventListener {
         }
     }
 
+    private fun setButtonOnShake(button: Int) {
+        val answer1 = findViewById<Button>(R.id.answer1)
+        val answer2 = findViewById<Button>(R.id.answer2)
+        val answer3 = findViewById<Button>(R.id.answer3)
+        when(button) {
+            1 -> {
+                answer1.isEnabled = true
+                answer2.isEnabled = false
+                answer3.isEnabled = false
+            }
+            2 -> {
+                answer1.isEnabled = false
+                answer2.isEnabled = true
+                answer3.isEnabled = false
+            }
+            3 -> {
+                answer1.isEnabled = false
+                answer2.isEnabled = false
+                answer3.isEnabled = true
+            }
+            4 -> {
+                shakingAnswer = 0
+                answer1.isEnabled = false
+                answer2.isEnabled = false
+                answer3.isEnabled = false
+            }
+        }
+    }
+
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
     }
 
     override fun onResume() {
         super.onResume()
-        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI)
+        if (questionTypes[Globals.getSection()-1][Globals.getQuestion()-1] == SHAKE) {
+            sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+            sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+            sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI)
+        }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (Globals.getQuestion() == 1) {
+            //will finish question activity and return to section activity
+            Globals.goBack()
+        } else {
+            Globals.goBack()
+            val questionActivity = Intent(applicationContext, Question::class.java)
+            startActivity(questionActivity)
+        }
+
+    }
 }
