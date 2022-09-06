@@ -11,8 +11,8 @@ import androidx.core.content.ContextCompat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private val REQUEST_CODE_ASK_PERMISSIONS = 1
-    private val REQUIRED_SDK_PERMISSIONS = arrayOf(
+    private val requestCodeAskPermissions = 1
+    private val requiredSDKPermissions = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.CAMERA
     )
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
     private fun checkPermissions() {
         val missingPermissions: MutableList<String> = ArrayList()
         // check all required dynamic permissions
-        for (permission in REQUIRED_SDK_PERMISSIONS) {
+        for (permission in requiredSDKPermissions) {
             val result = ContextCompat.checkSelfPermission(this, permission)
             if (result != PackageManager.PERMISSION_GRANTED) {
                 missingPermissions.add(permission)
@@ -46,12 +46,12 @@ class MainActivity : AppCompatActivity() {
             // request all missing permissions
             val permissions = missingPermissions
                 .toTypedArray()
-            ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_ASK_PERMISSIONS)
+            ActivityCompat.requestPermissions(this, permissions, requestCodeAskPermissions)
         } else {
-            val grantResults = IntArray(REQUIRED_SDK_PERMISSIONS.size)
+            val grantResults = IntArray(requiredSDKPermissions.size)
             Arrays.fill(grantResults, PackageManager.PERMISSION_GRANTED)
             onRequestPermissionsResult(
-                REQUEST_CODE_ASK_PERMISSIONS, REQUIRED_SDK_PERMISSIONS,
+                requestCodeAskPermissions, requiredSDKPermissions,
                 grantResults
             )
         }

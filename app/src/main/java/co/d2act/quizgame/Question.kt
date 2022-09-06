@@ -13,6 +13,7 @@ import android.hardware.SensorManager
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
 import android.provider.MediaStore
 import android.speech.RecognizerIntent
 import android.view.View
@@ -35,25 +36,29 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
+@Suppress("DEPRECATION")
 class Question : AppCompatActivity(), SensorEventListener {
 
-    private val DEBUG = true
+    private val DEBUG = false
     private lateinit var sensorManager: SensorManager
     private lateinit var sensor: Sensor
-    var lastUpdate: Long = 0
-    var last_x = 0f
-    var last_y = 0f
-    var last_z = 0f
+    private var lastUpdate: Long = 0
+    private var lastX = 0f
+    private var lastY = 0f
+    private var lastZ = 0f
     private val shakeThreshold = 600
     private val shakeSpeedThreshold = 1000
     private var shakeDuration = 0
-    private val CAMERA_CAPTURE_IMAGE_REQUEST = 102
-    private val SPEECH_TO_TEXT_REQUEST = 103
+    private val cameraCaptureImageRequest = 102
+    private val speechToTextRequest = 103
     private var mCurrentPhotoPath = ""
     private var imageUri: Uri? = null
     private var feedback: ArrayList<ArrayList<ArrayList<String>>> = arrayListOf(arrayListOf(arrayListOf()))
     private var secondTry = false
     private var shakingAnswer = 0
+    private var shortRevision: String = ""
+    private var doubleBackToExitPressedOnce = false
+    private var firstAttempt = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,12 +68,28 @@ class Question : AppCompatActivity(), SensorEventListener {
         updateContent()
     }
 
-    fun initFeedback() {
+    private fun initFeedback() {
         val feedback11 = arrayListOf(getString(R.string.a1_1_af),getString(R.string.a1_1_bf),getString(R.string.a1_1_cf))
         val feedback12 = arrayListOf(getString(R.string.a1_2_af),getString(R.string.a1_2_bf),getString(R.string.a1_2_cf))
         val feedback13 = arrayListOf(getString(R.string.a1_3_af),getString(R.string.a1_3_bf),getString(R.string.a1_3_cf))
         val feedback1 = arrayListOf(feedback11,feedback12,feedback13)
-        feedback = arrayListOf(feedback1)
+        val feedback21 = arrayListOf(getString(R.string.a2_1_af),getString(R.string.a2_1_bf),getString(R.string.a2_1_cf))
+        val feedback22 = arrayListOf(getString(R.string.a2_2_af),getString(R.string.a2_2_bf),getString(R.string.a2_2_cf))
+        val feedback23 = arrayListOf(getString(R.string.a2_3_af),getString(R.string.a2_3_bf),getString(R.string.a2_3_cf))
+        val feedback2 = arrayListOf(feedback21,feedback22,feedback23)
+        val feedback31 = arrayListOf(getString(R.string.a3_1_af),getString(R.string.a3_1_bf),getString(R.string.a3_1_cf))
+        val feedback32 = arrayListOf(getString(R.string.a3_2_af),getString(R.string.a3_2_bf),getString(R.string.a3_2_cf))
+        val feedback33 = arrayListOf(getString(R.string.a3_3_af),getString(R.string.a3_3_bf),getString(R.string.a3_3_cf))
+        val feedback3 = arrayListOf(feedback31,feedback32,feedback33)
+        val feedback41 = arrayListOf(getString(R.string.a4_1_af),getString(R.string.a4_1_bf),getString(R.string.a4_1_cf))
+        val feedback42 = arrayListOf(getString(R.string.a4_2_af),getString(R.string.a4_2_bf),getString(R.string.a4_2_cf))
+        val feedback43 = arrayListOf(getString(R.string.a4_3_af),getString(R.string.a4_3_bf),getString(R.string.a4_3_cf))
+        val feedback4 = arrayListOf(feedback41,feedback42,feedback43)
+        val feedback51 = arrayListOf(getString(R.string.a5_1_af),getString(R.string.a5_1_bf),getString(R.string.a5_1_cf))
+        val feedback52 = arrayListOf(getString(R.string.a5_2_af),getString(R.string.a5_2_bf),getString(R.string.a5_2_cf))
+        val feedback53 = arrayListOf(getString(R.string.a5_3_af),getString(R.string.a5_3_bf),getString(R.string.a5_3_cf))
+        val feedback5 = arrayListOf(feedback51,feedback52,feedback53)
+        feedback = arrayListOf(feedback1,feedback2,feedback3,feedback4,feedback5)
     }
 
 
@@ -90,6 +111,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a1_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a1_1_c)
+                        shortRevision = getString(R.string.short_revision_1_1)
                     }
                     2 -> {
                         qInstruction.text = getString(R.string.q1_2_instruction)
@@ -97,6 +119,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a1_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a1_2_c)
+                        shortRevision = getString(R.string.short_revision_1_2)
                     }
                     3 -> {
                         qInstruction.text = getString(R.string.q1_3_instruction)
@@ -104,6 +127,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a1_3_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a1_3_c)
+                        shortRevision = getString(R.string.short_revision_1_3)
                     }
                 }
             }
@@ -115,6 +139,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_1_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a2_1_c)
+                        shortRevision = getString(R.string.short_revision_2_1)
                     }
                     2 -> {
                         qInstruction.text = getString(R.string.q1_2_instruction)
@@ -122,6 +147,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_2_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a2_2_c)
+                        shortRevision = getString(R.string.short_revision_2_2)
                     }
                     3 -> {
                         qInstruction.text = getString(R.string.q2_3_instruction)
@@ -129,6 +155,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_3_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_3_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a2_3_c)
+                        shortRevision = getString(R.string.short_revision_2_3)
                     }
                 }
             }
@@ -140,6 +167,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a3_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a3_1_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a3_1_c)
+                        shortRevision = getString(R.string.short_revision_3_1)
                     }
                     2 -> {
                         qInstruction.text = getString(R.string.q3_2_instruction)
@@ -147,6 +175,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a3_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a3_2_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a3_2_c)
+                        shortRevision = getString(R.string.short_revision_3_2)
                     }
                     3 -> {
                         qInstruction.text = getString(R.string.q3_3_instruction)
@@ -154,56 +183,203 @@ class Question : AppCompatActivity(), SensorEventListener {
                         answer1.text = getString(R.string.a) +" " + getString(R.string.a3_3_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a3_3_b)
                         answer3.text = getString(R.string.c) +" " +getString(R.string.a3_3_c)
+                        shortRevision = getString(R.string.short_revision_3_3)
                     }
                 }
             }
             4 -> {
                 when(Globals.getQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q1_1_instruction)
-                        question.text = getString(R.string.q1_1)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_1_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_1_c)
+                        qInstruction.text = getString(R.string.q4_1_instruction)
+                        question.text = getString(R.string.q4_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a4_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a4_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a4_1_c)
+                        shortRevision = getString(R.string.short_revision_4_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q1_2_instruction)
-                        question.text = getString(R.string.q1_2)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_2_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_2_c)
+                        qInstruction.text = getString(R.string.q4_2_instruction)
+                        question.text = getString(R.string.q4_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a4_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a4_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a4_2_c)
+                        shortRevision = getString(R.string.short_revision_4_2)
                     }
                     3 -> {
-                        qInstruction.text = getString(R.string.q1_3_instruction)
-                        question.text = getString(R.string.q1_3)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_3_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_3_c)
+                        qInstruction.text = getString(R.string.q4_3_instruction)
+                        question.text = getString(R.string.q4_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a4_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a4_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a4_3_c)
+                        shortRevision = getString(R.string.short_revision_4_3)
                     }
                 }
             }
             5 -> {
                 when(Globals.getQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q1_1_instruction)
-                        question.text = getString(R.string.q1_1)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_1_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_1_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_1_c)
+                        qInstruction.text = getString(R.string.q5_1_instruction)
+                        question.text = getString(R.string.q5_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
+                        shortRevision = getString(R.string.short_revision_5_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q1_2_instruction)
-                        question.text = getString(R.string.q1_2)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_2_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_2_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_2_c)
+                        qInstruction.text = getString(R.string.q5_2_instruction)
+                        question.text = getString(R.string.q5_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
+                        shortRevision = getString(R.string.short_revision_5_2)
                     }
                     3 -> {
-                        qInstruction.text = getString(R.string.q1_3_instruction)
-                        question.text = getString(R.string.q1_3)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a1_3_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a1_3_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a1_3_c)
+                        qInstruction.text = getString(R.string.q5_3_instruction)
+                        question.text = getString(R.string.q5_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
+                        shortRevision = getString(R.string.short_revision_5_3)
+                    }
+                }
+            }
+            6 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q5_1_instruction)
+                        question.text = getString(R.string.q5_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
+                        shortRevision = getString(R.string.short_revision_5_1)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q5_2_instruction)
+                        question.text = getString(R.string.q5_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
+                        shortRevision = getString(R.string.short_revision_5_2)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q5_3_instruction)
+                        question.text = getString(R.string.q5_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
+                        shortRevision = getString(R.string.short_revision_5_3)
+                    }
+                }
+            }
+            7 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q5_1_instruction)
+                        question.text = getString(R.string.q5_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
+                        shortRevision = getString(R.string.short_revision_5_1)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q5_2_instruction)
+                        question.text = getString(R.string.q5_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
+                        shortRevision = getString(R.string.short_revision_5_2)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q5_3_instruction)
+                        question.text = getString(R.string.q5_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
+                        shortRevision = getString(R.string.short_revision_5_3)
+                    }
+                }
+            }
+            8 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q5_1_instruction)
+                        question.text = getString(R.string.q5_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
+                        shortRevision = getString(R.string.short_revision_5_1)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q5_2_instruction)
+                        question.text = getString(R.string.q5_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
+                        shortRevision = getString(R.string.short_revision_5_2)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q5_3_instruction)
+                        question.text = getString(R.string.q5_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
+                        shortRevision = getString(R.string.short_revision_5_3)
+                    }
+                }
+            }
+            9 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q5_1_instruction)
+                        question.text = getString(R.string.q5_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
+                        shortRevision = getString(R.string.short_revision_5_1)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q5_2_instruction)
+                        question.text = getString(R.string.q5_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
+                        shortRevision = getString(R.string.short_revision_5_2)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q5_3_instruction)
+                        question.text = getString(R.string.q5_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
+                        shortRevision = getString(R.string.short_revision_5_3)
+                    }
+                }
+            }
+            10 -> {
+                when(Globals.getQuestion()) {
+                    1 -> {
+                        qInstruction.text = getString(R.string.q5_1_instruction)
+                        question.text = getString(R.string.q5_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
+                        shortRevision = getString(R.string.short_revision_5_1)
+                    }
+                    2 -> {
+                        qInstruction.text = getString(R.string.q5_2_instruction)
+                        question.text = getString(R.string.q5_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
+                        shortRevision = getString(R.string.short_revision_5_2)
+                    }
+                    3 -> {
+                        qInstruction.text = getString(R.string.q5_3_instruction)
+                        question.text = getString(R.string.q5_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
+                        shortRevision = getString(R.string.short_revision_5_3)
                     }
                 }
             }
@@ -308,7 +484,7 @@ class Question : AppCompatActivity(), SensorEventListener {
             RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
         )
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Read the answer...")
-        startActivityForResult(intent, SPEECH_TO_TEXT_REQUEST)
+        startActivityForResult(intent, speechToTextRequest)
     }
 
     /**
@@ -321,12 +497,13 @@ class Question : AppCompatActivity(), SensorEventListener {
         intentIntegrator.initiateScan()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST) {
+        if (requestCode == cameraCaptureImageRequest) {
             getColorFromImage()
-        } else if (requestCode == SPEECH_TO_TEXT_REQUEST) {
+        } else if (requestCode == speechToTextRequest) {
             //Populate the strings to an alert dialog to confirm the answer
             val matches = data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
             if (matches != null) {
@@ -355,10 +532,15 @@ class Question : AppCompatActivity(), SensorEventListener {
             val section = contents.split("_")[0].toInt()
             val question = contents.split("_")[1].toInt()
             val answer = contents.split("_")[2].toInt()
+
             if (section == Globals.getSection() && question == Globals.getQuestion()) {
                 checkAnswer(answer)
             } else {
-                Toast.makeText(baseContext, "Wrong QR Code", Toast.LENGTH_SHORT).show()
+                if ((Globals.getSection() == 1) && (Globals.getQuestion() == 3)) {
+                    wrongAnswer("Good try, see help for the correct answer.")
+                } else {
+                    Toast.makeText(baseContext, "Wrong QR Code", Toast.LENGTH_SHORT).show()
+                }
             }
         } catch (e: Exception) {
             Toast.makeText(baseContext, "Invalid QR Code", Toast.LENGTH_SHORT).show()
@@ -384,14 +566,17 @@ class Question : AppCompatActivity(), SensorEventListener {
             val answer2 = findViewById<Button>(R.id.answer2)
             val answer3 = findViewById<Button>(R.id.answer3)
             val answer = editText.text.toString()
-            if (answer.equals(answer1.text.toString().substring(3), ignoreCase = true)) {
+            if (answer.equals(answer1.text.toString().substring(3).replace("?",""), ignoreCase = true)) {
                 checkAnswer(1)
-            } else if (answer.equals(answer2.text.toString().substring(3), ignoreCase = true)) {
+            } else if (answer.equals(answer2.text.toString().substring(3).replace("?",""), ignoreCase = true)) {
                 checkAnswer(2)
-            } else if (answer.equals(answer3.text.toString().substring(3), ignoreCase = true)) {
+            } else if (answer.equals(answer3.text.toString().substring(3).replace("?",""), ignoreCase = true)) {
                 checkAnswer(3)
             } else {
-               //
+               //Could not match to a possible answer
+                Toast.makeText(this, getString(R.string.toast_wrong_speech), Toast.LENGTH_LONG).show()
+                //try again
+                confirmVoiceRecognition(words)
             }
             dialog.dismiss()
         }
@@ -406,6 +591,7 @@ class Question : AppCompatActivity(), SensorEventListener {
      * Returns the dominant color name
      * (Red, Green or Blue) of a given bitmap
      */
+    @SuppressLint("SetTextI18n")
     private fun getDominantColor(bitmap: Bitmap): String{
         var  redBucket = 0
         var  greenBucket = 0
@@ -428,14 +614,14 @@ class Question : AppCompatActivity(), SensorEventListener {
         if (DEBUG) {
             findViewById<TextView>(R.id.status).text = "R: $red G: $green B: $blue"
         }
-        if ((red > green+colorDiff) && (red > blue+colorDiff)) {
-            return "red"
+        return if ((red > green+colorDiff) && (red > blue+colorDiff)) {
+            "red"
         } else if ((green > red+colorDiff) && (green > blue+colorDiff)) {
-            return "green"
+            "green"
         } else if ((blue > red+colorDiff) && (blue > green+colorDiff)) {
-            return "blue"
+            "blue"
         } else {
-            return "other"
+            "other"
         }
     }
 
@@ -468,10 +654,11 @@ class Question : AppCompatActivity(), SensorEventListener {
     private fun checkAnswer(answer: Int) {
         val section = Globals.getSection()-1
         val question = Globals.getQuestion()-1
-
         if (Globals.answers[section][question] == answer) {
             correctAnswer(feedback[section][question][answer-1])
+            Globals.addScore(firstAttempt)
         } else {
+            firstAttempt = false
             wrongAnswer(feedback[section][question][answer-1])
         }
     }
@@ -482,13 +669,13 @@ class Question : AppCompatActivity(), SensorEventListener {
     }
 
     private fun wrongAnswer(message:String) {
-        /*showDialog(message, false)*/
+        showDialog(message, false)
         //show feedback
         val feedbackLayout = findViewById<LinearLayout>(R.id.feedback_layout)
         val feedback = findViewById<TextView>(R.id.feedback)
-        feedback.text = message
+        feedback.text = shortRevision
         feedbackLayout.visibility = View.VISIBLE
-        Toast.makeText(this,getString(R.string.toast_wrong_answer),Toast.LENGTH_LONG).show()
+        /*Toast.makeText(this,getString(R.string.toast_wrong_answer),Toast.LENGTH_LONG).show()*/
     }
 
     private fun showDialog(message: String, correct: Boolean) {
@@ -502,6 +689,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 if (Globals.getQuestion() == 3) gotoNextSession = true
                 Globals.nextQuestion()
                 //Go to next section
+                //TODO: handle end of game with scoreboard
                 if (gotoNextSession) {
                     val sectionActivity = Intent(applicationContext, Section::class.java)
                     startActivity(sectionActivity)
@@ -551,10 +739,10 @@ class Question : AppCompatActivity(), SensorEventListener {
         val imageFile = createImageFile()
         imageUri = FileProvider.getUriForFile(Objects.requireNonNull(applicationContext), BuildConfig.APPLICATION_ID + ".provider", imageFile)
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
-        startActivityForResult(intent, CAMERA_CAPTURE_IMAGE_REQUEST)
+        startActivityForResult(intent, cameraCaptureImageRequest)
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     override fun onSensorChanged(event: SensorEvent?) {
         /* shaking */
         if (event != null) {
@@ -565,7 +753,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 val x = event.values[0]
                 val y = event.values[1]
                 val z = event.values[2]
-                val speed: Float = kotlin.math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000
+                val speed: Float = kotlin.math.abs(x + y + z - lastX - lastY - lastZ) / diffTime * 10000
                 if (speed > shakeSpeedThreshold) {
                     //Capture a shake
                     shakeDuration += 100
@@ -586,9 +774,9 @@ class Question : AppCompatActivity(), SensorEventListener {
                         findViewById<TextView>(R.id.status).text = "shaking was $shakeDuration"
                     }
                 }
-                last_x = x
-                last_y = y
-                last_z = z
+                lastX = x
+                lastY = y
+                lastZ = z
             }
         }
     }
@@ -635,15 +823,20 @@ class Question : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
-        if (Globals.getQuestion() == 1) {
+        if(doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+        doubleBackToExitPressedOnce = true
+        Toast.makeText(this, getString(R.string.toast_back_button), Toast.LENGTH_SHORT).show()
+        Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
+/*        if (Globals.getQuestion() == 1) {
             //will finish question activity and return to section activity
             Globals.goBack()
         } else {
             Globals.goBack()
             val questionActivity = Intent(applicationContext, Question::class.java)
             startActivity(questionActivity)
-        }
-
+        }*/
     }
 }
