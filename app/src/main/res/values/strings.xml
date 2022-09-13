@@ -14,6 +14,9 @@
     <string name="c">c)</string>
 
     <string name="toast_back_button">Press again to exit</string>
+    <string name="dialog_wrong_answer_first_attempt">Good try. You have a second chance.</string>
+    <string name="dialog_wrong_answer_second_attempt">Nice try. Maybe next time.</string>
+    <string name="dialog_correct_answer">Yes, you got it right!</string>
     <!--Project description-->
     <string name="project_description">Digitalization and industry 4.0 are perhaps the most important drivers behind the profound transformation of the labour market, the way people work and the new digital skills required to meet the needs of the digitalized market. VET is valued for fostering job-specific and transversal skills, facilitating the transition into employment and maintaining and updating the skills of the workforce according to sectoral, regional and local needs.\nThe 3D2ACT project supports VET trainers and educators in an attempt to strengthen their profiles with the acquisition of new skills, the development of targeted material, the collection of tools and resources, while at the same time creating opportunities for linking VET schools with the labour market building on synergies and partnerships with established organizations using industry 4.0 and automation or 3D printing.\nThe aim of this app is to promote key competencies targeted on entrepreneurial skills, but with a social impact as they are responding to social challenges/needs and have a benefit for the community, the environment, or culture. Having an entrepreneurial mindset is a great advantage in today’s job market since it is what makes ideas come true and become a reality. Creativity is the engine of entrepreneurship.</string>
     <!--Section 1. Choose a social issue -->
@@ -53,7 +56,7 @@
     <!--QnA-->
     <!--1.1 CLICK-->
     <string name="q1_1_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for "Step 1" and a second chance to click.</string>
-    <string name="q1.1">1. George has just bought a 3D printer and seriously considers starting a social enterprise, the main product/service of which should be developed by a 3D printer. What should his first step be?</string>
+    <string name="q1.1">George has just bought a 3D printer and seriously considers starting a social enterprise, the main product/service of which should be developed by a 3D printer. What should his first step be?</string>
     <string name="a1.1_a">Checking online for inspiration</string>
     <string name="a1.1_af">Good try, yet he should consider what he would like to look up online.</string>
     <string name="a1.1_b">Asking everybody he knows for ideas</string>
@@ -63,7 +66,7 @@
     <string name="short_revision_1_1">The first step before setting up an enterprise in general, is to think about what you are passionate for, and of course what social/environmental values match your beliefs, ideas and emotions.</string>
     <!--1.2 SHAKE-->
     <string name="q1.2_instruction">Choose answer by shaking the device!  Once for a, twice for b and thrice for c. The chosen answer will be highlighted in green. In case it is wrong, a shorter revision of info for “Step 1” and a second chance to shake.</string>
-    <string name="q1.2">2. What’s next for George?</string>
+    <string name="q1.2">What’s next for George?</string>
     <string name="a1.2_a">Registering in the Chamber of Commerce</string>
     <string name="a1.2_af">Good try, but it might be too soon.</string>
     <string name="a1.2_b">Searching for a 3D printer</string>
@@ -73,7 +76,7 @@
     <string name="short_revision_1_2">The second step before setting up an enterprise is to “test” your idea by discussing it, preferably with people that will use it, and ask for feedback.</string>
     <!--1.3 SCAN QR-->
     <string name="q1.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info for “Step 1” and a second chance to choose.</string>
-    <string name="q1.3">3. What could George do after that?</string>
+    <string name="q1.3">What could George do after that?</string>
     <string name="a1.3_a">Search for investors</string>
     <string name="a1.3_af">Good try, yet what if the plan did not work according to his target group?</string>
     <string name="a1.3_b">Buy a 3D printer</string>
@@ -83,7 +86,7 @@
     <string name="short_revision_1_3">If feedback is provided from people of your target group you should appropriately revise your entrepreneurial idea.</string>
     <!--2.1 SCAN QR-->
     <string name="q2_1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board.</string>
-    <string name="q2.1">1. George has now a clear idea for his social enterprise using his 3D printer. He is now about to research everything he has to know before starting his social business. What should be the main 2 topics George should focus on?</string>
+    <string name="q2.1">George has now a clear idea for his social enterprise using his 3D printer. He is now about to research everything he has to know before starting his social business. What should be the main 2 topics George should focus on?</string>
     <string name="a2.1_a">3D printing and social business model canvas</string>
     <string name="a2.1_af">Good try, yet this does not help anyone.</string>
     <string name="a2.1_b">The problem to solve and the concerning target groups</string>
@@ -93,7 +96,7 @@
     <string name="short_revision_2_1">Before starting your social business to have to research, by really focusing on the problem, why this problem exists, what the consequences of the social issue are, etc. Also pay enough attention to the target groups and all beneficiaries.</string>
     <!--2.2 SCAN QR-->
     <string name="q2.2_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info for “Step 2” and a second chance to choose.</string>
-    <string name="q2.2">2. What should George not forget when researching his social issue?</string>
+    <string name="q2.2">What should George not forget when researching his social issue?</string>
     <string name="a2.2_a">Finances</string>
     <string name="a2.2_af">Good try, but finances does not include for whom the social issue is an issue.</string>
     <string name="a2.2_b">Target groups and all beneficiaries</string>
@@ -103,7 +106,7 @@
     <string name="short_revision_2_2">You should always pay enough attention to the target groups and all beneficiaries: the direct targets of your project, the human and financial consequences, the characteristics of your beneficiaries and how many people are involved.</string>
     <!--2.3 CLICK-->
     <string name="q2.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 2” and a second chance to click</string>
-    <string name="q2.3">3. What could be George’s key selling point?</string>
+    <string name="q2.3">What could be George’s key selling point?</string>
     <string name="a2.3_a">Having a 3D printer as the main asset to solve your social issue</string>
     <string name="a2.3_af">Good try, but only a 3D printer is too much of a basic selling point.</string>
     <string name="a2.3_b">Having a very innovative product/service</string>
@@ -113,7 +116,7 @@
     <string name="short_revision_2_3">Last, you should always research on your potential competition. Are there any social businesses already trying to tackle the social issue you are aiming at tackling as well?</string>
     <!--3.1 SPEAK-->
     <string name="q3_1_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info for “Step 3” and a second chance to read.</string>
-    <string name="q3.1">1.	George wants to get a global viewpoint on his social enterprise based on 3D printing. He starts with the Positioning Statement of his business. What important question should he ask himself?</string>
+    <string name="q3.1">George wants to get a global viewpoint on his social enterprise based on 3D printing. He starts with the Positioning Statement of his business. What important question should he ask himself?</string>
     <string name="a3.1_a">Why is my social business better than the other relevant ones?</string>
     <string name="a3.1_af">Yes, you got it right!</string>
     <string name="a3.1_b">What precisely am I going to offer?</string>
@@ -123,7 +126,7 @@
     <string name="short_revision_3_1"></string>
     <!--3.2 SHAKE-->
     <string name="q3.2_instruction">Choose answer by shaking the device!  Once for a, twice for b and thrice for c. The chosen answer will be highlighted in green. In case it is wrong, a shorter revision of info for “Step 3” and a second chance to shake.</string>
-    <string name="q3.2">2.	What should George always keep in mind?</string>
+    <string name="q3.2">What should George always keep in mind?</string>
     <string name="a3.2_a">How he aims to write his business plan</string>
     <string name="a3.2_af">Good try, yet he wants to contribute to society. </string>
     <string name="a3.2_b">How he is contributing to a social cause differently than others</string>
@@ -133,7 +136,7 @@
     <string name="short_revision_3_2"></string>
     <!--3.3 CLICK-->
     <string name="q3.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 3” and a second chance to click.</string>
-    <string name="q3.3">3.	What can be done now even further?</string>
+    <string name="q3.3">What can be done now even further?</string>
     <string name="a3.3_a">Contact target groups</string>
     <string name="a3.3_af">Good try, yet you already have some ideas of the target groups and miss some knowledge about the kind of company you can be.</string>
     <string name="a3.3_b">Do more research</string>
@@ -143,7 +146,7 @@
     <string name="short_revision_3_3"></string>
     <!--4.1 SCAN-->
     <string name="q4_1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. Images will appear for all three answers.  In case of a wrong choice, feedback regarding the legal form that corresponds to the wrong choice will be provided along with a second chance to scan.</string>
-    <string name="q4.1">1.	George wonders which type of legal forms his social enterprise should entail. Which is one of the existing types?</string>
+    <string name="q4.1">George wonders which type of legal forms his social enterprise should entail. Which is one of the existing types?</string>
     <string name="a4.1_a">Share companies</string>
     <string name="a4.1_af">Yes, that’s the right answer!</string>
     <string name="a4.1_b">Profit organisations</string>
@@ -153,7 +156,7 @@
     <string name="short_revision_4_1"></string>
     <!--4.2 SPEAK-->
     <string name="q4.2_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info for “Step 4” and a second chance to read.</string>
-    <string name="q4.2">2.	Co-operatives are generally owned and controlled on a democratic basis by…?</string>
+    <string name="q4.2">Co-operatives are generally owned and controlled on a democratic basis by…?</string>
     <string name="a4.2_a">Stakeholders</string>
     <string name="a4.2_af">Good idea, but the right answer is members</string>
     <string name="a4.2_b">Different entities</string>
@@ -163,7 +166,7 @@
     <string name="short_revision_4_2"></string>
     <!--4.3 SCAN-->
     <string name="q4.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. An image will appear only for the correct answer and will be comprised of a sketch containing examples of business support organizations.  In case of a wrong choice, a shorter revision of info for “Step 4” and a second chance to scan.</string>
-    <string name="q4.3">3.	What can George do in order to have a deeper understanding of the legal structures in his country in terms of having a social enterprise?</string>
+    <string name="q4.3">What can George do in order to have a deeper understanding of the legal structures in his country in terms of having a social enterprise?</string>
     <string name="a4.3_a">Google everything</string>
     <string name="a4.3_af">Good idea, but the right answer is contact a business support organisation</string>
     <string name="a4.3_b">Contact a business support organisation</string>

@@ -35,6 +35,17 @@ import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
+//TODO: randomise the order of the questions for each sections
+
+//TODO: remove feedback per answer, use the short revision
+
+//TODO: improve color detection
+
+//TODO: add scoring and posting to online scoreboard
+
+//TODO: two qr scanning for answering 2.1.1
+
+//TODO:
 
 @Suppress("DEPRECATION")
 class Question : AppCompatActivity(), SensorEventListener {
@@ -54,16 +65,15 @@ class Question : AppCompatActivity(), SensorEventListener {
     private var mCurrentPhotoPath = ""
     private var imageUri: Uri? = null
     private var feedback: ArrayList<ArrayList<ArrayList<String>>> = arrayListOf(arrayListOf(arrayListOf()))
-    private var secondTry = false
     private var shakingAnswer = 0
     private var shortRevision: String = ""
     private var doubleBackToExitPressedOnce = false
     private var firstAttempt = true
+    private val colorDiff = 20
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
-
         initFeedback()
         updateContent()
     }
@@ -536,11 +546,7 @@ class Question : AppCompatActivity(), SensorEventListener {
             if (section == Globals.getSection() && question == Globals.getQuestion()) {
                 checkAnswer(answer)
             } else {
-                if ((Globals.getSection() == 1) && (Globals.getQuestion() == 3)) {
-                    wrongAnswer("Good try, see help for the correct answer.")
-                } else {
-                    Toast.makeText(baseContext, "Wrong QR Code", Toast.LENGTH_SHORT).show()
-                }
+                wrongAnswer("")
             }
         } catch (e: Exception) {
             Toast.makeText(baseContext, "Invalid QR Code", Toast.LENGTH_SHORT).show()
@@ -575,8 +581,6 @@ class Question : AppCompatActivity(), SensorEventListener {
             } else {
                //Could not match to a possible answer
                 Toast.makeText(this, getString(R.string.toast_wrong_speech), Toast.LENGTH_LONG).show()
-                //try again
-                confirmVoiceRecognition(words)
             }
             dialog.dismiss()
         }
@@ -610,7 +614,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         val red = redBucket / pixelCount
         val green = greenBucket / pixelCount
         val blue = blueBucket / pixelCount
-        val colorDiff = 30
+
         if (DEBUG) {
             findViewById<TextView>(R.id.status).text = "R: $red G: $green B: $blue"
         }
@@ -656,15 +660,12 @@ class Question : AppCompatActivity(), SensorEventListener {
         val question = Globals.getQuestion()-1
         if (Globals.answers[section][question] == answer) {
             correctAnswer(feedback[section][question][answer-1])
-            Globals.addScore(firstAttempt)
         } else {
-            firstAttempt = false
             wrongAnswer(feedback[section][question][answer-1])
         }
     }
 
     private fun correctAnswer(message: String) {
-        secondTry = false
         showDialog(message, true)
     }
 
@@ -681,38 +682,52 @@ class Question : AppCompatActivity(), SensorEventListener {
     private fun showDialog(message: String, correct: Boolean) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle("")
-        builder.setMessage(message)
+        //builder.setMessage(message)
+
+        //Correct answer, go to Next
         if (correct) {
+            builder.setMessage(getString(R.string.dialog_correct_answer))
+            Globals.addScore(firstAttempt)
             builder.setPositiveButton(getString(R.string.button_next)) { dialog, _ ->
                 dialog.dismiss()
-                var gotoNextSession = false
-                if (Globals.getQuestion() == 3) gotoNextSession = true
-                Globals.nextQuestion()
-                //Go to next section
-                //TODO: handle end of game with scoreboard
-                if (gotoNextSession) {
-                    val sectionActivity = Intent(applicationContext, Section::class.java)
-                    startActivity(sectionActivity)
-                }
-                //Go to next question
-                else {
-                    val questionActivity = Intent(applicationContext, Question::class.java)
-                    startActivity(questionActivity)
-                }
-                finish()
+                goToNext()
             }
-        } else if (secondTry) {
-            val questionActivity = Intent(applicationContext, Question::class.java)
-            startActivity(questionActivity)
-            finish()
         } else {
-            builder.setPositiveButton(getString(R.string.button_try)) { dialog, _ ->
-                dialog.dismiss()
-                secondTry = true
+            //Wrong answer, first attempt, try again
+            if (firstAttempt) {
+                builder.setMessage(getString(R.string.dialog_wrong_answer_first_attempt))
+                builder.setPositiveButton(getString(R.string.button_try)) { dialog, _ ->
+                    dialog.dismiss()
+                    firstAttempt = false
+                }
+            } else {
+                //Wrong answer, 2nd attempt, go to next
+                builder.setMessage(getString(R.string.dialog_wrong_answer_second_attempt))
+                builder.setPositiveButton(getString(R.string.button_next)) { dialog, _ ->
+                    goToNext()
+                }
             }
         }
         val alert: AlertDialog = builder.create()
         alert.show()
+    }
+
+    private fun goToNext() {
+        var gotoNextSession = false
+        if (Globals.getQuestion() == 3) gotoNextSession = true
+        Globals.nextQuestion()
+        //Go to next section
+        //TODO: handle end of game with scoreboard
+        if (gotoNextSession) {
+            val sectionActivity = Intent(applicationContext, Section::class.java)
+            startActivity(sectionActivity)
+        }
+        //Go to next question
+        else {
+            val questionActivity = Intent(applicationContext, Question::class.java)
+            startActivity(questionActivity)
+        }
+        finish()
     }
 
     @SuppressLint("SimpleDateFormat")
@@ -765,7 +780,11 @@ class Question : AppCompatActivity(), SensorEventListener {
                     }
                     //avoid double jump
                     lastUpdate += 800
-                    shakingAnswer++
+                    if (shakingAnswer == 3) {
+                        shakingAnswer = 1
+                    } else {
+                        shakingAnswer++
+                    }
                     setButtonOnShake(shakingAnswer)
                     //Reset
                     shakeDuration = 0
@@ -801,12 +820,6 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answer2.isEnabled = false
                 answer3.isEnabled = true
             }
-            4 -> {
-                shakingAnswer = 0
-                answer1.isEnabled = false
-                answer2.isEnabled = false
-                answer3.isEnabled = false
-            }
         }
     }
 
@@ -824,7 +837,8 @@ class Question : AppCompatActivity(), SensorEventListener {
 
     override fun onBackPressed() {
         if(doubleBackToExitPressedOnce) {
-            super.onBackPressed()
+            this.finishAffinity()
+            /*super.onBackPressed()*/
             return
         }
         doubleBackToExitPressedOnce = true

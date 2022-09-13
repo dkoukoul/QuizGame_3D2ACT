@@ -103,7 +103,8 @@ class Section : AppCompatActivity() {
         }*/
 
         if(doubleBackToExitPressedOnce) {
-            super.onBackPressed()
+            /*super.onBackPressed()*/
+            this.finishAffinity()
             return
         }
         doubleBackToExitPressedOnce = true

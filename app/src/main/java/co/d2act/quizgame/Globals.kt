@@ -1,5 +1,7 @@
 package co.d2act.quizgame
 
+import kotlin.random.Random
+
 
 object Globals {
     const val CLICK = 1
@@ -10,7 +12,8 @@ object Globals {
     private var currentSection = 0
     private var currentQuestion = 0
 
-    private val types1 = arrayListOf(CLICK,SHAKE,SCAN)
+    //private val types1 = arrayListOf(CLICK,SHAKE,SCAN)
+    private val types1 = arrayListOf(COLOR,SHAKE,SCAN)
     private val types2 = arrayListOf(SCAN,SCAN,CLICK)
     private val types3 = arrayListOf(SPEAK,SHAKE,CLICK)
     private val types4 = arrayListOf(SCAN,SPEAK,SCAN)
@@ -28,7 +31,7 @@ object Globals {
     private val answers4 = arrayListOf(1,3,2)
     private val answers5 = arrayListOf(2,1,1)
     val answers = arrayListOf(answers1, answers2, answers3, answers4, answers5)
-
+    private var answeredQuestions : ArrayList<Int> = arrayListOf()
     private var score = 0
 
     fun start() {
@@ -60,6 +63,15 @@ object Globals {
     fun getQuestion(): Int {
         return currentQuestion
     }
+
+    fun getRandomQuestion(): Int {
+        //get next question excluding the answered ones
+        while (!answeredQuestions.contains(currentQuestion)) {
+            currentQuestion = Random.nextInt(1,3)
+        }
+        return currentQuestion
+    }
+
 
     fun goBack() {
         if (currentQuestion==1) {
