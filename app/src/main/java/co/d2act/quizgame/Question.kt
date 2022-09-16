@@ -24,7 +24,7 @@ import androidx.core.content.FileProvider
 import androidx.core.graphics.drawable.DrawableCompat
 import co.d2act.quizgame.Globals.CLICK
 import co.d2act.quizgame.Globals.COLOR
-import co.d2act.quizgame.Globals.SCAN
+import co.d2act.quizgame.Globals.QRSCAN
 import co.d2act.quizgame.Globals.SHAKE
 import co.d2act.quizgame.Globals.SPEAK
 import co.d2act.quizgame.Globals.questionTypes
@@ -36,8 +36,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 //TODO: randomise the order of the questions for each sections
-
-//TODO: remove feedback per answer, use the short revision
 
 //TODO: improve color detection
 
@@ -74,32 +72,7 @@ class Question : AppCompatActivity(), SensorEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
-        initFeedback()
         updateContent()
-    }
-
-    private fun initFeedback() {
-        val feedback11 = arrayListOf(getString(R.string.a1_1_af),getString(R.string.a1_1_bf),getString(R.string.a1_1_cf))
-        val feedback12 = arrayListOf(getString(R.string.a1_2_af),getString(R.string.a1_2_bf),getString(R.string.a1_2_cf))
-        val feedback13 = arrayListOf(getString(R.string.a1_3_af),getString(R.string.a1_3_bf),getString(R.string.a1_3_cf))
-        val feedback1 = arrayListOf(feedback11,feedback12,feedback13)
-        val feedback21 = arrayListOf(getString(R.string.a2_1_af),getString(R.string.a2_1_bf),getString(R.string.a2_1_cf))
-        val feedback22 = arrayListOf(getString(R.string.a2_2_af),getString(R.string.a2_2_bf),getString(R.string.a2_2_cf))
-        val feedback23 = arrayListOf(getString(R.string.a2_3_af),getString(R.string.a2_3_bf),getString(R.string.a2_3_cf))
-        val feedback2 = arrayListOf(feedback21,feedback22,feedback23)
-        val feedback31 = arrayListOf(getString(R.string.a3_1_af),getString(R.string.a3_1_bf),getString(R.string.a3_1_cf))
-        val feedback32 = arrayListOf(getString(R.string.a3_2_af),getString(R.string.a3_2_bf),getString(R.string.a3_2_cf))
-        val feedback33 = arrayListOf(getString(R.string.a3_3_af),getString(R.string.a3_3_bf),getString(R.string.a3_3_cf))
-        val feedback3 = arrayListOf(feedback31,feedback32,feedback33)
-        val feedback41 = arrayListOf(getString(R.string.a4_1_af),getString(R.string.a4_1_bf),getString(R.string.a4_1_cf))
-        val feedback42 = arrayListOf(getString(R.string.a4_2_af),getString(R.string.a4_2_bf),getString(R.string.a4_2_cf))
-        val feedback43 = arrayListOf(getString(R.string.a4_3_af),getString(R.string.a4_3_bf),getString(R.string.a4_3_cf))
-        val feedback4 = arrayListOf(feedback41,feedback42,feedback43)
-        val feedback51 = arrayListOf(getString(R.string.a5_1_af),getString(R.string.a5_1_bf),getString(R.string.a5_1_cf))
-        val feedback52 = arrayListOf(getString(R.string.a5_2_af),getString(R.string.a5_2_bf),getString(R.string.a5_2_cf))
-        val feedback53 = arrayListOf(getString(R.string.a5_3_af),getString(R.string.a5_3_bf),getString(R.string.a5_3_cf))
-        val feedback5 = arrayListOf(feedback51,feedback52,feedback53)
-        feedback = arrayListOf(feedback1,feedback2,feedback3,feedback4,feedback5)
     }
 
 
@@ -256,140 +229,140 @@ class Question : AppCompatActivity(), SensorEventListener {
             6 -> {
                 when(Globals.getQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q5_1_instruction)
-                        question.text = getString(R.string.q5_1)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
-                        shortRevision = getString(R.string.short_revision_5_1)
+                        qInstruction.text = getString(R.string.q6_1_instruction)
+                        question.text = getString(R.string.q6_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a6_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a6_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a6_1_c)
+                        shortRevision = getString(R.string.short_revision_6_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q5_2_instruction)
-                        question.text = getString(R.string.q5_2)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
-                        shortRevision = getString(R.string.short_revision_5_2)
+                        qInstruction.text = getString(R.string.q6_2_instruction)
+                        question.text = getString(R.string.q6_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a6_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a6_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a6_2_c)
+                        shortRevision = getString(R.string.short_revision_6_2)
                     }
                     3 -> {
-                        qInstruction.text = getString(R.string.q5_3_instruction)
-                        question.text = getString(R.string.q5_3)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
-                        shortRevision = getString(R.string.short_revision_5_3)
+                        qInstruction.text = getString(R.string.q6_3_instruction)
+                        question.text = getString(R.string.q6_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a6_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a6_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a6_3_c)
+                        shortRevision = getString(R.string.short_revision_6_3)
                     }
                 }
             }
             7 -> {
                 when(Globals.getQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q5_1_instruction)
-                        question.text = getString(R.string.q5_1)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
-                        shortRevision = getString(R.string.short_revision_5_1)
+                        qInstruction.text = getString(R.string.q7_1_instruction)
+                        question.text = getString(R.string.q7_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a7_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a7_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a7_1_c)
+                        shortRevision = getString(R.string.short_revision_7_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q5_2_instruction)
-                        question.text = getString(R.string.q5_2)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
-                        shortRevision = getString(R.string.short_revision_5_2)
+                        qInstruction.text = getString(R.string.q7_2_instruction)
+                        question.text = getString(R.string.q7_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a7_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a7_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a7_2_c)
+                        shortRevision = getString(R.string.short_revision_7_2)
                     }
                     3 -> {
-                        qInstruction.text = getString(R.string.q5_3_instruction)
-                        question.text = getString(R.string.q5_3)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
-                        shortRevision = getString(R.string.short_revision_5_3)
+                        qInstruction.text = getString(R.string.q7_3_instruction)
+                        question.text = getString(R.string.q7_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a7_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a7_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a7_3_c)
+                        shortRevision = getString(R.string.short_revision_7_3)
                     }
                 }
             }
             8 -> {
                 when(Globals.getQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q5_1_instruction)
-                        question.text = getString(R.string.q5_1)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
-                        shortRevision = getString(R.string.short_revision_5_1)
+                        qInstruction.text = getString(R.string.q8_1_instruction)
+                        question.text = getString(R.string.q8_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a8_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a8_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a8_1_c)
+                        shortRevision = getString(R.string.short_revision_8_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q5_2_instruction)
-                        question.text = getString(R.string.q5_2)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
-                        shortRevision = getString(R.string.short_revision_5_2)
+                        qInstruction.text = getString(R.string.q8_2_instruction)
+                        question.text = getString(R.string.q8_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a8_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a8_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a8_2_c)
+                        shortRevision = getString(R.string.short_revision_8_2)
                     }
                     3 -> {
-                        qInstruction.text = getString(R.string.q5_3_instruction)
-                        question.text = getString(R.string.q5_3)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
-                        shortRevision = getString(R.string.short_revision_5_3)
+                        qInstruction.text = getString(R.string.q8_3_instruction)
+                        question.text = getString(R.string.q8_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a8_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a8_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a8_3_c)
+                        shortRevision = getString(R.string.short_revision_8_3)
                     }
                 }
             }
             9 -> {
                 when(Globals.getQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q5_1_instruction)
-                        question.text = getString(R.string.q5_1)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
-                        shortRevision = getString(R.string.short_revision_5_1)
+                        qInstruction.text = getString(R.string.q9_1_instruction)
+                        question.text = getString(R.string.q9_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a9_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a9_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a9_1_c)
+                        shortRevision = getString(R.string.short_revision_9_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q5_2_instruction)
-                        question.text = getString(R.string.q5_2)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
-                        shortRevision = getString(R.string.short_revision_5_2)
+                        qInstruction.text = getString(R.string.q9_2_instruction)
+                        question.text = getString(R.string.q9_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a9_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a9_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a9_2_c)
+                        shortRevision = getString(R.string.short_revision_9_2)
                     }
                     3 -> {
-                        qInstruction.text = getString(R.string.q5_3_instruction)
-                        question.text = getString(R.string.q5_3)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
-                        shortRevision = getString(R.string.short_revision_5_3)
+                        qInstruction.text = getString(R.string.q9_3_instruction)
+                        question.text = getString(R.string.q9_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a9_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a9_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a9_3_c)
+                        shortRevision = getString(R.string.short_revision_9_3)
                     }
                 }
             }
             10 -> {
                 when(Globals.getQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q5_1_instruction)
-                        question.text = getString(R.string.q5_1)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_1_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_1_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_1_c)
-                        shortRevision = getString(R.string.short_revision_5_1)
+                        qInstruction.text = getString(R.string.q10_1_instruction)
+                        question.text = getString(R.string.q10_1)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a10_1_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a10_1_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a10_1_c)
+                        shortRevision = getString(R.string.short_revision_10_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q5_2_instruction)
-                        question.text = getString(R.string.q5_2)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_2_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_2_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_2_c)
-                        shortRevision = getString(R.string.short_revision_5_2)
+                        qInstruction.text = getString(R.string.q10_2_instruction)
+                        question.text = getString(R.string.q10_2)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a10_2_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a10_2_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a10_2_c)
+                        shortRevision = getString(R.string.short_revision_10_2)
                     }
                     3 -> {
-                        qInstruction.text = getString(R.string.q5_3_instruction)
-                        question.text = getString(R.string.q5_3)
-                        answer1.text = getString(R.string.a) +" " +getString(R.string.a5_3_a)
-                        answer2.text = getString(R.string.b) +" " +getString(R.string.a5_3_b)
-                        answer3.text = getString(R.string.c) +" " +getString(R.string.a5_3_c)
-                        shortRevision = getString(R.string.short_revision_5_3)
+                        qInstruction.text = getString(R.string.q10_3_instruction)
+                        question.text = getString(R.string.q10_3)
+                        answer1.text = getString(R.string.a) +" " +getString(R.string.a10_3_a)
+                        answer2.text = getString(R.string.b) +" " +getString(R.string.a10_3_b)
+                        answer3.text = getString(R.string.c) +" " +getString(R.string.a10_3_c)
+                        shortRevision = getString(R.string.short_revision_10_3)
                     }
                 }
             }
@@ -442,7 +415,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answer2.isEnabled = false
                 answer3.isEnabled = false
             }
-            SCAN -> {
+            QRSCAN -> {
                 answerButton.visibility = View.VISIBLE
                 answerButton.setImageResource(R.drawable.ic_qr_code)
                 answerButton.setOnClickListener {
@@ -481,7 +454,6 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answer3.background = buttonDrawableGreen
             }
         }
-
     }
 
     /**
