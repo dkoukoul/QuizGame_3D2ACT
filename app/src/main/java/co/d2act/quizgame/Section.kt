@@ -62,34 +62,34 @@ class Section : AppCompatActivity() {
                 nextText.text = getString(R.string.section5_next_text)
             }
             6-> {
-                header.text = getString(R.string.section5_title)
-                whyText.text = getString(R.string.section5_why_text)
-                howText.text = getString(R.string.section5_how_text)
-                nextText.text = getString(R.string.section5_next_text)
+                header.text = getString(R.string.section6_title)
+                whyText.text = getString(R.string.section6_why_text)
+                howText.text = getString(R.string.section6_how_text)
+                nextText.text = getString(R.string.section6_next_text)
             }
             7-> {
-                header.text = getString(R.string.section5_title)
-                whyText.text = getString(R.string.section5_why_text)
-                howText.text = getString(R.string.section5_how_text)
-                nextText.text = getString(R.string.section5_next_text)
+                header.text = getString(R.string.section7_title)
+                whyText.text = getString(R.string.section7_why_text)
+                howText.text = getString(R.string.section7_how_text)
+                nextText.text = getString(R.string.section7_next_text)
             }
             8-> {
-                header.text = getString(R.string.section5_title)
-                whyText.text = getString(R.string.section5_why_text)
-                howText.text = getString(R.string.section5_how_text)
-                nextText.text = getString(R.string.section5_next_text)
+                header.text = getString(R.string.section8_title)
+                whyText.text = getString(R.string.section8_why_text)
+                howText.text = getString(R.string.section8_how_text)
+                nextText.text = getString(R.string.section8_next_text)
             }
             9-> {
-                header.text = getString(R.string.section5_title)
-                whyText.text = getString(R.string.section5_why_text)
-                howText.text = getString(R.string.section5_how_text)
-                nextText.text = getString(R.string.section5_next_text)
+                header.text = getString(R.string.section9_title)
+                whyText.text = getString(R.string.section9_why_text)
+                howText.text = getString(R.string.section9_how_text)
+                nextText.text = getString(R.string.section9_next_text)
             }
             10-> {
-                header.text = getString(R.string.section5_title)
-                whyText.text = getString(R.string.section5_why_text)
-                howText.text = getString(R.string.section5_how_text)
-                nextText.text = getString(R.string.section5_next_text)
+                header.text = getString(R.string.section10_title)
+                whyText.text = getString(R.string.section10_why_text)
+                howText.text = getString(R.string.section10_how_text)
+                nextText.text = getString(R.string.section10_next_text)
             }
         }
     }
