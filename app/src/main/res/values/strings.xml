@@ -44,7 +44,39 @@
     <string name="section5_why_text">After establishing the legal structure, it is important to create a business plan. Without a business plan one can get lost along the way. Certainly, as a start-up you are at risk of becoming consumed with practical tasks. Besides, making a business plan helps you think about where you want to be with your company. This can motivate you even more to reach your goals. A business plan will give you the clarity necessary to start your company and make it successful.</string>
     <string name="section5_how_text">To make a clear business plan it is important to keep in mind where you want your company to go. A business plan has to be as close to your wishes as it can be. Make sure that the mission and vision you have for your company are clear. The mission is what the company does, and the vision is where you want the company to be. You should think about how many 3D printers you want to have, how long can they last, and where you want to be in five years. How much time do you want to invest in marketing? When do you need to hire employees? There are many questions to consider, so you should start with want you want and then look at what you need to make your goal possible.</string>
     <string name="section5_next_text">Now that you know what your company does and where it wants to go, you have the basis for the next step, funding. With the goals set for your company you can now figure out how much you need to make your goals possible.</string>
-
+    <!--Section 6. investigate funding options -->
+    <string name="section6_title">6. investigate funding options</string>
+    <string name="section6_why_text">Funding is a key factor in making sure that you can finance your company. Without the right funding it is not possible to be financially stable.</string>
+    <string name="section6_how_text">In order to establish what cost you will have it is important to look at the costs you will have to create your product. With the costs in mind, it is possible to identify how much money you need for your company. This gives you different options to find the funds necessary:
+    • Your own savings
+    • Your network, like friends and family
+    • Crowdfunding
+    • Find a company incubator
+    • Ask for subsidies
+    • Sponsoring
+    • Business angels
+The most important factor is to consider which fits best with your company, which can be more than one opportunity. </string>
+    <string name="section6_next_text">Once you have identified your options for funding it becomes easier to surround yourself with the right people, either those who can help you or those you can hire. You now know your options and costs, thus you know if you can pay hires. Your mentor can identify how the money is spent. </string>
+    <!--Section 7.  -->
+    <string name="section7_title">seek ongoing support from a mentor</string>
+    <string name="section7_why_text">After figuring out what your company does, where you want to go and how much funding you need it is a good step to look for a mentor. A mentor can help you through the start up landscape, as they have experience which you do not yet have. Besides, a mentor can help you to structure your thoughts about your company. Next to that, a mentor also provides a network, which can help you even further with your start-up. </string>
+    <string name="section7_how_text">When looking for a mentor you need to consider what you want from a mentor. This can be advice, a good network or support. Do you need a mentor with experience in start-ups or do you need a mentor who knows much about 3D printing? It is also important that there is a match between the mentor and mentee. This can be on the basis of a hobby, interests or lifestyle. If you used an incubator as a funding source, they could also function as a mentor. Other ways to look for a mentor are to use your network to find someone who is suited as a mentor. </string>
+    <string name="section7_next_text">With advice easily available, it is an easy step to consider if you need more people in your company. Do you need help from employees? The mentor can help you structure what for and why you need an employee.</string>
+    <!--Section 8.  -->
+    <string name="section8_title">hire the right people</string>
+    <string name="section8_why_text">Once you have set goals for yourself, you will probably no longer be able to do it alone. You either want to grow or you want someone with different knowledge than you have. New people can have different ideas and different perspectives, which betters your company. </string>
+    <string name="section8_how_text">When you decide that you need to hire an employee, there are several factors to consider. Do you want to hire someone who can help you out with work you already do or do you want someone who has different knowledge and thus can focus on other topics? It is important to not only focus on the academic or technical skills, but also on soft skills. Does the personality of someone you hire, fit with you and the company’s goals? It is also good to consider hiring someone with a different background that is already available to you. Next to that you should consider how many people you want to hire and when. You can also consider not doing the recruitment yourself. Do you want to hire someone else to do it or hire an external company? This all depends on how many people you want to hire. When you want to hire several people and expand even more in the coming years it might be worth it to hire someone as part of your company, instead of an external company. </string>
+    <string name="section8_next_text">Once you have a clear aspect of who you want to hire, it is good to know what kind of company culture you want to have. This builds on to the kind of people you want working in your company. </string>
+    <!--Section 9.  -->
+    <string name="section9_title">build a company culture</string>
+    <string name="section9_why_text">In order to finish your company’s ideas, it is important to note which kind of company you would want to be. Your employees form an aspect of your company’s culture, but also the image you have of the company. You have set a goal for yourself and how you want to reach that goal, which also includes how big your company is and is going to be. </string>
+    <string name="section9_how_text">To form your company culture, you have to consider in what kind of environment you like to work, as well as what fits best with the product you are selling. Do you want your company to be small or do you want to continue to expand? Do you like a more hierarchical form or do you want all employees to be equal? The company and thus its culture should represent who you are and what you’re selling.  An inclusive work environment is also important, as a workplace in which different people work, leads to more innovative ideas. Lastly, it helps to establish core values of the company. These values represent what the company does and how is it reaches its goals. </string>
+    <string name="section9_next_text">Now that you have a company culture set, you get to make your way to the global scene. You have values set, which gives potential investors or those who want to buy your product an idea of your company and if it is relevant to them.</string>
+    <!--Section 10.  -->
+    <string name="section10_title">reach out globally</string>
+    <string name="section10_why_text">In a world where everything is as closely connected, as it is now, reaching out globally can be a useful step to expand your company, either with knowledge or expand globally. A reason to want to expand globally can be that you do not want to depend on one national economic market or that your idea has potential in other countries. Besides, building your start-up globally can make your company stronger. </string>
+    <string name="section10_how_text">When you decide to reach out globally, you should start by considering which countries are relevant to you. Why do you want to go to a country and what do you offer there, that is different from what they already have? Through the positioning statement it is already clear which opportunities can go global. After that it is important to consider culture. Does the country where you want to expand speak the same language, do they have different working ethics and does your company culture fit into theirs. Does your business model consider differentiation based on culture?</string>
+    <string name="section10_next_text">You can now identify what is necessary for your company. With the last step of understanding how you can reach out globally, it is possible to create your own company in 3D printing.</string>
     <!--Quiz Generics-->
     <string name="voice_recognition_confirm_message">Otherwise correct and submit your answer.</string>
     <string name="voice_recognition_confirm_title">Did we understand you correctly?</string>
@@ -58,150 +90,215 @@
     <string name="q1_1_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for "Step 1" and a second chance to click.</string>
     <string name="q1.1">George has just bought a 3D printer and seriously considers starting a social enterprise, the main product/service of which should be developed by a 3D printer. What should his first step be?</string>
     <string name="a1.1_a">Checking online for inspiration</string>
-    <string name="a1.1_af">Good try, yet he should consider what he would like to look up online.</string>
     <string name="a1.1_b">Asking everybody he knows for ideas</string>
-    <string name="a1.1_bf">Good idea, yet he should have some boundaries if he wants advice from people.</string>
     <string name="a1.1_c">Asking himself what social/environmental values are the closest to his heart</string>
-    <string name="a1.1_cf">Yes, you got it right!</string>
     <string name="short_revision_1_1">The first step before setting up an enterprise in general, is to think about what you are passionate for, and of course what social/environmental values match your beliefs, ideas and emotions.</string>
     <!--1.2 SHAKE-->
     <string name="q1.2_instruction">Choose answer by shaking the device!  Once for a, twice for b and thrice for c. The chosen answer will be highlighted in green. In case it is wrong, a shorter revision of info for “Step 1” and a second chance to shake.</string>
     <string name="q1.2">What’s next for George?</string>
     <string name="a1.2_a">Registering in the Chamber of Commerce</string>
-    <string name="a1.2_af">Good try, but it might be too soon.</string>
     <string name="a1.2_b">Searching for a 3D printer</string>
-    <string name="a1.2_bf"> Good idea, but what if the idea has no potential?</string>
     <string name="a1.2_c">Checking his idea with his potential target group</string>
-    <string name="a1.2_cf">Yes, that’s the right answer!</string>
     <string name="short_revision_1_2">The second step before setting up an enterprise is to “test” your idea by discussing it, preferably with people that will use it, and ask for feedback.</string>
     <!--1.3 SCAN QR-->
     <string name="q1.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info for “Step 1” and a second chance to choose.</string>
     <string name="q1.3">What could George do after that?</string>
     <string name="a1.3_a">Search for investors</string>
-    <string name="a1.3_af">Good try, yet what if the plan did not work according to his target group?</string>
     <string name="a1.3_b">Buy a 3D printer</string>
-    <string name="a1.3_bf">Good idea, yet the plan might need a little update before buying a 3D printer.</string>
     <string name="a1.3_c">Modify the idea based on the feedback from the target group</string>
-    <string name="a1.3_cf">Yes, you got it right!</string>
     <string name="short_revision_1_3">If feedback is provided from people of your target group you should appropriately revise your entrepreneurial idea.</string>
     <!--2.1 SCAN QR-->
     <string name="q2_1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board.</string>
     <string name="q2.1">George has now a clear idea for his social enterprise using his 3D printer. He is now about to research everything he has to know before starting his social business. What should be the main 2 topics George should focus on?</string>
     <string name="a2.1_a">3D printing and social business model canvas</string>
-    <string name="a2.1_af">Good try, yet this does not help anyone.</string>
     <string name="a2.1_b">The problem to solve and the concerning target groups</string>
-    <string name="a2.1_bf">Yes, that’s the right answer!</string>
     <string name="a2.1_c">Social inclusion and environmental issues</string>
-    <string name="a2.1_cf">Good idea, but this cannot be done without a problem.</string>
     <string name="short_revision_2_1">Before starting your social business to have to research, by really focusing on the problem, why this problem exists, what the consequences of the social issue are, etc. Also pay enough attention to the target groups and all beneficiaries.</string>
     <!--2.2 SCAN QR-->
     <string name="q2.2_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info for “Step 2” and a second chance to choose.</string>
     <string name="q2.2">What should George not forget when researching his social issue?</string>
     <string name="a2.2_a">Finances</string>
-    <string name="a2.2_af">Good try, but finances does not include for whom the social issue is an issue.</string>
     <string name="a2.2_b">Target groups and all beneficiaries</string>
-    <string name="a2.2_bf">Yes, you got it right!</string>
     <string name="a2.2_c">How to fit in the 3D printer as an asset to solve the social issue</string>
-    <string name="a2.2_cf">Good idea, yet a social issue depends on problems from people.</string>
     <string name="short_revision_2_2">You should always pay enough attention to the target groups and all beneficiaries: the direct targets of your project, the human and financial consequences, the characteristics of your beneficiaries and how many people are involved.</string>
     <!--2.3 CLICK-->
     <string name="q2.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 2” and a second chance to click</string>
     <string name="q2.3">What could be George’s key selling point?</string>
     <string name="a2.3_a">Having a 3D printer as the main asset to solve your social issue</string>
-    <string name="a2.3_af">Good try, but only a 3D printer is too much of a basic selling point.</string>
     <string name="a2.3_b">Having a very innovative product/service</string>
-    <string name="a2.3_bf">Yes, that’s the right answer!</string>
     <string name="a2.3_c">Collaboration with other companies on his social issue</string>
-    <string name="a2.3_cf">Good idea, but a collaboration does not sell his service.</string>
     <string name="short_revision_2_3">Last, you should always research on your potential competition. Are there any social businesses already trying to tackle the social issue you are aiming at tackling as well?</string>
     <!--3.1 SPEAK-->
     <string name="q3_1_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info for “Step 3” and a second chance to read.</string>
     <string name="q3.1">George wants to get a global viewpoint on his social enterprise based on 3D printing. He starts with the Positioning Statement of his business. What important question should he ask himself?</string>
     <string name="a3.1_a">Why is my social business better than the other relevant ones?</string>
-    <string name="a3.1_af">Yes, you got it right!</string>
     <string name="a3.1_b">What precisely am I going to offer?</string>
-    <string name="a3.1_bf">Good try, but you should already know what to offer.</string>
     <string name="a3.1_c">What is the social aspect in my social business?</string>
-    <string name="a3.1_cf">Good idea, but you should already know what the social aspect is.</string>
-    <string name="short_revision_3_1"></string>
+    <string name="short_revision_3_1">A Positioning Statement is an answer to why your 3D printing-based product/service is better than the other relevant ones existing.</string>
     <!--3.2 SHAKE-->
     <string name="q3.2_instruction">Choose answer by shaking the device!  Once for a, twice for b and thrice for c. The chosen answer will be highlighted in green. In case it is wrong, a shorter revision of info for “Step 3” and a second chance to shake.</string>
     <string name="q3.2">What should George always keep in mind?</string>
     <string name="a3.2_a">How he aims to write his business plan</string>
-    <string name="a3.2_af">Good try, yet he wants to contribute to society. </string>
     <string name="a3.2_b">How he is contributing to a social cause differently than others</string>
-    <string name="a3.2_bf">Yes, that’s the right answer!</string>
     <string name="a3.2_c">What costs are involved with his business</string>
-    <string name="a3.2_cf">Good idea, but only looking at the costs can prevent you from being innovative. </string>
-    <string name="short_revision_3_2"></string>
+    <string name="short_revision_3_2">You should always remember what creating a social value means to you, what value it is exactly and how you can contribute to a social cause differently than others.</string>
     <!--3.3 CLICK-->
     <string name="q3.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 3” and a second chance to click.</string>
     <string name="q3.3">What can be done now even further?</string>
     <string name="a3.3_a">Contact target groups</string>
-    <string name="a3.3_af">Good try, yet you already have some ideas of the target groups and miss some knowledge about the kind of company you can be.</string>
     <string name="a3.3_b">Do more research</string>
-    <string name="a3.3_bf">Good idea, but this is a bit too broad. You need some more specialized information.</string>
     <string name="a3.3_c">Dig deeper into other matters, like legal structures and funding opportunities</string>
-    <string name="a3.3_cf">Yes, you got it right!</string>
-    <string name="short_revision_3_3"></string>
+    <string name="short_revision_3_3">After having a global viewpoint on your social business you can start resolving other matters like legal structures and funding opportunities.</string>
     <!--4.1 SCAN-->
     <string name="q4_1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. Images will appear for all three answers.  In case of a wrong choice, feedback regarding the legal form that corresponds to the wrong choice will be provided along with a second chance to scan.</string>
     <string name="q4.1">George wonders which type of legal forms his social enterprise should entail. Which is one of the existing types?</string>
     <string name="a4.1_a">Share companies</string>
-    <string name="a4.1_af">Yes, that’s the right answer!</string>
     <string name="a4.1_b">Profit organisations</string>
-    <string name="a4.1_bf">Good try, but this is not the right answer.</string>
     <string name="a4.1_c">Non operative organisations</string>
-    <string name="a4.1_cf">Good idea, but this is not the right answer.</string>
-    <string name="short_revision_4_1"></string>
+    <string name="short_revision_4_1">The main different ‘types’ of legal forms used by social enterprises are non-profit organisations, co-operatives and share companies.</string>
     <!--4.2 SPEAK-->
     <string name="q4.2_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info for “Step 4” and a second chance to read.</string>
     <string name="q4.2">Co-operatives are generally owned and controlled on a democratic basis by…?</string>
     <string name="a4.2_a">Stakeholders</string>
-    <string name="a4.2_af">Good idea, but the right answer is members</string>
     <string name="a4.2_b">Different entities</string>
-    <string name="a4.2_bf">Good idea, but the right answer is members</string>
     <string name="a4.2_c">Members</string>
-    <string name="a4.2_cf">Yes, you got it right!</string>
-    <string name="short_revision_4_2"></string>
+    <string name="short_revision_4_2">Co-operatives are generally owned and controlled on a democratic basis by all those enrolled to them and they distribute profit from trading activities to their members.</string>
     <!--4.3 SCAN-->
     <string name="q4.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. An image will appear only for the correct answer and will be comprised of a sketch containing examples of business support organizations.  In case of a wrong choice, a shorter revision of info for “Step 4” and a second chance to scan.</string>
     <string name="q4.3">What can George do in order to have a deeper understanding of the legal structures in his country in terms of having a social enterprise?</string>
     <string name="a4.3_a">Google everything</string>
-    <string name="a4.3_af">Good idea, but the right answer is contact a business support organisation</string>
     <string name="a4.3_b">Contact a business support organisation</string>
-    <string name="a4.3_bf">Yes, that’s the right answer!</string>
     <string name="a4.3_c">Read books about it</string>
-    <string name="a4.3_cf">Good idea, but the right answer is contact a business support organisation</string>
-    <string name="short_revision_4_3"></string>
+    <string name="short_revision_4_3">When it comes to legal structures basic information is important, but try to go even further by contacting support organisations that could help you with your business.</string>
     <!--5.1 CLICK-->
     <string name="q5_1_instruction">Choose answer by clicking on it! In case it is wrong, a shorter revision of info for “Step 5” and a second chance to click.</string>
     <string name="q5.1">George wants to make a business plan for his 3D printing start-up. He already knows the mission of his company, yet he does not know what the vision should be. What is important for George to consider?</string>
     <string name="a5.1_a">How much money there is</string>
-    <string name="a5.1_af"> Good try, but a vision is dependable on how much money there currently is.</string>
     <string name="a5.1_b">Where does George want his company to go?</string>
-    <string name="a5.1_bf">Yes, you got it right!</string>
     <string name="a5.1_c">What does the company do?</string>
-    <string name="a5.1_cf">Good idea, but the mission states what he wants to do.</string>
-    <string name="short_revision_5_1"></string>
+    <string name="short_revision_5_1">To make a clear business plan it has to be as close to your wishes as it can be and it is important to keep in mind where you want your company to go.</string>
     <!--5.2 COLOR-->
     <string name="q5.2_instruction">Choose answer by scanning a red surface from around to choose a, a green to choose b, or a blue to choose c. In case it is wrong, a shorter revision of info for “Step 5” and a second chance to choose.</string>
     <string name="q5.2">George has decided to make a business plan for his 3D printing start up. Now that he knows the vision, what does he need to consider?</string>
     <string name="a5.2_a">What does he need to do to make the vision possible?</string>
-    <string name="a5.2_af">Yes, that’s the right answer!</string>
     <string name="a5.2_b">Whether this vision will appeal to his customers?</string>
-    <string name="a5.2_bf">Good try, but he already knows his customers.</string>
     <string name="a5.2_c">How to formulate his vision into a slogan?</string>
-    <string name="a5.2_cf">Good idea, but what if the vision cannot happen?</string>
-    <string name="short_revision_5_2"></string>
+    <string name="short_revision_5_2">There are many questions to consider while making your business plan, so you should start with what you want and then look at what you need to make your goal possible.</string>
     <!--5.3 CLICK-->
     <string name="q5.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 5” and a second chance to click.</string>
     <string name="q5.3">George has made a great start with his 3D printing start up. How can the business plan be as effective as possible?</string>
     <string name="a5.3_a">When it is as close to his wishes as it can be</string>
-    <string name="a5.3_af">Yes, you got it right!</string>
     <string name="a5.3_b">When it complies with what his investors want</string>
-    <string name="a5.3_bf">Good try, but what if George does not agree with the investors?</string>
     <string name="a5.3_c">When the business plan is very extensive</string>
-    <string name="a5.3_cf">Good idea, but what should George do when the situation changes and the plan does not leave room for that?</string>
-    <string name="short_revision_5_3"></string>
+    <string name="short_revision_5_3">To make an effective business plan it has to be as close to what you wish as it can be.</string>
+
+    <!--6.1 QR SCAN-->
+    <string name="q6.1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case of a wrong choice, a shorter revision of info regarding the question will be provided and a second chance to scan.</string>
+    <string name="q6.1">George is looking for a way to fund his company. What is important before he can look for funds?</string>
+    <string name="a6.1_a">He should know if he needs funds at all</string>
+    <string name="a6.1_b">He should know people</string>
+    <string name="a6.1_c">He should already have funds</string>
+    <string name="short_revision_6_1">With the costs for your business in mind, it is possible to identify how much money you need for your company and thus if funding is necessary.</string>
+    <!--6.2 SPEAK-->
+    <string name="q6.2_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to read.</string>
+    <string name="q6.2">George has concluded that he needs funding. What should be clear to him before he can look for funds?</string>
+    <string name="a6.2_a">The costs of his company.</string>
+    <string name="a6.2_b">The influence of the market on the price of his product.</string>
+    <string name="a6.2_c">The market</string>
+    <string name="short_revision_6_2">With the costs in mind, it is possible to identify how much funding you need for your company.</string>
+    <!--6.3 QR SCAN-->
+    <string name="q6.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case of a wrong choice, a shorter revision of info regarding the question will be provided and a second chance to scan.</string>
+    <string name="q6.3">George wants somebody to help him fund his 3D printing start up. What is important to consider?</string>
+    <string name="a6.3_a">Does he have one option?</string>
+    <string name="a6.3_b">Is the investor the right one for me?</string>
+    <string name="a6.3_c">Does he want to do a huge investment?</string>
+    <string name="short_revision_6_3">The most important factor regarding funding by others is to consider which fits best with your company, which can be more than one opportunity.</string>
+
+    <!--7.1 SPEAK-->
+    <string name="q7_1_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to read.</string>
+    <string name="q7.1">George is looking for a mentor, where can he find this mentor?</string>
+    <string name="a7.1_a">He should ask around</string>
+    <string name="a7.1_b">He should look in his own network</string>
+    <string name="a7.1_c">He should ask a friend to be his mentor</string>
+    <string name="short_revision_7_1">When looking for a mentor you may use your network to find someone who is suited as a mentor.</string>
+    <!--7.2 COLOR-->
+    <string name="q7.2_instruction">Choose answer by scanning a green surface from around to choose a, a blue to choose b, or a red to choose c. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to scan.</string>
+    <string name="q7.2">George wants to find a mentor to help make his start up even better. George likes to have a mentor with experience. How can George know if there is a match between him and the mentor?</string>
+    <string name="a7.2_a">When there is no connection between them</string>
+    <string name="a7.2_b">When the mentor acts superior</string>
+    <string name="a7.2_c">When the mentor has knowledge of start-ups</string>
+    <string name="short_revision_7_2">A mentor can help you through the start-up landscape, as he has experience which you do not yet have.</string>
+    <!--7.3 SHAKE-->
+    <string name="q7.3_instruction">Choose answer by shaking the device!  Once for a, twice for b and thrice for c. The chosen answer will be highlighted in green. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to shake.</string>
+    <string name="q7.3">George has found a mentor for his start up. What would his next step be?</string>
+    <string name="a7.3_a">Get another mentor involved as well</string>
+    <string name="a7.3_b">Discuss with his mentor whether he needs employees, what for, etc.</string>
+    <string name="a7.3_c">Ask the mentor whether this mentor can take over some of his work</string>
+    <string name="short_revision_7_3">With advice easily available, you may consider if you need more people in your company. The mentor can help you in what for and why you need employees.</string>
+
+    <!--8.1 QR SCAN-->
+    <string name="q8_1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to scan.</string>
+    <string name="q8.1">What other skills besides technical or academic skills are important to focus on when hiring employees?</string>
+    <string name="a8.1_a">Soft skills </string>
+    <string name="a8.1_b">Entrepreneurial skills</string>
+    <string name="a8.1_c">Creative skills</string>
+    <string name="short_revision_8_1">When you decide that you need to hire an employee, there are several factors to consider. It is important to not only focus on the academic or technical skills, but also on soft skills.</string>
+    <!--8.2 CLICK-->
+    <string name="q8.2_instruction">Choose answer by clicking on it! In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to click.</string>
+    <string name="q8.2">George wants to hire several employees over the coming year. What is a good option to consider for him?</string>
+    <string name="a8.2_a">To hire someone to do the recruitment</string>
+    <string name="a8.2_b">To keep doing the recruitment himself</string>
+    <string name="a8.2_c">To hire an external company to do the recruitment</string>
+    <string name="short_revision_8_2">When you want to hire several people in the coming years and not only the next, it might be worth it to hire someone as part of your company, instead of an external company.</string>
+    <!--8.3 COLOR-->
+    <string name="q8.3_instruction">Choose answer by scanning a red surface from around to choose a, a green to choose b, or a blue to choose c. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to scan.</string>
+    <string name="q8.3">What comes next after knowing who George wants to hire?</string>
+    <string name="a8.3_a">Defining the preferred company culture</string>
+    <string name="a8.3_b">Thinking about what kind of cultural background his employees should have</string>
+    <string name="a8.3_c">Think about how he could save as much as possible on his new employees</string>
+    <string name="short_revision_8_3">Once you have a clear aspect of who you want to hire, it is good to know what kind of company culture you want to have.</string>
+
+    <!--9.1 SPEAK-->
+    <string name="q9_1_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to read.</string>
+    <string name="q9.1">George is trying to expand his company. While he is doing that, he notices that a culture is not yet there. What should George consider in order to make a suiting company culture?</string>
+    <string name="a9.1_a">His company values</string>
+    <string name="a9.1_b">His mission</string>
+    <string name="a9.1_c">The goals</string>
+    <string name="short_revision_9_1">The culture of your company helps to establish core values of the company. These values represent what the company does and how is it reaches its goals.</string>
+    <!--9.2 COLOR-->
+    <string name="q9.2_instruction">Choose answer by scanning a blue surface from around to choose a, a red to choose b, or a green to choose c. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to scan.</string>
+    <string name="q9.2">George is making sure that he has some company values. What is important in these values to make sure there are more innovative ideas?</string>
+    <string name="a9.2_a">People should be able to do what they want</string>
+    <string name="a9.2_b">The workplace should be inclusive</string>
+    <string name="a9.2_c">The Employees should not be able to provide new input</string>
+    <string name="short_revision_9_2">An inclusive work environment is important, as a workplace in which different people work, leads to more innovative ideas.</string>
+    <!--9.3 CLICK-->
+    <string name="q9.3_instruction">Choose answer by clicking on it! In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to click.</string>
+    <string name="q9.3">George has set some company values. What should he do with these values?</string>
+    <string name="a9.3_a">He should make sure it is clear to everyone what these values are</string>
+    <string name="a9.3_b">He should have them and not use them</string>
+    <string name="a9.3_c">He should make sure the employees follow them to a point</string>
+    <string name="short_revision_9_3">The values of your company should be clear to employees, potential investors and customers. It is your responsibility to achieve this goal! </string>
+
+    <!--10.1 SHAKE-->
+    <string name="q10_1_instruction">Choose answer by shaking the device!  Once for a, twice for b and thrice for c. The chosen answer will be highlighted in green. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to shake.</string>
+    <string name="q10.1">George is looking to expand his company to a global level. What does he need to consider before he can do so?</string>
+    <string name="a10.1_a">Which countries fit with George’s company?</string>
+    <string name="a10.1_b">To which countries is this idea new?</string>
+    <string name="a10.1_c">What does George’s company need to go global?</string>
+    <string name="short_revision_10_1">When you decide to reach out globally, you should start by considering which countries are relevant to you.</string>
+    <!--10.2 CLICK-->
+    <string name="q10.2_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to click.</string>
+    <string name="q10.2">George has chosen several countries in which his idea might work. What else does he need to consider?</string>
+    <string name="a10.2_a">Are the cultures the same in these countries?</string>
+    <string name="a10.2_b">Does his company culture fit in these countries?</string>
+    <string name="a10.2_c">Is his idea new?</string>
+    <string name="short_revision_10_2">After preparing a list of countries to expand your business to, it is important to consider culture. Do people in the countries speak the same language, have they different working ethics, does your company culture fit into theirs.</string>
+    <!--10.3 QR SCAN-->
+    <string name="q10.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to scan.  </string>
+    <string name="q10.3">George	 is considering a country which has a different language than that of his home country. What should he take into account?</string>
+    <string name="a10.3_a">There might be translation issues.</string>
+    <string name="a10.3_b">Hiring a translator can help in order to prevent translation issues.</string>
+    <string name="a10.3_c">You should always choose a country in which the language is the same.</string>
+    <string name="short_revision_10_3">When expanding your business to a country where the language spoken is different than your home country it is very likely to come along with translation problems which need solutions.</string>
 </resources>
