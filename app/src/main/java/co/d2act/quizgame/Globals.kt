@@ -32,7 +32,7 @@ object Globals {
     val types5 = arrayListOf(CLICK,CLICK,CLICK)*/
     val questionTypes = arrayListOf(types1,types2,types3,types4,types5,types6,types7,types8,types9,types10)
     private val answers1 = arrayListOf(3,3,3)
-    private val answers2 = arrayListOf(2,2,2)
+    private val answers2 = arrayListOf(0,2,2) //2.1 requires two answers
     private val answers3 = arrayListOf(1,2,3)
     private val answers4 = arrayListOf(1,3,2)
     private val answers5 = arrayListOf(2,1,1)
@@ -101,5 +101,9 @@ object Globals {
         } else {
             1
         }
+    }
+
+    fun getScore():Int {
+        return score
     }
 }

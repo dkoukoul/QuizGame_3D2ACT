@@ -17,6 +17,18 @@
     <string name="dialog_wrong_answer_first_attempt">Good try. You have a second chance.</string>
     <string name="dialog_wrong_answer_second_attempt">Nice try. Maybe next time.</string>
     <string name="dialog_correct_answer">Yes, you got it right!</string>
+    <!--Score card -->
+    <string name="score_congratulations">Congratulations\nfor finishing the game</string>
+    <string name="score_title">You achieved a score of</string>
+    <!--Quiz Generics-->
+    <string name="voice_recognition_confirm_message">Otherwise correct and submit your answer.</string>
+    <string name="voice_recognition_confirm_title">Did we understand you correctly?</string>
+    <string name="alert_submit_button">Submit</string>
+    <string name="alert_cancel_button">Cancel</string>
+    <string name="toast_wrong_answer">Wrong answer</string>
+    <string name="toast_wrong_color">Could not identify red, green or blue. Please try again.</string>
+    <string name="toast_wrong_speech">Could not match to any answer. Please try again.</string>
+
     <!--Project description-->
     <string name="project_description">Digitalization and industry 4.0 are perhaps the most important drivers behind the profound transformation of the labour market, the way people work and the new digital skills required to meet the needs of the digitalized market. VET is valued for fostering job-specific and transversal skills, facilitating the transition into employment and maintaining and updating the skills of the workforce according to sectoral, regional and local needs.\nThe 3D2ACT project supports VET trainers and educators in an attempt to strengthen their profiles with the acquisition of new skills, the development of targeted material, the collection of tools and resources, while at the same time creating opportunities for linking VET schools with the labour market building on synergies and partnerships with established organizations using industry 4.0 and automation or 3D printing.\nThe aim of this app is to promote key competencies targeted on entrepreneurial skills, but with a social impact as they are responding to social challenges/needs and have a benefit for the community, the environment, or culture. Having an entrepreneurial mindset is a great advantage in today’s job market since it is what makes ideas come true and become a reality. Creativity is the engine of entrepreneurship.</string>
     <!--Section 1. Choose a social issue -->
@@ -77,14 +89,7 @@ The most important factor is to consider which fits best with your company, whic
     <string name="section10_why_text">In a world where everything is as closely connected, as it is now, reaching out globally can be a useful step to expand your company, either with knowledge or expand globally. A reason to want to expand globally can be that you do not want to depend on one national economic market or that your idea has potential in other countries. Besides, building your start-up globally can make your company stronger. </string>
     <string name="section10_how_text">When you decide to reach out globally, you should start by considering which countries are relevant to you. Why do you want to go to a country and what do you offer there, that is different from what they already have? Through the positioning statement it is already clear which opportunities can go global. After that it is important to consider culture. Does the country where you want to expand speak the same language, do they have different working ethics and does your company culture fit into theirs. Does your business model consider differentiation based on culture?</string>
     <string name="section10_next_text">You can now identify what is necessary for your company. With the last step of understanding how you can reach out globally, it is possible to create your own company in 3D printing.</string>
-    <!--Quiz Generics-->
-    <string name="voice_recognition_confirm_message">Otherwise correct and submit your answer.</string>
-    <string name="voice_recognition_confirm_title">Did we understand you correctly?</string>
-    <string name="alert_submit_button">Submit</string>
-    <string name="alert_cancel_button">Cancel</string>
-    <string name="toast_wrong_answer">Wrong answer</string>
-    <string name="toast_wrong_color">Could not identify red, green or blue. Please try again.</string>
-    <string name="toast_wrong_speech">Could not match to any answer. Please try again.</string>
+
     <!--QnA-->
     <!--1.1 CLICK-->
     <string name="q1_1_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for "Step 1" and a second chance to click.</string>

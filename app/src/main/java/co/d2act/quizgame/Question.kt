@@ -62,12 +62,13 @@ class Question : AppCompatActivity(), SensorEventListener {
     private val speechToTextRequest = 103
     private var mCurrentPhotoPath = ""
     private var imageUri: Uri? = null
-    private var feedback: ArrayList<ArrayList<ArrayList<String>>> = arrayListOf(arrayListOf(arrayListOf()))
     private var shakingAnswer = 0
     private var shortRevision: String = ""
     private var doubleBackToExitPressedOnce = false
     private var firstAttempt = true
     private val colorDiff = 20
+    private var firstAnswer = ""
+    private var secondAnswer = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -514,11 +515,27 @@ class Question : AppCompatActivity(), SensorEventListener {
             val section = contents.split("_")[0].toInt()
             val question = contents.split("_")[1].toInt()
             val answer = contents.split("_")[2].toInt()
-
-            if (section == Globals.getSection() && question == Globals.getQuestion()) {
+            //Handle special case for 2_1 which require two QR codes
+            if ((Globals.getSection() == 2) && (Globals.getQuestion() == 1)) {
+                //Record first answer and open scanner again for second
+                if (firstAnswer.isNotEmpty()) {
+                    secondAnswer = contents
+                } else {
+                    firstAnswer = contents
+                }
+                if (firstAnswer.isNotEmpty() && secondAnswer.isNotEmpty()) {
+                    if (firstAnswer.contains("2_1_1") && secondAnswer.contains("2_1_1")){
+                        correctAnswer()
+                    } else {
+                        wrongAnswer()
+                    }
+                } else {
+                    scanCode()
+                }
+            } else if (section == Globals.getSection() && question == Globals.getQuestion()) {
                 checkAnswer(answer)
             } else {
-                wrongAnswer("")
+                wrongAnswer()
             }
         } catch (e: Exception) {
             Toast.makeText(baseContext, "Invalid QR Code", Toast.LENGTH_SHORT).show()
@@ -631,18 +648,23 @@ class Question : AppCompatActivity(), SensorEventListener {
         val section = Globals.getSection()-1
         val question = Globals.getQuestion()-1
         if (Globals.answers[section][question] == answer) {
-            correctAnswer(feedback[section][question][answer-1])
+            correctAnswer()
         } else {
-            wrongAnswer(feedback[section][question][answer-1])
+            wrongAnswer()
         }
     }
 
-    private fun correctAnswer(message: String) {
-        showDialog(message, true)
+    private fun correctAnswer() {
+        showDialog(getString(R.string.dialog_correct_answer), true)
     }
 
-    private fun wrongAnswer(message:String) {
-        showDialog(message, false)
+    private fun wrongAnswer() {
+        if (firstAttempt) {
+            showDialog(getString(R.string.dialog_wrong_answer_first_attempt), false)
+        } else {
+            showDialog(getString(R.string.dialog_wrong_answer_second_attempt), false)
+        }
+
         //show feedback
         val feedbackLayout = findViewById<LinearLayout>(R.id.feedback_layout)
         val feedback = findViewById<TextView>(R.id.feedback)
@@ -691,8 +713,14 @@ class Question : AppCompatActivity(), SensorEventListener {
         //Go to next section
         //TODO: handle end of game with scoreboard
         if (gotoNextSession) {
-            val sectionActivity = Intent(applicationContext, Section::class.java)
-            startActivity(sectionActivity)
+            if (Globals.getSection() == 10) {
+                //End of game
+                val scoreIntent = Intent(this, ScoreActivity::class.java)
+                startActivity(scoreIntent)
+            } else {
+                val sectionActivity = Intent(applicationContext, Section::class.java)
+                startActivity(sectionActivity)
+            }
         }
         //Go to next question
         else {
