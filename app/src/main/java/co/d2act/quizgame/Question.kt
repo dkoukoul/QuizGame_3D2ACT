@@ -35,16 +35,6 @@ import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
-//TODO: randomise the order of the questions for each sections
-
-//TODO: improve color detection
-
-//TODO: add scoring and posting to online scoreboard
-
-//TODO: two qr scanning for answering 2.1.1
-
-//TODO:
-
 @Suppress("DEPRECATION")
 class Question : AppCompatActivity(), SensorEventListener {
 
@@ -116,7 +106,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             2 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q2_1_instruction)
                         question.text = getString(R.string.q2_1)
@@ -144,7 +134,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             3 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q3_1_instruction)
                         question.text = getString(R.string.q3_1)
@@ -172,7 +162,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             4 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q4_1_instruction)
                         question.text = getString(R.string.q4_1)
@@ -200,7 +190,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             5 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q5_1_instruction)
                         question.text = getString(R.string.q5_1)
@@ -228,7 +218,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             6 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q6_1_instruction)
                         question.text = getString(R.string.q6_1)
@@ -256,7 +246,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             7 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q7_1_instruction)
                         question.text = getString(R.string.q7_1)
@@ -284,7 +274,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             8 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q8_1_instruction)
                         question.text = getString(R.string.q8_1)
@@ -312,7 +302,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             9 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q9_1_instruction)
                         question.text = getString(R.string.q9_1)
@@ -340,7 +330,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 }
             }
             10 -> {
-                when(Globals.getQuestion()) {
+                when(Globals.getRandomQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q10_1_instruction)
                         question.text = getString(R.string.q10_1)
@@ -524,6 +514,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                     firstAnswer = contents
                 }
                 if (firstAnswer.isNotEmpty() && secondAnswer.isNotEmpty()) {
+                    //TODO: handle the case where user answers twice with the same qr code 2_1_1a or 2_1_1b
                     if (firstAnswer.contains("2_1_1") && secondAnswer.contains("2_1_1")){
                         correctAnswer()
                     } else {
@@ -709,10 +700,12 @@ class Question : AppCompatActivity(), SensorEventListener {
 
     private fun goToNext() {
         var gotoNextSession = false
-        if (Globals.getQuestion() == 3) gotoNextSession = true
-        Globals.nextQuestion()
+        if (Globals.answeredQuestions.size == 3) {
+            gotoNextSession = true
+            Globals.nextSection()
+        }
+
         //Go to next section
-        //TODO: handle end of game with scoreboard
         if (gotoNextSession) {
             if (Globals.getSection() == 10) {
                 //End of game

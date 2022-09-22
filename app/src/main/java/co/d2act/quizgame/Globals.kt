@@ -42,7 +42,7 @@ object Globals {
     private val answers9 = arrayListOf(1,2,1)
     private val answers10 = arrayListOf(1,1,1)
     val answers = arrayListOf(answers1, answers2, answers3, answers4, answers5, answers6, answers7, answers8, answers9, answers10)
-    private var answeredQuestions : ArrayList<Int> = arrayListOf()
+    var answeredQuestions : ArrayList<Int> = arrayListOf()
     private var score = 0
 
     fun start() {
@@ -54,12 +54,13 @@ object Globals {
         currentQuestion = 1
     }
 
-    private fun nextSection() {
+    fun nextSection() {
+        answeredQuestions.clear()
         currentSection++
     }
 
     fun nextQuestion() {
-        if (currentQuestion == 3) {
+        if (answeredQuestions.size == 3) {
             currentQuestion = 1
             nextSection()
         } else {
@@ -76,23 +77,13 @@ object Globals {
     }
 
     fun getRandomQuestion(): Int {
-        //get next question excluding the answered ones
-        while (!answeredQuestions.contains(currentQuestion)) {
-            currentQuestion = Random.nextInt(1,3)
-        }
+        currentQuestion = Random.nextInt(1,4)
+        if (!answeredQuestions.contains(currentQuestion))
+            answeredQuestions.add(currentQuestion)
+        else
+            getRandomQuestion()
+
         return currentQuestion
-    }
-
-
-    fun goBack() {
-        if (currentQuestion==1) {
-            if (currentSection > 1) {
-                currentSection--
-                currentQuestion = 3
-            }
-        } else {
-            currentQuestion--
-        }
     }
 
     fun addScore(firstAttempt: Boolean) {
