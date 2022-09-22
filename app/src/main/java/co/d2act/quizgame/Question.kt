@@ -514,7 +514,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         try {
             val section = contents.split("_")[0].toInt()
             val question = contents.split("_")[1].toInt()
-            val answer = contents.split("_")[2].toInt()
+
             //Handle special case for 2_1 which require two QR codes
             if ((Globals.getSection() == 2) && (Globals.getQuestion() == 1)) {
                 //Record first answer and open scanner again for second
@@ -533,6 +533,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                     scanCode()
                 }
             } else if (section == Globals.getSection() && question == Globals.getQuestion()) {
+                val answer = contents.split("_")[2].toInt()
                 checkAnswer(answer)
             } else {
                 wrongAnswer()
