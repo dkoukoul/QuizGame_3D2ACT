@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:padding="10dp"
-            android:text="@string/a1.1_af"/>
+            android:text=""/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/layout_answers"
