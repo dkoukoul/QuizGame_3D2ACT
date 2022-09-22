@@ -4,6 +4,7 @@
     <string name="button_next">NEXT</string>
     <string name="button_try">TRY AGAIN</string>
     <string name="button_start">START</string>
+    <string name="button_end">END</string>
     <!--Section Generic-->
     <string name="section_why">WHY?</string>
     <string name="section_how">HOW?</string>
@@ -207,8 +208,8 @@ The most important factor is to consider which fits best with your company, whic
     <!--6.2 SPEAK-->
     <string name="q6.2_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to read.</string>
     <string name="q6.2">George has concluded that he needs funding. What should be clear to him before he can look for funds?</string>
-    <string name="a6.2_a">The costs of his company.</string>
-    <string name="a6.2_b">The influence of the market on the price of his product.</string>
+    <string name="a6.2_a">The costs of his company</string>
+    <string name="a6.2_b">The influence of the market on the price of his product</string>
     <string name="a6.2_c">The market</string>
     <string name="short_revision_6_2">With the costs in mind, it is possible to identify how much funding you need for your company.</string>
     <!--6.3 QR SCAN-->
@@ -302,8 +303,8 @@ The most important factor is to consider which fits best with your company, whic
     <!--10.3 QR SCAN-->
     <string name="q10.3_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to scan.  </string>
     <string name="q10.3">George	 is considering a country which has a different language than that of his home country. What should he take into account?</string>
-    <string name="a10.3_a">There might be translation issues.</string>
-    <string name="a10.3_b">Hiring a translator can help in order to prevent translation issues.</string>
-    <string name="a10.3_c">You should always choose a country in which the language is the same.</string>
+    <string name="a10.3_a">There might be translation issues</string>
+    <string name="a10.3_b">Hiring a translator can help in order to prevent translation issues</string>
+    <string name="a10.3_c">You should always choose a country in which the language is the same</string>
     <string name="short_revision_10_3">When expanding your business to a country where the language spoken is different than your home country it is very likely to come along with translation problems which need solutions.</string>
 </resources>
