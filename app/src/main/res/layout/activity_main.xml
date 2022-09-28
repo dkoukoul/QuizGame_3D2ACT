@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logo_horizontal"/>
+
     <ScrollView
         android:id="@+id/main_scrollview"
         android:layout_width="match_parent"
@@ -33,6 +34,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/logo"
                 app:layout_constraintBottom_toTopOf="@+id/button_start"/>
+            <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/funded"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eu_project_disclaimer"
+                android:paddingHorizontal="20dp"/>
             <Button
                 android:id="@+id/button_start"
                 android:layout_width="match_parent"

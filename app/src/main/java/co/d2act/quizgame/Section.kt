@@ -95,15 +95,9 @@ class Section : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-/*        super.onBackPressed()
-        if (Globals.getSection() > 1) {
-            Globals.goBack()
-            val questionActivity = Intent(applicationContext, Question::class.java)
-            startActivity(questionActivity)
-        }*/
-
         if(doubleBackToExitPressedOnce) {
-            /*super.onBackPressed()*/
+            //clear cache
+            Globals.clearCache()
             this.finishAffinity()
             return
         }

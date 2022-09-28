@@ -62,38 +62,44 @@
             android:padding="10dp"
             android:text=""/>
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/layout_answers"
+    <ScrollView
+        android:id="@+id/questions_scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/answer1"
+        android:layout_marginHorizontal="20dp">
+        <LinearLayout
+            android:id="@+id/layout_answers"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            style="@style/ButtonStyle"
-            android:enabled="true"
-            android:text="@string/a1.1_a"/>
-        <Button
-            android:id="@+id/answer2"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            style="@style/ButtonStyle"
-            android:text="@string/a1.1_b"/>
-        <Button
-            android:id="@+id/answer3"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            style="@style/ButtonStyle"
-            android:text="@string/a1.1_c"/>
-        <ImageButton
-            android:id="@+id/button_answer"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_green"
-            android:layout_gravity="center"
-            android:visibility="gone"
-            android:src="@drawable/ic_qr_code"/>
-    </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/answer1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                style="@style/ButtonStyle"
+                android:enabled="true"
+                android:text="@string/a1.1_a"/>
+            <Button
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                style="@style/ButtonStyle"
+                android:text="@string/a1.1_b"/>
+            <Button
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                style="@style/ButtonStyle"
+                android:text="@string/a1.1_c"/>
+            <ImageButton
+                android:id="@+id/button_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_green"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/ic_qr_code"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -4,6 +4,7 @@
     package="co.d2act.quizgame">
     <!-- Permissions for color detection -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -52,5 +53,9 @@
                 android:resource="@xml/provider_paths" />
         </provider>
     </application>
-
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
 </manifest>

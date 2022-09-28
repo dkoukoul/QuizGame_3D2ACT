@@ -1,5 +1,7 @@
 package co.d2act.quizgame
 
+import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 
@@ -11,9 +13,10 @@ object Globals {
     const val COLOR = 5
     private var currentSection = 0
     private var currentQuestion = 0
+    lateinit var prefs: SharedPreferences
 
-    //private val types1 = arrayListOf(CLICK,SHAKE,SCAN)
-    private val types1 = arrayListOf(CLICK,SHAKE,QRSCAN)
+    private val types1 = arrayListOf(SPEAK,SHAKE,CLICK)
+    //private val types1 = arrayListOf(CLICK,SHAKE,QRSCAN)
     private val types2 = arrayListOf(QRSCAN,QRSCAN,CLICK)
     private val types3 = arrayListOf(SPEAK,SHAKE,CLICK)
     private val types4 = arrayListOf(QRSCAN,SPEAK,QRSCAN)
@@ -96,5 +99,28 @@ object Globals {
 
     fun getScore():Int {
         return score
+    }
+
+    fun saveCache() {
+        prefs.edit().putInt("section", currentSection).apply()
+        prefs.edit().putInt("question", currentQuestion).apply()
+        prefs.edit().putInt("score", score).apply()
+        prefs.edit().putString("answeredQuestions", answeredQuestions.toString()).apply()
+    }
+
+    fun clearCache() {
+        prefs.edit().clear().apply()
+    }
+
+    fun restoreCache():Boolean {
+        return if (prefs.contains("section")) {
+            currentSection = prefs.getInt("section", 1)
+            currentQuestion = prefs.getInt("question", 1)
+            score = prefs.getInt("score", 0)
+            answeredQuestions = prefs.getString("answeredQuestions", "")!!.split(",") as ArrayList<Int>
+            true
+        } else {
+            false
+        }
     }
 }

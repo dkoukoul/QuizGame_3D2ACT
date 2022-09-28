@@ -15,6 +15,7 @@ class ScoreActivity : AppCompatActivity() {
 
         val buttonEnd = findViewById<Button>(R.id.button_end)
         buttonEnd.setOnClickListener {
+            Globals.clearCache()
             finishAndRemoveTask()
         }
     }

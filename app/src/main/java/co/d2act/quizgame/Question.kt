@@ -16,6 +16,7 @@ import android.os.Environment
 import android.os.Handler
 import android.provider.MediaStore
 import android.speech.RecognizerIntent
+import android.speech.SpeechRecognizer
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -35,6 +36,7 @@ import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 @Suppress("DEPRECATION")
 class Question : AppCompatActivity(), SensorEventListener {
 
@@ -49,7 +51,6 @@ class Question : AppCompatActivity(), SensorEventListener {
     private val shakeSpeedThreshold = 1000
     private var shakeDuration = 0
     private val cameraCaptureImageRequest = 102
-    private val speechToTextRequest = 103
     private var mCurrentPhotoPath = ""
     private var imageUri: Uri? = null
     private var shakingAnswer = 0
@@ -59,10 +60,14 @@ class Question : AppCompatActivity(), SensorEventListener {
     private val colorDiff = 20
     private var firstAnswer = ""
     private var secondAnswer = ""
+    lateinit var speechRecognizer: SpeechRecognizer
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
+        speechRecognizer.setRecognitionListener(VoiceListener(this))
         updateContent()
     }
 
@@ -452,13 +457,10 @@ class Question : AppCompatActivity(), SensorEventListener {
      */
     private fun voiceRecognition() {
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-        intent.putExtra(
-            RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-            RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
-        )
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Read the answer...")
-        startActivityForResult(intent, speechToTextRequest)
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+        speechRecognizer.startListening(intent)
     }
+
 
     /**
      * Will initiate the intent for QR Code scanning
@@ -476,14 +478,6 @@ class Question : AppCompatActivity(), SensorEventListener {
 
         if (requestCode == cameraCaptureImageRequest) {
             getColorFromImage()
-        } else if (requestCode == speechToTextRequest) {
-            //Populate the strings to an alert dialog to confirm the answer
-            val matches = data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
-            if (matches != null) {
-                confirmVoiceRecognition(matches)
-            } else {
-                //TODO: try again because we got no words back
-            }
         } else {
             val intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
             if (intentResult != null) {
@@ -539,7 +533,7 @@ class Question : AppCompatActivity(), SensorEventListener {
      * edit, confirm before submitting it as an answer. Gets submitted text and
      * checks it against checkAnswer
      */
-    private fun confirmVoiceRecognition(words: ArrayList<String>) {
+    fun confirmVoiceRecognition(words: ArrayList<String>) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle(getString(R.string.voice_recognition_confirm_title))
         builder.setMessage(getString(R.string.voice_recognition_confirm_message))
@@ -699,6 +693,7 @@ class Question : AppCompatActivity(), SensorEventListener {
     }
 
     private fun goToNext() {
+
         var gotoNextSession = false
         if (Globals.answeredQuestions.size == 3) {
             gotoNextSession = true
@@ -721,6 +716,7 @@ class Question : AppCompatActivity(), SensorEventListener {
             val questionActivity = Intent(applicationContext, Question::class.java)
             startActivity(questionActivity)
         }
+        Globals.saveCache()
         finish()
     }
 
@@ -831,6 +827,8 @@ class Question : AppCompatActivity(), SensorEventListener {
 
     override fun onBackPressed() {
         if(doubleBackToExitPressedOnce) {
+            //clear cache
+            Globals.clearCache()
             this.finishAffinity()
             /*super.onBackPressed()*/
             return
@@ -838,13 +836,5 @@ class Question : AppCompatActivity(), SensorEventListener {
         doubleBackToExitPressedOnce = true
         Toast.makeText(this, getString(R.string.toast_back_button), Toast.LENGTH_SHORT).show()
         Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
-/*        if (Globals.getQuestion() == 1) {
-            //will finish question activity and return to section activity
-            Globals.goBack()
-        } else {
-            Globals.goBack()
-            val questionActivity = Intent(applicationContext, Question::class.java)
-            startActivity(questionActivity)
-        }*/
     }
 }

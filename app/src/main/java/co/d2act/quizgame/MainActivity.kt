@@ -14,23 +14,34 @@ class MainActivity : AppCompatActivity() {
     private val requestCodeAskPermissions = 1
     private val requiredSDKPermissions = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
-        Manifest.permission.CAMERA
+        Manifest.permission.CAMERA,
+        Manifest.permission.RECORD_AUDIO
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val buttonStart = findViewById<Button>(R.id.button_start)
+        Globals.prefs = getSharedPreferences("co.d2act.quizgame", AppCompatActivity.MODE_PRIVATE)
         buttonStart.setOnClickListener {
             //Launch 1st section
             Globals.start()
             val sectionActivity = Intent(applicationContext, Section::class.java)
             startActivity(sectionActivity)
         }
+        checkCacheAndResume()
+    }
+
+    private fun checkCacheAndResume() {
+        if (Globals.restoreCache()) {
+            val activity = Intent(applicationContext, Question::class.java)
+            startActivity(activity)
+        }
     }
 
     override fun onStart() {
         super.onStart()
         checkPermissions()
+
     }
 
     private fun checkPermissions() {
@@ -44,16 +55,12 @@ class MainActivity : AppCompatActivity() {
         }
         if (missingPermissions.isNotEmpty()) {
             // request all missing permissions
-            val permissions = missingPermissions
-                .toTypedArray()
+            val permissions = missingPermissions.toTypedArray()
             ActivityCompat.requestPermissions(this, permissions, requestCodeAskPermissions)
         } else {
             val grantResults = IntArray(requiredSDKPermissions.size)
             Arrays.fill(grantResults, PackageManager.PERMISSION_GRANTED)
-            onRequestPermissionsResult(
-                requestCodeAskPermissions, requiredSDKPermissions,
-                grantResults
-            )
+            onRequestPermissionsResult(requestCodeAskPermissions, requiredSDKPermissions, grantResults)
         }
     }
 }

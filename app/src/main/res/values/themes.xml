@@ -10,6 +10,5 @@
     <style name="ButtonStyle" parent="Theme.3D2ACTQuiz">
         <item name="backgroundTint">@color/buttons</item>
         <item name="android:textColor">@color/button_text</item>
-        <item name="textAllCaps">true</item>
     </style>
 </resources>
