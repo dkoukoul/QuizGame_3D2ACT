@@ -15,25 +15,25 @@ object Globals {
     private var currentQuestion = 0
     lateinit var prefs: SharedPreferences
 
-    private val types1 = arrayListOf(SPEAK,SHAKE,CLICK)
-    //private val types1 = arrayListOf(CLICK,SHAKE,QRSCAN)
+    //DEBUG//private val types1 = arrayListOf(SPEAK,SHAKE,CLICK)
+    /*private val types1 = arrayListOf(CLICK,SHAKE,QRSCAN)
     private val types2 = arrayListOf(QRSCAN,QRSCAN,CLICK)
     private val types3 = arrayListOf(SPEAK,SHAKE,CLICK)
     private val types4 = arrayListOf(QRSCAN,SPEAK,QRSCAN)
-    private val types5 = arrayListOf(CLICK,COLOR,CLICK)
+    private val types5 = arrayListOf(CLICK,COLOR,CLICK)*/
     private val types6 = arrayListOf(QRSCAN,SPEAK,QRSCAN)
     private val types7 = arrayListOf(SPEAK,COLOR,SHAKE)
     private val types8 = arrayListOf(QRSCAN,CLICK,COLOR)
     private val types9 = arrayListOf(SPEAK,COLOR,CLICK)
     private val types10 = arrayListOf(SHAKE,CLICK,QRSCAN)
-
     //ALL CLICK for DEBUGGING
-/*    val types1 = arrayListOf(CLICK,CLICK,CLICK)
+    val types1 = arrayListOf(CLICK,CLICK,CLICK)
     val types2 = arrayListOf(CLICK,CLICK,CLICK)
     val types3 = arrayListOf(CLICK,CLICK,CLICK)
     val types4 = arrayListOf(CLICK,CLICK,CLICK)
-    val types5 = arrayListOf(CLICK,CLICK,CLICK)*/
+    val types5 = arrayListOf(CLICK,CLICK,CLICK)
     val questionTypes = arrayListOf(types1,types2,types3,types4,types5,types6,types7,types8,types9,types10)
+
     private val answers1 = arrayListOf(3,3,3)
     private val answers2 = arrayListOf(0,2,2) //2.1 requires two answers
     private val answers3 = arrayListOf(1,2,3)
@@ -59,6 +59,7 @@ object Globals {
 
     fun nextSection() {
         answeredQuestions.clear()
+        prefs.edit().remove("answeredQuestions").apply()
         currentSection++
     }
 
@@ -81,11 +82,9 @@ object Globals {
 
     fun getRandomQuestion(): Int {
         currentQuestion = Random.nextInt(1,4)
-        if (!answeredQuestions.contains(currentQuestion))
-            answeredQuestions.add(currentQuestion)
-        else
-            getRandomQuestion()
-
+        while (answeredQuestions.contains(currentQuestion)) {
+            currentQuestion = Random.nextInt(1,4)
+        }
         return currentQuestion
     }
 
@@ -116,8 +115,12 @@ object Globals {
         return if (prefs.contains("section")) {
             currentSection = prefs.getInt("section", 1)
             currentQuestion = prefs.getInt("question", 1)
-            score = prefs.getInt("score", 0)
-            answeredQuestions = prefs.getString("answeredQuestions", "")!!.split(",") as ArrayList<Int>
+            if (prefs.getString("answeredQuestions", "") != "") {
+                answeredQuestions = prefs.getString("answeredQuestions", "")!!.split(",") as ArrayList<Int>
+                score = prefs.getInt("score", 0)
+            } else {
+                answeredQuestions.clear()
+            }
             true
         } else {
             false

@@ -28,6 +28,7 @@ import co.d2act.quizgame.Globals.COLOR
 import co.d2act.quizgame.Globals.QRSCAN
 import co.d2act.quizgame.Globals.SHAKE
 import co.d2act.quizgame.Globals.SPEAK
+import co.d2act.quizgame.Globals.answeredQuestions
 import co.d2act.quizgame.Globals.questionTypes
 import com.google.zxing.integration.android.IntentIntegrator
 import java.io.File
@@ -83,6 +84,9 @@ class Question : AppCompatActivity(), SensorEventListener {
         val answer3 = findViewById<Button>(R.id.answer3)
         when(Globals.getSection()) {
             1 -> {
+                if (answeredQuestions.contains(Globals.getQuestion())) {
+                    Globals.nextQuestion()
+                }
                 when(Globals.getQuestion()) {
                     1 -> {
                         qInstruction.text = getString(R.string.q1_1_instruction)
@@ -510,9 +514,9 @@ class Question : AppCompatActivity(), SensorEventListener {
                 if (firstAnswer.isNotEmpty() && secondAnswer.isNotEmpty()) {
                     //TODO: handle the case where user answers twice with the same qr code 2_1_1a or 2_1_1b
                     if (firstAnswer.contains("2_1_1") && secondAnswer.contains("2_1_1")){
-                        correctAnswer()
+                        correctAnswer(0)
                     } else {
-                        wrongAnswer()
+                        wrongAnswer(0)
                     }
                 } else {
                     scanCode()
@@ -521,7 +525,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 val answer = contents.split("_")[2].toInt()
                 checkAnswer(answer)
             } else {
-                wrongAnswer()
+                wrongAnswer(0)
             }
         } catch (e: Exception) {
             Toast.makeText(baseContext, "Invalid QR Code", Toast.LENGTH_SHORT).show()
@@ -634,21 +638,21 @@ class Question : AppCompatActivity(), SensorEventListener {
         val section = Globals.getSection()-1
         val question = Globals.getQuestion()-1
         if (Globals.answers[section][question] == answer) {
-            correctAnswer()
+            correctAnswer(answer)
         } else {
-            wrongAnswer()
+            wrongAnswer(answer)
         }
     }
 
-    private fun correctAnswer() {
-        showDialog(getString(R.string.dialog_correct_answer), true)
+    private fun correctAnswer(answer: Int) {
+        showDialog(getString(R.string.dialog_correct_answer), true, answer)
     }
 
-    private fun wrongAnswer() {
+    private fun wrongAnswer(answer: Int) {
         if (firstAttempt) {
-            showDialog(getString(R.string.dialog_wrong_answer_first_attempt), false)
+            showDialog(getString(R.string.dialog_wrong_answer_first_attempt), false, answer)
         } else {
-            showDialog(getString(R.string.dialog_wrong_answer_second_attempt), false)
+            showDialog(getString(R.string.dialog_wrong_answer_second_attempt), false, answer)
         }
 
         //show feedback
@@ -659,7 +663,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         /*Toast.makeText(this,getString(R.string.toast_wrong_answer),Toast.LENGTH_LONG).show()*/
     }
 
-    private fun showDialog(message: String, correct: Boolean) {
+    private fun showDialog(message: String, correct: Boolean, answer: Int) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle("")
         //builder.setMessage(message)
@@ -670,7 +674,7 @@ class Question : AppCompatActivity(), SensorEventListener {
             Globals.addScore(firstAttempt)
             builder.setPositiveButton(getString(R.string.button_next)) { dialog, _ ->
                 dialog.dismiss()
-                goToNext()
+                goToNext(answer)
             }
         } else {
             //Wrong answer, first attempt, try again
@@ -683,8 +687,8 @@ class Question : AppCompatActivity(), SensorEventListener {
             } else {
                 //Wrong answer, 2nd attempt, go to next
                 builder.setMessage(getString(R.string.dialog_wrong_answer_second_attempt))
-                builder.setPositiveButton(getString(R.string.button_next)) { dialog, _ ->
-                    goToNext()
+                builder.setPositiveButton(getString(R.string.button_next)) { _, _ ->
+                    goToNext(answer)
                 }
             }
         }
@@ -692,8 +696,8 @@ class Question : AppCompatActivity(), SensorEventListener {
         alert.show()
     }
 
-    private fun goToNext() {
-
+    private fun goToNext(answer: Int) {
+        answeredQuestions.add(answer)
         var gotoNextSession = false
         if (Globals.answeredQuestions.size == 3) {
             gotoNextSession = true
@@ -713,6 +717,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         }
         //Go to next question
         else {
+            Globals.nextQuestion()
             val questionActivity = Intent(applicationContext, Question::class.java)
             startActivity(questionActivity)
         }

@@ -56,6 +56,11 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/section1_why_text"/>
             </LinearLayout>
+            <ImageView
+                android:id="@+id/section_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/s1_icon"/>
             <LinearLayout
                 android:id="@+id/section_how"
                 android:layout_width="match_parent"

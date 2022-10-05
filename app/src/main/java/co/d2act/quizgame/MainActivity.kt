@@ -33,8 +33,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkCacheAndResume() {
         if (Globals.restoreCache()) {
-            val activity = Intent(applicationContext, Question::class.java)
-            startActivity(activity)
+            if (Globals.answeredQuestions.size > 0) {
+                val activity = Intent(applicationContext, Question::class.java)
+                startActivity(activity)
+            } else {
+                val sectionActivity = Intent(applicationContext, Section::class.java)
+                startActivity(sectionActivity)
+            }
         }
     }
 
