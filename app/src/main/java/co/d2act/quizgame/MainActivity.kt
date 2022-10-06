@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import java.util.*
@@ -33,6 +34,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkCacheAndResume() {
         if (Globals.restoreCache()) {
+            //Ask user if they want to resume
+            askToResume()
+        }
+    }
+
+    private fun askToResume() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle(getString(R.string.dialog_resume_title))
+        builder.setMessage(getString(R.string.dialog_resume_message))
+        builder.setPositiveButton(getString(R.string.dialog_resume_resume)) { dialog, _ ->
+            dialog.dismiss()
             if (Globals.answeredQuestions.size > 0) {
                 val activity = Intent(applicationContext, Question::class.java)
                 startActivity(activity)
@@ -41,6 +53,16 @@ class MainActivity : AppCompatActivity() {
                 startActivity(sectionActivity)
             }
         }
+        builder.setNegativeButton(getString(R.string.dialog_resume_restart)) { dialog, _ ->
+            dialog.dismiss()
+            Globals.clearCache()
+            Globals.start()
+            val sectionActivity = Intent(applicationContext, Section::class.java)
+            startActivity(sectionActivity)
+        }
+
+        val alert: AlertDialog = builder.create()
+        alert.show()
     }
 
     override fun onStart() {

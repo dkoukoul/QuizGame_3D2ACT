@@ -514,9 +514,9 @@ class Question : AppCompatActivity(), SensorEventListener {
                 if (firstAnswer.isNotEmpty() && secondAnswer.isNotEmpty()) {
                     //TODO: handle the case where user answers twice with the same qr code 2_1_1a or 2_1_1b
                     if (firstAnswer.contains("2_1_1") && secondAnswer.contains("2_1_1")){
-                        correctAnswer(0)
+                        correctAnswer()
                     } else {
-                        wrongAnswer(0)
+                        wrongAnswer()
                     }
                 } else {
                     scanCode()
@@ -525,7 +525,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 val answer = contents.split("_")[2].toInt()
                 checkAnswer(answer)
             } else {
-                wrongAnswer(0)
+                wrongAnswer()
             }
         } catch (e: Exception) {
             Toast.makeText(baseContext, "Invalid QR Code", Toast.LENGTH_SHORT).show()
@@ -638,21 +638,21 @@ class Question : AppCompatActivity(), SensorEventListener {
         val section = Globals.getSection()-1
         val question = Globals.getQuestion()-1
         if (Globals.answers[section][question] == answer) {
-            correctAnswer(answer)
+            correctAnswer()
         } else {
-            wrongAnswer(answer)
+            wrongAnswer()
         }
     }
 
-    private fun correctAnswer(answer: Int) {
-        showDialog(getString(R.string.dialog_correct_answer), true, answer)
+    private fun correctAnswer() {
+        showDialog(getString(R.string.dialog_correct_answer), true)
     }
 
-    private fun wrongAnswer(answer: Int) {
+    private fun wrongAnswer() {
         if (firstAttempt) {
-            showDialog(getString(R.string.dialog_wrong_answer_first_attempt), false, answer)
+            showDialog(getString(R.string.dialog_wrong_answer_first_attempt), false)
         } else {
-            showDialog(getString(R.string.dialog_wrong_answer_second_attempt), false, answer)
+            showDialog(getString(R.string.dialog_wrong_answer_second_attempt), false)
         }
 
         //show feedback
@@ -663,7 +663,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         /*Toast.makeText(this,getString(R.string.toast_wrong_answer),Toast.LENGTH_LONG).show()*/
     }
 
-    private fun showDialog(message: String, correct: Boolean, answer: Int) {
+    private fun showDialog(message: String, correct: Boolean) {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle("")
         //builder.setMessage(message)
@@ -674,7 +674,7 @@ class Question : AppCompatActivity(), SensorEventListener {
             Globals.addScore(firstAttempt)
             builder.setPositiveButton(getString(R.string.button_next)) { dialog, _ ->
                 dialog.dismiss()
-                goToNext(answer)
+                goToNext()
             }
         } else {
             //Wrong answer, first attempt, try again
@@ -688,7 +688,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                 //Wrong answer, 2nd attempt, go to next
                 builder.setMessage(getString(R.string.dialog_wrong_answer_second_attempt))
                 builder.setPositiveButton(getString(R.string.button_next)) { _, _ ->
-                    goToNext(answer)
+                    goToNext()
                 }
             }
         }
@@ -696,8 +696,8 @@ class Question : AppCompatActivity(), SensorEventListener {
         alert.show()
     }
 
-    private fun goToNext(answer: Int) {
-        answeredQuestions.add(answer)
+    private fun goToNext() {
+        answeredQuestions.add(Globals.getQuestion())
         var gotoNextSession = false
         if (Globals.answeredQuestions.size == 3) {
             gotoNextSession = true

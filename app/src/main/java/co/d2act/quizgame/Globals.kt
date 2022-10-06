@@ -16,22 +16,22 @@ object Globals {
     lateinit var prefs: SharedPreferences
 
     //DEBUG//private val types1 = arrayListOf(SPEAK,SHAKE,CLICK)
-    /*private val types1 = arrayListOf(CLICK,SHAKE,QRSCAN)
+    private val types1 = arrayListOf(CLICK,SHAKE,QRSCAN)
     private val types2 = arrayListOf(QRSCAN,QRSCAN,CLICK)
     private val types3 = arrayListOf(SPEAK,SHAKE,CLICK)
     private val types4 = arrayListOf(QRSCAN,SPEAK,QRSCAN)
-    private val types5 = arrayListOf(CLICK,COLOR,CLICK)*/
+    private val types5 = arrayListOf(CLICK,COLOR,CLICK)
     private val types6 = arrayListOf(QRSCAN,SPEAK,QRSCAN)
     private val types7 = arrayListOf(SPEAK,COLOR,SHAKE)
     private val types8 = arrayListOf(QRSCAN,CLICK,COLOR)
     private val types9 = arrayListOf(SPEAK,COLOR,CLICK)
     private val types10 = arrayListOf(SHAKE,CLICK,QRSCAN)
     //ALL CLICK for DEBUGGING
-    val types1 = arrayListOf(CLICK,CLICK,CLICK)
+/*    val types1 = arrayListOf(CLICK,CLICK,CLICK)
     val types2 = arrayListOf(CLICK,CLICK,CLICK)
     val types3 = arrayListOf(CLICK,CLICK,CLICK)
     val types4 = arrayListOf(CLICK,CLICK,CLICK)
-    val types5 = arrayListOf(CLICK,CLICK,CLICK)
+    val types5 = arrayListOf(CLICK,CLICK,CLICK)*/
     val questionTypes = arrayListOf(types1,types2,types3,types4,types5,types6,types7,types8,types9,types10)
 
     private val answers1 = arrayListOf(3,3,3)
@@ -85,6 +85,7 @@ object Globals {
         while (answeredQuestions.contains(currentQuestion)) {
             currentQuestion = Random.nextInt(1,4)
         }
+
         return currentQuestion
     }
 
@@ -104,10 +105,16 @@ object Globals {
         prefs.edit().putInt("section", currentSection).apply()
         prefs.edit().putInt("question", currentQuestion).apply()
         prefs.edit().putInt("score", score).apply()
-        prefs.edit().putString("answeredQuestions", answeredQuestions.toString()).apply()
+        if (answeredQuestions.size > 0) {
+            prefs.edit().putString("answeredQuestions", answeredQuestions.joinToString(",")).apply()
+        } else {
+            prefs.edit().remove("answeredQuestions").apply()
+        }
     }
 
     fun clearCache() {
+        answeredQuestions.clear()
+        score = 0
         prefs.edit().clear().apply()
     }
 
@@ -115,8 +122,17 @@ object Globals {
         return if (prefs.contains("section")) {
             currentSection = prefs.getInt("section", 1)
             currentQuestion = prefs.getInt("question", 1)
+            score = prefs.getInt("score", 0)
             if (prefs.getString("answeredQuestions", "") != "") {
-                answeredQuestions = prefs.getString("answeredQuestions", "")!!.split(",") as ArrayList<Int>
+                val answers = prefs.getString("answeredQuestions", "")
+                if (answers!!.contains(",")) {
+                    val answersStr = answers.split(",")
+                    for (a in answersStr) {
+                        answeredQuestions.add(a.toInt())
+                    }
+                } else {
+                    answeredQuestions.add(answers.toInt())
+                }
                 score = prefs.getInt("score", 0)
             } else {
                 answeredQuestions.clear()

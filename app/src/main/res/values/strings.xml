@@ -9,6 +9,10 @@ Project Number: 2020-1-EL01-KA202-078957</string>
     <string name="button_try">TRY AGAIN</string>
     <string name="button_start">START</string>
     <string name="button_end">END</string>
+    <string name="dialog_resume_title">Unfinished Quiz</string>
+    <string name="dialog_resume_message">Do you wish to resume?</string>
+    <string name="dialog_resume_resume">Resume</string>
+    <string name="dialog_resume_restart">Restart</string>
     <!--Section Generic-->
     <string name="section_why">WHY?</string>
     <string name="section_how">HOW?</string>
