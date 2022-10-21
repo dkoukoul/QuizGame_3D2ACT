@@ -441,17 +441,35 @@ class Question : AppCompatActivity(), SensorEventListener {
                 //Change button background color
                 var buttonDrawableBlue: Drawable = answer1.background
                 buttonDrawableBlue = DrawableCompat.wrap(buttonDrawableBlue)
-                DrawableCompat.setTint(buttonDrawableBlue, getColor(R.color.dark_blue))
                 var buttonDrawableRed: Drawable = answer2.background
                 buttonDrawableRed = DrawableCompat.wrap(buttonDrawableRed)
-                DrawableCompat.setTint(buttonDrawableRed, getColor(R.color.dark_red))
                 var buttonDrawableGreen: Drawable = answer3.background
                 buttonDrawableGreen = DrawableCompat.wrap(buttonDrawableGreen)
                 DrawableCompat.setTint(buttonDrawableGreen, getColor(R.color.dark_green))
-
-                answer1.background = buttonDrawableBlue
-                answer2.background = buttonDrawableRed
-                answer3.background = buttonDrawableGreen
+                DrawableCompat.setTint(buttonDrawableRed, getColor(R.color.dark_red))
+                DrawableCompat.setTint(buttonDrawableBlue, getColor(R.color.dark_blue))
+                when(Globals.getSection()){
+                    5 -> {
+                        answer1.background = buttonDrawableRed
+                        answer2.background = buttonDrawableGreen
+                        answer3.background = buttonDrawableBlue
+                    }
+                    7 -> {
+                        answer1.background = buttonDrawableRed
+                        answer2.background = buttonDrawableBlue
+                        answer3.background = buttonDrawableGreen
+                    }
+                    8 -> {
+                        answer1.background = buttonDrawableRed
+                        answer2.background = buttonDrawableGreen
+                        answer3.background = buttonDrawableBlue
+                    }
+                    9 -> {
+                        answer1.background = buttonDrawableBlue
+                        answer2.background = buttonDrawableRed
+                        answer3.background = buttonDrawableGreen
+                    }
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">3D2ACT Quiz</string>
+    <string name="app_name">3D2ACT SE Quiz</string>
     <string name="eu_project_disclaimer">This project has been funded with the support of the Erasmus+ Programme of the European Union. This communication reflects the views only of the authors, and neither the European Commission nor the Education, Audiovisual and Culture Executive Agency can be held responsible for any use which may be made of the information contained therein.
 Project Number: 2020-1-EL01-KA202-078957</string>
     <string name="reading_prompt">Read the answer</string>
@@ -79,22 +79,22 @@ Project Number: 2020-1-EL01-KA202-078957</string>
 The most important factor is to consider which fits best with your company, which can be more than one opportunity. </string>
     <string name="section6_next_text">Once you have identified your options for funding it becomes easier to surround yourself with the right people, either those who can help you or those you can hire. You now know your options and costs, thus you know if you can pay hires. Your mentor can identify how the money is spent. </string>
     <!--Section 7.  -->
-    <string name="section7_title">seek ongoing support from a mentor</string>
+    <string name="section7_title">7. seek ongoing support from a mentor</string>
     <string name="section7_why_text">After figuring out what your company does, where you want to go and how much funding you need it is a good step to look for a mentor. A mentor can help you through the start up landscape, as they have experience which you do not yet have. Besides, a mentor can help you to structure your thoughts about your company. Next to that, a mentor also provides a network, which can help you even further with your start-up. </string>
     <string name="section7_how_text">When looking for a mentor you need to consider what you want from a mentor. This can be advice, a good network or support. Do you need a mentor with experience in start-ups or do you need a mentor who knows much about 3D printing? It is also important that there is a match between the mentor and mentee. This can be on the basis of a hobby, interests or lifestyle. If you used an incubator as a funding source, they could also function as a mentor. Other ways to look for a mentor are to use your network to find someone who is suited as a mentor. </string>
     <string name="section7_next_text">With advice easily available, it is an easy step to consider if you need more people in your company. Do you need help from employees? The mentor can help you structure what for and why you need an employee.</string>
     <!--Section 8.  -->
-    <string name="section8_title">hire the right people</string>
+    <string name="section8_title">8. hire the right people</string>
     <string name="section8_why_text">Once you have set goals for yourself, you will probably no longer be able to do it alone. You either want to grow or you want someone with different knowledge than you have. New people can have different ideas and different perspectives, which betters your company. </string>
     <string name="section8_how_text">When you decide that you need to hire an employee, there are several factors to consider. Do you want to hire someone who can help you out with work you already do or do you want someone who has different knowledge and thus can focus on other topics? It is important to not only focus on the academic or technical skills, but also on soft skills. Does the personality of someone you hire, fit with you and the company’s goals? It is also good to consider hiring someone with a different background that is already available to you. Next to that you should consider how many people you want to hire and when. You can also consider not doing the recruitment yourself. Do you want to hire someone else to do it or hire an external company? This all depends on how many people you want to hire. When you want to hire several people and expand even more in the coming years it might be worth it to hire someone as part of your company, instead of an external company. </string>
     <string name="section8_next_text">Once you have a clear aspect of who you want to hire, it is good to know what kind of company culture you want to have. This builds on to the kind of people you want working in your company. </string>
     <!--Section 9.  -->
-    <string name="section9_title">build a company culture</string>
+    <string name="section9_title">9. build a company culture</string>
     <string name="section9_why_text">In order to finish your company’s ideas, it is important to note which kind of company you would want to be. Your employees form an aspect of your company’s culture, but also the image you have of the company. You have set a goal for yourself and how you want to reach that goal, which also includes how big your company is and is going to be. </string>
     <string name="section9_how_text">To form your company culture, you have to consider in what kind of environment you like to work, as well as what fits best with the product you are selling. Do you want your company to be small or do you want to continue to expand? Do you like a more hierarchical form or do you want all employees to be equal? The company and thus its culture should represent who you are and what you’re selling.  An inclusive work environment is also important, as a workplace in which different people work, leads to more innovative ideas. Lastly, it helps to establish core values of the company. These values represent what the company does and how is it reaches its goals. </string>
     <string name="section9_next_text">Now that you have a company culture set, you get to make your way to the global scene. You have values set, which gives potential investors or those who want to buy your product an idea of your company and if it is relevant to them.</string>
     <!--Section 10.  -->
-    <string name="section10_title">reach out globally</string>
+    <string name="section10_title">10. reach out globally</string>
     <string name="section10_why_text">In a world where everything is as closely connected, as it is now, reaching out globally can be a useful step to expand your company, either with knowledge or expand globally. A reason to want to expand globally can be that you do not want to depend on one national economic market or that your idea has potential in other countries. Besides, building your start-up globally can make your company stronger. </string>
     <string name="section10_how_text">When you decide to reach out globally, you should start by considering which countries are relevant to you. Why do you want to go to a country and what do you offer there, that is different from what they already have? Through the positioning statement it is already clear which opportunities can go global. After that it is important to consider culture. Does the country where you want to expand speak the same language, do they have different working ethics and does your company culture fit into theirs. Does your business model consider differentiation based on culture?</string>
     <string name="section10_next_text">You can now identify what is necessary for your company. With the last step of understanding how you can reach out globally, it is possible to create your own company in 3D printing.</string>
@@ -122,28 +122,28 @@ The most important factor is to consider which fits best with your company, whic
     <string name="a1.3_c">Modify the idea based on the feedback from the target group</string>
     <string name="short_revision_1_3">If feedback is provided from people of your target group you should appropriately revise your entrepreneurial idea.</string>
     <!--2.1 SCAN QR-->
-    <string name="q2_1_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board.</string>
+    <string name="q2_1_instruction">Choose answer by scanning two QR codes which correspond to images on the game board, that when combined make up one of the three possible answers. In case half of the answer is correct, a shorter revision of info regarding the question will be provided along with a second chance to choose.</string>
     <string name="q2.1">George has now a clear idea for his social enterprise using his 3D printer. He is now about to research everything he has to know before starting his social business. What should be the main 2 topics George should focus on?</string>
     <string name="a2.1_a">3D printing and social business model canvas</string>
     <string name="a2.1_b">The problem to solve and the concerning target groups</string>
     <string name="a2.1_c">Social inclusion and environmental issues</string>
     <string name="short_revision_2_1">Before starting your social business to have to research, by really focusing on the problem, why this problem exists, what the consequences of the social issue are, etc. Also pay enough attention to the target groups and all beneficiaries.</string>
     <!--2.2 SCAN QR-->
-    <string name="q2.2_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info for “Step 2” and a second chance to choose.</string>
+    <string name="q2.2_instruction">Choose answer by scanning a QR code corresponding to an appropriate image on the game board. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to choose.</string>
     <string name="q2.2">What should George not forget when researching his social issue?</string>
     <string name="a2.2_a">Finances</string>
     <string name="a2.2_b">Target groups and all beneficiaries</string>
     <string name="a2.2_c">How to fit in the 3D printer as an asset to solve the social issue</string>
     <string name="short_revision_2_2">You should always pay enough attention to the target groups and all beneficiaries: the direct targets of your project, the human and financial consequences, the characteristics of your beneficiaries and how many people are involved.</string>
     <!--2.3 CLICK-->
-    <string name="q2.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info for “Step 2” and a second chance to click</string>
+    <string name="q2.3_instruction">Choose answer by clicking on it!  In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to click.</string>
     <string name="q2.3">What could be George’s key selling point?</string>
     <string name="a2.3_a">Having a 3D printer as the main asset to solve your social issue</string>
     <string name="a2.3_b">Having a very innovative product/service</string>
     <string name="a2.3_c">Collaboration with other companies on his social issue</string>
     <string name="short_revision_2_3">Last, you should always research on your potential competition. Are there any social businesses already trying to tackle the social issue you are aiming at tackling as well?</string>
     <!--3.1 SPEAK-->
-    <string name="q3_1_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info for “Step 3” and a second chance to read.</string>
+    <string name="q3_1_instruction">Choose answer by reading it!  Textual verification with edit functionality will be used to verify the recording. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to read.</string>
     <string name="q3.1">George wants to get a global viewpoint on his social enterprise based on 3D printing. He starts with the Positioning Statement of his business. What important question should he ask himself?</string>
     <string name="a3.1_a">Why is my social business better than the other relevant ones?</string>
     <string name="a3.1_b">What precisely am I going to offer?</string>
@@ -192,7 +192,7 @@ The most important factor is to consider which fits best with your company, whic
     <string name="a5.1_c">What does the company do?</string>
     <string name="short_revision_5_1">To make a clear business plan it has to be as close to your wishes as it can be and it is important to keep in mind where you want your company to go.</string>
     <!--5.2 COLOR-->
-    <string name="q5.2_instruction">Choose answer by scanning a red surface from around to choose a, a green to choose b, or a blue to choose c. In case it is wrong, a shorter revision of info for “Step 5” and a second chance to choose.</string>
+    <string name="q5.2_instruction">Choose answer by scanning a red surface from around to choose a, a green to choose b, or a blue to choose c. In case it is wrong, a shorter revision of info regarding the question will be provided and a second chance to scan.</string>
     <string name="q5.2">George has decided to make a business plan for his 3D printing start up. Now that he knows the vision, what does he need to consider?</string>
     <string name="a5.2_a">What does he need to do to make the vision possible?</string>
     <string name="a5.2_b">Whether this vision will appeal to his customers?</string>
