@@ -23,17 +23,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/project_description"
                 android:paddingHorizontal="20dp"
+                android:text="@string/project_description"
                 android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_start"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/logo"
-                app:layout_constraintBottom_toTopOf="@+id/button_start"/>
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
             <ImageView
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="match_parent"
@@ -43,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/eu_project_disclaimer"
+                android:textSize="10sp"
                 android:paddingHorizontal="20dp"/>
             <Button
                 android:id="@+id/button_start"
