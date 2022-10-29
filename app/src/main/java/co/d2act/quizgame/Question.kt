@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -17,6 +18,10 @@ import android.os.Handler
 import android.provider.MediaStore
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.StyleSpan
+import android.view.Gravity
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -117,7 +122,11 @@ class Question : AppCompatActivity(), SensorEventListener {
             2 -> {
                 when(Globals.getRandomQuestion()) {
                     1 -> {
-                        qInstruction.text = getString(R.string.q2_1_instruction)
+                        val text = getString(R.string.q2_1_instruction)
+                        val ss = SpannableString(text)
+                        val boldSpan = StyleSpan(Typeface.BOLD)
+                        ss.setSpan(boldSpan, 17, 38, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+                        qInstruction.text = ss
                         question.text = getString(R.string.q2_1)
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_1_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_1_b)
@@ -586,6 +595,7 @@ class Question : AppCompatActivity(), SensorEventListener {
         }
         val alert: AlertDialog = builder.create()
         alert.show()
+        alert.window?.setGravity(Gravity.TOP);
     }
 
     /**

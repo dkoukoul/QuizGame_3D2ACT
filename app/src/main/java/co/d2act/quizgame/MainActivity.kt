@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         Manifest.permission.CAMERA,
         Manifest.permission.RECORD_AUDIO
     )
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
