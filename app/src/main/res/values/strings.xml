@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">3D2ACT SE Quiz</string>
+    <string name="app_name">SE Quiz</string>
     <string name="eu_project_disclaimer">This project has been funded with the support of the Erasmus+ Programme of the European Union. This communication reflects the views only of the authors, and neither the European Commission nor the Education, Audiovisual and Culture Executive Agency can be held responsible for any use which may be made of the information contained therein.
 Project Number: 2020-1-EL01-KA202-078957</string>
     <string name="reading_prompt">Read the answer</string>

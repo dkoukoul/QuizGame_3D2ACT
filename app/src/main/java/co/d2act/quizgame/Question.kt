@@ -122,6 +122,7 @@ class Question : AppCompatActivity(), SensorEventListener {
             2 -> {
                 when(Globals.getRandomQuestion()) {
                     1 -> {
+                        //make specific part of text BOLD
                         val text = getString(R.string.q2_1_instruction)
                         val ss = SpannableString(text)
                         val boldSpan = StyleSpan(Typeface.BOLD)
