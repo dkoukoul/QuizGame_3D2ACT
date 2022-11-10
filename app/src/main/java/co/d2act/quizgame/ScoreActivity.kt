@@ -11,7 +11,7 @@ class ScoreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_score)
 
         val score = findViewById<TextView>(R.id.score)
-        score.text = Globals.getScore().toString()
+        score.text = Globals.getScore().toString()+"/60"
 
         val buttonEnd = findViewById<Button>(R.id.button_end)
         buttonEnd.setOnClickListener {

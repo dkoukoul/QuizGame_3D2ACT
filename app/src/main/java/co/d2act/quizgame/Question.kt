@@ -429,7 +429,11 @@ class Question : AppCompatActivity(), SensorEventListener {
                 answerButton.visibility = View.VISIBLE
                 answerButton.setImageResource(R.drawable.ic_qr_code)
                 answerButton.setOnClickListener {
-                    scanCode()
+                    if ((Globals.getSection() == 2) && (Globals.getQuestion() == 1)) {
+                        scanCode(1)
+                    } else {
+                        scanCode(0)
+                    }
                 }
                 answer1.isEnabled = false
                 answer2.isEnabled = false
@@ -497,10 +501,14 @@ class Question : AppCompatActivity(), SensorEventListener {
     /**
      * Will initiate the intent for QR Code scanning
      */
-    private fun scanCode() {
+    private fun scanCode(number: Int) {
         val intentIntegrator = IntentIntegrator(this)
         intentIntegrator.setOrientationLocked(false)
-        intentIntegrator.setPrompt("Scan QR Code")
+        when(number) {
+            1 -> intentIntegrator.setPrompt(getString(R.string.scan_1_qr_code))
+            2 -> intentIntegrator.setPrompt(getString(R.string.scan_2_qr_code))
+            else -> intentIntegrator.setPrompt(getString(R.string.scan_qr_code))
+        }
         intentIntegrator.initiateScan()
     }
 
@@ -547,7 +555,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         wrongAnswer()
                     }
                 } else {
-                    scanCode()
+                    scanCode(2)
                 }
             } else if (section == Globals.getSection() && question == Globals.getQuestion()) {
                 val answer = contents.split("_")[2].toInt()
@@ -735,7 +743,7 @@ class Question : AppCompatActivity(), SensorEventListener {
 
         //Go to next section
         if (gotoNextSession) {
-            if (Globals.getSection() == 10) {
+            if (Globals.getSection() > 10) {
                 //End of game
                 val scoreIntent = Intent(this, ScoreActivity::class.java)
                 startActivity(scoreIntent)
