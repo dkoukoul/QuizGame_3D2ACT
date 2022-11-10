@@ -135,7 +135,7 @@ class Question : AppCompatActivity(), SensorEventListener {
                         shortRevision = getString(R.string.short_revision_2_1)
                     }
                     2 -> {
-                        qInstruction.text = getString(R.string.q1_2_instruction)
+                        qInstruction.text = getString(R.string.q2_2_instruction)
                         question.text = getString(R.string.q2_2)
                         answer1.text = getString(R.string.a) +" " +getString(R.string.a2_2_a)
                         answer2.text = getString(R.string.b) +" " +getString(R.string.a2_2_b)
