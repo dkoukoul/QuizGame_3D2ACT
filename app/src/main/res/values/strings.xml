@@ -17,6 +17,9 @@ Project Number: 2020-1-EL01-KA202-078957</string>
     <string name="section_why">WHY?</string>
     <string name="section_how">HOW?</string>
     <string name="section_next">NEXT</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="scan_1_qr_code">Scan 1st QR Code</string>
+    <string name="scan_2_qr_code">Scan 2nd QR Code</string>
 
     <string name="a">a)</string>
     <string name="b">b)</string>
