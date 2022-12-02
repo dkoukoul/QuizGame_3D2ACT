@@ -57,7 +57,7 @@
     <!--Section 4. Choose a social issue -->
     <string name="section4_title">4. juridische structuren begrijpen</string>
     <string name="section4_why_text"> Voordat je een bedrijf begint, is het ook belangrijk om voldoende aandacht te besteden aan de wetgeving, aan wat mogelijk is en waar je voorzichtig mee moet zijn, in je eigen land/regio. Dit zal voorkomen dat je voor onaangename verrassingen komt te staan, die alleen maar een belemmering zullen vormen voor het goed runnen van jouw sociale onderneming. Het is dus een must om alle belangrijke feiten en informatie over wetgevingskwesties voor je bedrijf bij de hand te hebben.</string>
-    <string name="section4_how_text">De wetgeving is hier een complex onderwerp, omdat deze per land verschilt. Je kunt echter beginnen met de basisinformatie, die in alle landen vergelijkbaar is. Er zijn drie verschillende 'soorten' rechtsvormen voor sociale ondernemingen:\1. Non-Profit Organisaties: kunnen democratisch zijn of gecontroleerd worden door managers, ze maken geen winst en handelen voor een sociaal doel.\2.Coöperaties: zijn meestal eigendom van en worden democratisch gecontroleerd door leden. Zij keren winst uit handelsactiviteiten uit aan de leden. Zij kunnen een maatschappelijk doel hebben dat verder gaat dan het voordeel voor de leden, dat in de statuten is vastgelegd, of zij voeren een dienst van algemeen belang uit.\3.Aandelenvennootschappen: zijn over het algemeen eigendom van en worden gecontroleerd door aandeelhouders op een pro-rata basis. Deze kunnen worden verhandeld ter bevordering van een sociaal doel en kunnen ook andere bestuur kenmerken hebben om winst ondergeschikt te maken aan het doel..</string>
+    <string name="section4_how_text">De wetgeving is hier een complex onderwerp, omdat deze per land verschilt. Je kunt echter beginnen met de basisinformatie, die in alle landen vergelijkbaar is. Er zijn drie verschillende \'soorten\' rechtsvormen voor sociale ondernemingen:\1. Non-Profit Organisaties: kunnen democratisch zijn of gecontroleerd worden door managers, ze maken geen winst en handelen voor een sociaal doel.\2.Coöperaties: zijn meestal eigendom van en worden democratisch gecontroleerd door leden. Zij keren winst uit handelsactiviteiten uit aan de leden. Zij kunnen een maatschappelijk doel hebben dat verder gaat dan het voordeel voor de leden, dat in de statuten is vastgelegd, of zij voeren een dienst van algemeen belang uit.\3.Aandelenvennootschappen: zijn over het algemeen eigendom van en worden gecontroleerd door aandeelhouders op een pro-rata basis. Deze kunnen worden verhandeld ter bevordering van een sociaal doel en kunnen ook andere bestuur kenmerken hebben om winst ondergeschikt te maken aan het doel..</string>
     <string name="section4_next_text">Natuurlijk is basisinformatie belangrijk, maar probeer nog verder te gaan door contact op te nemen met organisaties die jou verder kunnen helpen als het gaat om juridische structuren. Je kunt daarvoor contact opnemen met bedrijfsondersteunende organisaties, maar kijk ook binnen je netwerk wie je zou kunnen helpen. Een idee zou kunnen zijn om een dag in je agenda te reserveren voor informatie over de juridische structuren die je nodig hebt voor je sociale onderneming.</string>
     <!--Section 5. Choose a social issue -->
     <string name="section5_title">5. een solide sociaal bedrijfsplan opstellen </string>
@@ -136,7 +136,7 @@ De belangrijkste factor is te overwegen welke het beste bij jouw bedrijf past, w
     <string name="short_revision_2_2">Je moet altijd voldoende aandacht besteden aan de doelgroepen en alle begunstigden: de directe doelstellingen van je project, de menselijke en financiële gevolgen, de kenmerken van de begunstigden en hoeveel mensen erbij betrokken zijn..</string>
     <!--2.3 CLICK-->
     <string name="q2.3_instruction"> Kies een antwoord door erop te klikken!  Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
-    <string name="q2.3"> Wat zou George's belangrijkste verkoopargument kunnen zijn?</string>
+    <string name="q2.3"> Wat zou George\'s belangrijkste verkoopargument kunnen zijn?</string>
     <string name="a2.3_a"> Een 3D-printer als belangrijkste troef om uw maatschappelijk probleem op te lossen </string>
     <string name="a2.3_b"> Een zeer innovatief product/dienst hebben </string>
     <string name="a2.3_c"> Samenwerking met andere bedrijven op zijn sociaal gebied </string>
@@ -295,9 +295,9 @@ De belangrijkste factor is te overwegen welke het beste bij jouw bedrijf past, w
     <!--10.1 SHAKE-->
     <string name="q10_1_instruction">Kies een antwoord door het apparaat te schudden!  Eenmaal voor a, tweemaal voor b en driemaal voor c. Het gekozen antwoord wordt groen gemarkeerd. Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te schudden..</string>
     <string name="q10.1"> George wil zijn bedrijf wereldwijd uitbreiden. Waar moet hij rekening mee houden voordat hij dat kan doen?</string>
-    <string name="a10.1_a"> Welke landen passen bij George's bedrijf?</string>
+    <string name="a10.1_a"> Welke landen passen bij George\'s bedrijf?</string>
     <string name="a10.1_b"> Voor welke landen is dit idee nieuw?</string>
-    <string name="a10.1_c"> Wat heeft George's bedrijf nodig om wereldwijd te gaan??</string>
+    <string name="a10.1_c"> Wat heeft George\'s bedrijf nodig om wereldwijd te gaan??</string>
     <string name="short_revision_10_1"> Wanneer je besluit wereldwijd te gaan werken, moet je eerst nagaan welke landen voor jou relevant zijn..</string>
     <!--10.2 CLICK-->
     <string name="q10.2_instruction"> Kies een antwoord door erop te klikken!  Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
@@ -313,4 +313,8 @@ De belangrijkste factor is te overwegen welke het beste bij jouw bedrijf past, w
     <string name="a10.3_b"> Het inhuren van een vertaler kan helpen om vertaalproblemen te voorkomen </string>
     <string name="a10.3_c"> Je moet altijd een land kiezen waar de taal hetzelfde is </string>
     <string name="short_revision_10_3"> Wanneer je jouw bedrijf uitbreidt naar een land waar de gesproken taal anders is dan in je eigen land, is het zeer waarschijnlijk dat je te maken krijgt met vertaalproblemen die oplossingen behoeven..</string>
+    <string name="scan_2_qr_code">Scan de 2e QR-code</string>
+    <string name="scan_1_qr_code">Scan de 1e QR-code</string>
+    <string name="scan_qr_code">Scan QR-code</string>
+    <string name="q8.2">George wil het komende jaar meerdere medewerkers aannemen. Wat is voor hem een goede optie?</string>
 </resources>

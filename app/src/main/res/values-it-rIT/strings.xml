@@ -1,6 +1,6 @@
 <resources>
 	<string name="app_name">3D2ACT SE Quiz</string>
-	<string name="eu_project_disclaimer">Questo progetto è stato finanziato con il sostegno del Programma Erasmus+ dell'Unione Europea. Questa comunicazione riflette solo il punto di vista degli autori e né la Commissione europea né l'Agenzia esecutiva per l'istruzione, gli audiovisivi e la cultura possono essere ritenute responsabili per l'uso che può essere fatto delle informazioni in essa contenute. Numero del progetto: 2020-1-EL01-KA202-078957</string>
+	<string name="eu_project_disclaimer">Questo progetto è stato finanziato con il sostegno del Programma Erasmus+ dell\'Unione Europea. Questa comunicazione riflette solo il punto di vista degli autori e né la Commissione europea né l\'Agenzia esecutiva per l\'istruzione, gli audiovisivi e la cultura possono essere ritenute responsabili per l\'uso che può essere fatto delle informazioni in essa contenute. Numero del progetto: 2020-1-EL01-KA202-078957</string>
 	<string name="reading_prompt">leggi la risposta</string>
 	<string name="reading_prompt_no_results"> Non siamo riusciti a ottenere alcun risultato</string>
 	<!-- Buttons -->
@@ -13,7 +13,7 @@
 	<string name="dialog_resume_resume">Riprendi</string>
 	<string name="dialog_resume_restart">Ricomincia</string>
 	<!-- Section Generic -->
-	<string name="section_why">Estring>
+	<string name="section_why">PERCHE?</string>
 	<string name="section_how">COME?</string>
 	<string name="section_next">AVANTI</string>
 	<string name="a">a)</string>
@@ -35,15 +35,15 @@
 	<string name="toast_wrong_color"> Impossibile identificare il rosso, il verde o il blu. Riprovare.</string>
 	<string name="toast_wrong_speech"> Non è stato possibile abbinare alcuna risposta. Si prega di riprovare.</string>
 	<!-- Project description -->
-	<string name="project_description">La digitalizzazione e l'industria 4.0 sono forse i fattori più importanti alla base della profonda trasformazione del mercato del lavoro, del modo in cui le persone lavorano e delle nuove competenze digitali necessarie per soddisfare le esigenze del mercato digitalizzato. Il progetto 3D2ACT sostiene i formatori e gli educatori dell'istruzione e della formazione professionale nel tentativo di rafforzare i loro profili con l'acquisizione di nuove competenze, lo sviluppo di materiale mirato, la raccolta di strumenti e risorse, creando al contempo opportunità di collegamento tra le scuole di formazione professionale e il mercato del lavoro grazie a sinergie e partenariati con organizzazioni consolidate che utilizzano l'industria 4.0 e l'automazione o la stampa 3D. L'obiettivo di questa applicazione è quello di promuovere competenze chiave mirate alle capacità imprenditoriali, ma con un impatto sociale in quanto rispondono a sfide/esigenze sociali e hanno un beneficio per la comunità, l'ambiente o la cultura. Avere una mentalità imprenditoriale è un grande vantaggio nell'attuale mercato del lavoro, poiché è ciò che fa sì che le idee si concretizzino e diventino realtà. La creatività è il motore dell'imprenditorialità.</string>
+	<string name="project_description">La digitalizzazione e l\'industria 4.0 sono forse i fattori più importanti alla base della profonda trasformazione del mercato del lavoro, del modo in cui le persone lavorano e delle nuove competenze digitali necessarie per soddisfare le esigenze del mercato digitalizzato. Il progetto 3D2ACT sostiene i formatori e gli educatori dell\'istruzione e della formazione professionale nel tentativo di rafforzare i loro profili con l\'acquisizione di nuove competenze, lo sviluppo di materiale mirato, la raccolta di strumenti e risorse, creando al contempo opportunità di collegamento tra le scuole di formazione professionale e il mercato del lavoro grazie a sinergie e partenariati con organizzazioni consolidate che utilizzano l\'industria 4.0 e l\'automazione o la stampa 3D. L\'obiettivo di questa applicazione è quello di promuovere competenze chiave mirate alle capacità imprenditoriali, ma con un impatto sociale in quanto rispondono a sfide/esigenze sociali e hanno un beneficio per la comunità, l\'ambiente o la cultura. Avere una mentalità imprenditoriale è un grande vantaggio nell\'attuale mercato del lavoro, poiché è ciò che fa sì che le idee si concretizzino e diventino realtà. La creatività è il motore dell\'imprenditorialità.</string>
 	<!-- Section 1. Choose a social issue  -->
 	<string name="section1_title">1. scegliere un tema sociale </string>
-	<string name="section1_why_text"> Per avere una visione chiara e una missione specifica per un'impresa sociale, il primo passo è definire il problema sociale esistente. Da quel momento in poi, potrete vedere come la vostra impresa sociale potrebbe contribuire a risolvere quel problema sociale. Qual è esattamente il bisogno sociale e qual è il gruppo target specifico? Si tratta di un problema grande o piccolo, ma che vale la pena risolvere? Qual è la causa del problema? Quali sono le vostre idee su come contribuire alla soluzione di quel problema specifico?</string>
+	<string name="section1_why_text"> Per avere una visione chiara e una missione specifica per un\'impresa sociale, il primo passo è definire il problema sociale esistente. Da quel momento in poi, potrete vedere come la vostra impresa sociale potrebbe contribuire a risolvere quel problema sociale. Qual è esattamente il bisogno sociale e qual è il gruppo target specifico? Si tratta di un problema grande o piccolo, ma che vale la pena risolvere? Qual è la causa del problema? Quali sono le vostre idee su come contribuire alla soluzione di quel problema specifico?</string>
 	<string name="section1_how_text"> Prima di rispondere alla maggior parte delle domande di cui sopra, occorre innanzitutto dedicare del tempo alla ricerca di ciò che vi appassiona come problema sociale da risolvere. Ma come fare? Se non ne avete idea, ma sapete che vi piacerebbe utilizzare le tecniche di stampa 3D, iniziate a verificare quali sono i valori sociali/ambientali che vi stanno più a cuore.</string>
-	<string name="section1_next_text">Avete L'idea di business sociale che prevede tecniche di stampa 3D per migliorare la soluzione? Ottimo lavoro! Ora potete "testare" la vostra idea discutendone con persone preferibilmente appartenenti al vostro gruppo target. Verificate con loro cosa ne pensano e chiedete un feedback per migliorare l'idea, in modo che sia la soluzione perfetta per i gruppi target.).</string>
+	<string name="section1_next_text">Avete L\'idea di business sociale che prevede tecniche di stampa 3D per migliorare la soluzione? Ottimo lavoro! Ora potete "testare" la vostra idea discutendone con persone preferibilmente appartenenti al vostro gruppo target. Verificate con loro cosa ne pensano e chiedete un feedback per migliorare l\'idea, in modo che sia la soluzione perfetta per i gruppi target.).</string>
 	<!-- Section 2. research your issue  -->
 	<string name="section2_title">2. ricerca del problema </string>
-	<string name="section2_why_text"> Dopo aver individuato l'obiettivo da perseguire con la vostra impresa sociale, è importante fare una ricerca approfondita su tutto ciò che riguarda il problema sociale che volete risolvere. Non solo i fatti relativi ai gruppi target e alle loro lotte, ma anche le ricerche sulla vostra potenziale concorrenza. Ci sono imprese sociali che stanno già cercando di affrontare il problema sociale che intendete affrontare?
+	<string name="section2_why_text">Dopo aver individuato l\'obiettivo da perseguire con la vostra impresa sociale, è importante fare una ricerca approfondita su tutto ciò che riguarda il problema sociale che volete risolvere. Non solo i fatti relativi ai gruppi target e alle loro lotte, ma anche le ricerche sulla vostra potenziale concorrenza. Ci sono imprese sociali che stanno già cercando di affrontare il problema sociale che intendete affrontare?</string>
 	<string name="section2_how_text">Ora è importante scavare più a fondo in tutto ciò che riguarda il vostro problema sociale e non dimenticare come la stampa 3D possa essere coinvolta. Fate uno studio della vostra ricerca, concentrandovi sul problema, sul perché esiste, sulle conseguenze della questione sociale, sui costi che comporta la vostra specifica questione sociale e che quindi potreste ridurre al minimo. Prestate inoltre sufficiente attenzione ai gruppi target e a tutti i beneficiari: quali sono gli obiettivi diretti del vostro progetto, quali sono le conseguenze umane e finanziarie della questione sociale, quali sono le caratteristiche dei vostri beneficiari, quante persone sono coinvolte in questa questione sociale?</string>
 	<string name="section2_next_text"> Dopo la ricerca sulla vostra idea di business sociale, verificate come potete incorporare la vostra stampante 3D nel vostro business sociale. Questo potrebbe essere il vostro punto di forza e differenziarvi dalla concorrenza. Quali altri vantaggi vi vengono in mente producendo con una stampante 3D?</string>
 	<!-- Section 3. Choose a social issue  -->
@@ -53,70 +53,70 @@
 	<string name="section3_next_text"> Dopo aver identificato il vostro Positioning Statement, lo slogan e la metafora, avrete un punto di vista globale sulla vostra impresa sociale. Potrete quindi approfondire altri aspetti come le strutture legali e le opportunità di finanziamento. Cercate di ricordare cosa significa per voi creare un valore sociale, di che valore si tratta esattamente e come potete contribuire a una causa sociale in modo diverso dagli altri.</string>
 	<!-- Section 4. Choose a social issue  -->
 	<string name="section4_title">4. cogliere le strutture giuridiche </string>
-	<string name="section4_why_text"> Prima di avviare un'attività, è importante prestare attenzione alla legislazione, a ciò che è possibile fare e a ciò che si deve fare con cautela nel proprio Paese/regione. In questo modo si eviteranno spiacevoli sorprese, che non faranno altro che ostacolare la corretta gestione della propria attività sociale. Pertanto, è indispensabile disporre di tutti i fatti e le informazioni importanti sulle questioni legislative per la vostra attività.</string>
+	<string name="section4_why_text"> Prima di avviare un\'attività, è importante prestare attenzione alla legislazione, a ciò che è possibile fare e a ciò che si deve fare con cautela nel proprio Paese/regione. In questo modo si eviteranno spiacevoli sorprese, che non faranno altro che ostacolare la corretta gestione della propria attività sociale. Pertanto, è indispensabile disporre di tutti i fatti e le informazioni importanti sulle questioni legislative per la vostra attività.</string>
 	<string name="section4_how_text">La legislazione è un argomento complesso, poiché varia da Paese a Paese. Tuttavia, è possibile iniziare con le informazioni di base, che sono simili in tutti i Paesi. Esistono tre diversi "tipi" di forme giuridiche utilizzate dalle imprese sociali:\n\t1. Organizzazioni senza scopo di lucro: possono essere democratiche o controllate da manager, non distribuiscono profitti e operano per uno scopo sociale.\n\t2. Cooperative: sono generalmente possedute e controllate su base democratica dai soci. Distribuiscono ai soci i profitti delle attività commerciali. Possono avere uno scopo sociale che va oltre il beneficio dei soci, che è scritto nello statuto, oppure svolgono un servizio di interesse generale.\n\t3. Società per azioni: sono generalmente possedute e controllate dagli azionisti su base proporzionale. Possono essere negoziate per promuovere uno scopo sociale e possono anche avere altre caratteristiche di governance per subordinare il profitto allo scopo.</string>
-	<string name="section4_next_text"> Naturalmente le informazioni di base sono importanti, ma cercate di andare oltre, contattando organizzazioni che possano aiutarvi ulteriormente per quanto riguarda le strutture legali. Potete contattare le organizzazioni di supporto alle imprese, ma anche verificare all'interno della vostra rete chi potrebbe aiutarvi. Un'idea potrebbe essere quella di riservare un giorno della vostra agenda alle informazioni del vostro Paese sulle strutture legali necessarie per la vostra impresa sociale.</string>
+	<string name="section4_next_text"> Naturalmente le informazioni di base sono importanti, ma cercate di andare oltre, contattando organizzazioni che possano aiutarvi ulteriormente per quanto riguarda le strutture legali. Potete contattare le organizzazioni di supporto alle imprese, ma anche verificare all\'interno della vostra rete chi potrebbe aiutarvi. Un\'idea potrebbe essere quella di riservare un giorno della vostra agenda alle informazioni del vostro Paese sulle strutture legali necessarie per la vostra impresa sociale.</string>
 	<!-- Section 5. Choose a social issue  -->
 	<string name="section5_title">5. stabilire un solido piano di business sociale </string>
 	<string name="section5_why_text"> Dopo aver stabilito la struttura legale, è importante creare un business plan. Senza un piano aziendale ci si può perdere lungo la strada. Indubbiamente, in una start-up si rischia di essere assorbiti dalle attività pratiche. Inoltre, la stesura di un business plan aiuta a pensare a dove si vuole arrivare con la propria azienda. Questo può motivarvi ancora di più a raggiungere i vostri obiettivi. Un business plan vi darà la chiarezza necessaria per avviare la vostra azienda e portarla al successo.</string>
-	<string name="section5_how_text">Per realizzare un piano aziendale chiaro è importante tenere a mente la direzione che si vuole dare alla propria azienda. Un business plan deve essere il più vicino possibile ai vostri desideri. Assicuratevi che la missione e la visione che avete per la vostra azienda siano chiare. La missione è ciò che l'azienda fa e la visione è la direzione che si vuole dare all'azienda. Dovete pensare a quante stampanti 3D volete avere, quanto possono durare e dove volete arrivare tra cinque anni. Quanto tempo volete investire nel marketing? Quando è necessario assumere dei dipendenti? Le domande da prendere in considerazione sono molte, quindi dovreste iniziare con i vostri desideri e poi guardare a ciò che vi serve per rendere possibile il vostro obiettivo.</string>
+	<string name="section5_how_text">Per realizzare un piano aziendale chiaro è importante tenere a mente la direzione che si vuole dare alla propria azienda. Un business plan deve essere il più vicino possibile ai vostri desideri. Assicuratevi che la missione e la visione che avete per la vostra azienda siano chiare. La missione è ciò che l\'azienda fa e la visione è la direzione che si vuole dare all\'azienda. Dovete pensare a quante stampanti 3D volete avere, quanto possono durare e dove volete arrivare tra cinque anni. Quanto tempo volete investire nel marketing? Quando è necessario assumere dei dipendenti? Le domande da prendere in considerazione sono molte, quindi dovreste iniziare con i vostri desideri e poi guardare a ciò che vi serve per rendere possibile il vostro obiettivo.</string>
 	<string name="section5_next_text">Ora che sapete cosa fa la vostra azienda e dove vuole arrivare, avete le basi per il passo successivo, il finanziamento. Con gli obiettivi fissati per la vostra azienda, potete ora capire quanto vi serve per renderli possibili.</string>
 	<!-- Section 6. investigate funding options  -->
 	<string name="section6_title">6. indagare sulle opzioni di finanziamento </string>
 	<string name="section6_why_text"> Il finanziamento è un fattore chiave per assicurarsi di poter finanziare la propria azienda. Senza i giusti finanziamenti non è possibile essere finanziariamente stabili.</string>
-	<string name="section6_how_text"> Per stabilire il costo da sostenere, è importante considerare i costi da sostenere per creare il prodotto. Tenendo conto dei costi, è possibile identificare l'importo necessario per la vostra azienda. Questo vi offre diverse opzioni per trovare i fondi necessari: - I vostri risparmi - La vostra rete, come amici e familiari - Il crowdfunding - Trovare un incubatore d'impresa - Chiedere sovvenzioni - Sponsorizzazione - Business angels Il fattore più importante è considerare quale si adatta meglio alla vostra azienda, che può essere più di un'opportunità. </string>.
+	<string name="section6_how_text"> Per stabilire il costo da sostenere, è importante considerare i costi da sostenere per creare il prodotto. Tenendo conto dei costi, è possibile identificare l\'importo necessario per la vostra azienda. Questo vi offre diverse opzioni per trovare i fondi necessari: - I vostri risparmi - La vostra rete, come amici e familiari - Il crowdfunding - Trovare un incubatore d\'impresa - Chiedere sovvenzioni - Sponsorizzazione - Business angels Il fattore più importante è considerare quale si adatta meglio alla vostra azienda, che può essere più di un\'opportunità. </string>.
 	<string name="section6_next_text">Una volta individuate le opzioni di finanziamento, diventa più facile circondarsi delle persone giuste, sia quelle che possono aiutarvi sia quelle che potete assumere. Ora conoscete le opzioni e i costi, quindi sapete se potete pagare le assunzioni. Il vostro mentore può identificare come viene speso il denaro. </string>
 	<!-- Section 7.   -->
 	<string name="section7_title">7. cercare il supporto continuo di un mentore </string>
-	<string name="section7_why_text">Dopo aver capito di cosa si occupa la vostra azienda, dove volete andare e di quanti fondi avete bisogno, è un buon passo cercare un mentore. Un mentore può aiutarvi nel panorama delle start-up, poiché ha un'esperienza che voi non avete ancora. Inoltre, un mentore può aiutarvi a strutturare i vostri pensieri sulla vostra azienda. Inoltre, un mentore fornisce anche una rete di contatti che può aiutarvi ulteriormente con la vostra start-up. </string>
+	<string name="section7_why_text">Dopo aver capito di cosa si occupa la vostra azienda, dove volete andare e di quanti fondi avete bisogno, è un buon passo cercare un mentore. Un mentore può aiutarvi nel panorama delle start-up, poiché ha un\'esperienza che voi non avete ancora. Inoltre, un mentore può aiutarvi a strutturare i vostri pensieri sulla vostra azienda. Inoltre, un mentore fornisce anche una rete di contatti che può aiutarvi ulteriormente con la vostra start-up. </string>
 	<string name="section7_how_text">Quando cercate un mentore, dovete considerare cosa volete da un mentore. Può trattarsi di consigli, di una buona rete o di supporto. Avete bisogno di un mentore con esperienza nelle start-up o di un mentore che conosca bene la stampa 3D? È anche importante che ci sia una corrispondenza tra il mentore e il mentee. Questo può avvenire sulla base di un hobby, di interessi o di uno stile di vita. Se si utilizza un incubatore come fonte di finanziamento, potrebbe anche fungere da mentore. Altri modi per cercare un mentore sono quelli di utilizzare la propria rete di contatti per trovare qualcuno che sia adatto come mentore. </string>.
-	<string name="section7_next_text">Con i consigli facilmente disponibili, è facile valutare se avete bisogno di più persone nella vostra azienda. Avete bisogno dell'aiuto dei dipendenti? Il mentore può aiutarvi a strutturare per cosa e perché avete bisogno di un dipendente.</string>
+	<string name="section7_next_text">Con i consigli facilmente disponibili, è facile valutare se avete bisogno di più persone nella vostra azienda. Avete bisogno dell\'aiuto dei dipendenti? Il mentore può aiutarvi a strutturare per cosa e perché avete bisogno di un dipendente.</string>
 	<!-- Section 8.   -->
 	<string name="section8_title">8. Assumi le persone giuste </string>
 	<string name="section8_why_text">Una volta fissati gli obiettivi per voi stessi, probabilmente non sarete più in grado di farlo da soli. O volete crescere o volete qualcuno con conoscenze diverse dalle vostre. Le nuove persone possono avere idee e prospettive diverse, il che migliora la vostra azienda. </string>
-	<string name="section8_how_text">Quando decidete di assumere un dipendente, ci sono diversi fattori da considerare. Volete assumere qualcuno che vi aiuti nel lavoro che già svolgete o volete qualcuno che abbia conoscenze diverse e che quindi possa concentrarsi su altri argomenti? È importante non concentrarsi solo sulle competenze accademiche o tecniche, ma anche sulle soft skills. La personalità di chi assumete si adatta a voi e agli obiettivi dell'azienda? È bene considerare anche l'assunzione di una persona con un background diverso da quello già disponibile. Inoltre, dovete considerare quante persone volete assumere e quando. Potete anche pensare di non occuparvi personalmente del reclutamento. Volete incaricare qualcun altro di farlo o affidarvi a un'azienda esterna? Tutto dipende dal numero di persone che volete assumere. Se volete assumere diverse persone ed espandervi ancora di più nei prossimi anni, potrebbe valere la pena di assumere qualcuno all'interno della vostra azienda, anziché una società esterna. </string>
+	<string name="section8_how_text">Quando decidete di assumere un dipendente, ci sono diversi fattori da considerare. Volete assumere qualcuno che vi aiuti nel lavoro che già svolgete o volete qualcuno che abbia conoscenze diverse e che quindi possa concentrarsi su altri argomenti? È importante non concentrarsi solo sulle competenze accademiche o tecniche, ma anche sulle soft skills. La personalità di chi assumete si adatta a voi e agli obiettivi dell\'azienda? È bene considerare anche l\'assunzione di una persona con un background diverso da quello già disponibile. Inoltre, dovete considerare quante persone volete assumere e quando. Potete anche pensare di non occuparvi personalmente del reclutamento. Volete incaricare qualcun altro di farlo o affidarvi a un\'azienda esterna? Tutto dipende dal numero di persone che volete assumere. Se volete assumere diverse persone ed espandervi ancora di più nei prossimi anni, potrebbe valere la pena di assumere qualcuno all\'interno della vostra azienda, anziché una società esterna. </string>
 	<string name="section8_next_text"> Una volta che avete un aspetto chiaro di chi volete assumere, è bene sapere che tipo di cultura aziendale volete avere. Questo si riflette sul tipo di persone che volete che lavorino nella vostra azienda. </string>
 	<!-- Section 9.   -->
 	<string name="section9_title">9. costruire una cultura aziendale </string>
-	<string name="section9_why_text">Per completare le idee della vostra azienda, è importante capire che tipo di azienda volete essere. I vostri dipendenti costituiscono un aspetto della cultura aziendale, ma anche dell'immagine che avete dell'azienda. Avete stabilito un obiettivo per voi stessi e il modo in cui volete raggiungerlo, che comprende anche le dimensioni della vostra azienda, che è e diventerà. </string>
-	<string name="section9_how_text">Per formare la vostra cultura aziendale, dovete considerare il tipo di ambiente in cui vi piace lavorare e quello che si adatta meglio al prodotto che vendete. Volete che la vostra azienda sia piccola o che continui a espandersi? Vi piace una forma più gerarchica o volete che tutti i dipendenti siano uguali? L'azienda e quindi la sua cultura devono rappresentare chi siete e cosa vendete. Anche un ambiente di lavoro inclusivo è importante, perché un posto di lavoro in cui lavorano persone diverse porta a idee più innovative. Infine, è utile stabilire i valori fondamentali dell'azienda. Questi valori rappresentano ciò che l'azienda fa e come raggiunge i suoi obiettivi. </string>
-	<string name="section9_next_text">Ora che avete impostato una cultura aziendale, potete farvi strada sulla scena globale. Avete definito dei valori, che danno ai potenziali investitori o a coloro che vogliono acquistare il vostro prodotto un'idea della vostra azienda e se è rilevante per loro.</string>
+	<string name="section9_why_text">Per completare le idee della vostra azienda, è importante capire che tipo di azienda volete essere. I vostri dipendenti costituiscono un aspetto della cultura aziendale, ma anche dell\'immagine che avete dell\'azienda. Avete stabilito un obiettivo per voi stessi e il modo in cui volete raggiungerlo, che comprende anche le dimensioni della vostra azienda, che è e diventerà. </string>
+	<string name="section9_how_text">Per formare la vostra cultura aziendale, dovete considerare il tipo di ambiente in cui vi piace lavorare e quello che si adatta meglio al prodotto che vendete. Volete che la vostra azienda sia piccola o che continui a espandersi? Vi piace una forma più gerarchica o volete che tutti i dipendenti siano uguali? L\'azienda e quindi la sua cultura devono rappresentare chi siete e cosa vendete. Anche un ambiente di lavoro inclusivo è importante, perché un posto di lavoro in cui lavorano persone diverse porta a idee più innovative. Infine, è utile stabilire i valori fondamentali dell\'azienda. Questi valori rappresentano ciò che l\'azienda fa e come raggiunge i suoi obiettivi. </string>
+	<string name="section9_next_text">Ora che avete impostato una cultura aziendale, potete farvi strada sulla scena globale. Avete definito dei valori, che danno ai potenziali investitori o a coloro che vogliono acquistare il vostro prodotto un\'idea della vostra azienda e se è rilevante per loro.</string>
 	<!-- Section 10.   -->
 	<string name="section10_title">10. raggiungere il mondo intero </string>
-	<string name="section10_why_text">In un mondo in cui tutto è strettamente connesso come quello attuale, rivolgersi al mondo intero può essere un passo utile per espandere la propria azienda, sia con la conoscenza che con l'espansione globale. Un motivo per espandersi a livello globale può essere che non si vuole dipendere da un solo mercato economico nazionale o che la propria idea ha un potenziale in altri Paesi. Inoltre, costruire la vostra start-up a livello globale può rendere la vostra azienda più forte. </string>
-	<string name="section10_how_text"> Quando decidete di raggiungere il mondo, dovete iniziare a considerare quali paesi sono rilevanti per voi. Perché volete andare in un Paese e cosa offrite lì di diverso da quello che hanno già? Attraverso la dichiarazione di posizionamento è già chiaro quali opportunità possono diventare globali. Dopodiché è importante considerare la cultura. Il Paese in cui volete espandervi parla la stessa lingua, ha un'etica lavorativa diversa e la vostra cultura aziendale si adatta alla loro. Il vostro modello di business prevede una differenziazione basata sulla cultura?</string>
-	<string name="section10_next_text"> Ora è possibile identificare ciò che è necessario per la propria azienda. Con l'ultimo passo, che consiste nel capire come raggiungere un livello globale, è possibile creare la propria azienda nella stampa 3D.</string>
+	<string name="section10_why_text">In un mondo in cui tutto è strettamente connesso come quello attuale, rivolgersi al mondo intero può essere un passo utile per espandere la propria azienda, sia con la conoscenza che con l\'espansione globale. Un motivo per espandersi a livello globale può essere che non si vuole dipendere da un solo mercato economico nazionale o che la propria idea ha un potenziale in altri Paesi. Inoltre, costruire la vostra start-up a livello globale può rendere la vostra azienda più forte. </string>
+	<string name="section10_how_text"> Quando decidete di raggiungere il mondo, dovete iniziare a considerare quali paesi sono rilevanti per voi. Perché volete andare in un Paese e cosa offrite lì di diverso da quello che hanno già? Attraverso la dichiarazione di posizionamento è già chiaro quali opportunità possono diventare globali. Dopodiché è importante considerare la cultura. Il Paese in cui volete espandervi parla la stessa lingua, ha un\'etica lavorativa diversa e la vostra cultura aziendale si adatta alla loro. Il vostro modello di business prevede una differenziazione basata sulla cultura?</string>
+	<string name="section10_next_text"> Ora è possibile identificare ciò che è necessario per la propria azienda. Con l\'ultimo passo, che consiste nel capire come raggiungere un livello globale, è possibile creare la propria azienda nella stampa 3D.</string>
 	<!-- QnA -->
 	<!-- 1.1 CLICK -->
 	<string name="q1_1_instruction"> Scegliete una risposta cliccando su di essa! Nel caso in cui sia sbagliata, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di cliccare.</string>
-	<string name="q1.1"> George ha appena acquistato una stampante 3D e pensa seriamente di avviare un'impresa sociale, il cui prodotto/servizio principale dovrebbe essere sviluppato da una stampante 3D. Quale dovrebbe essere il suo primo passo?</string>
+	<string name="q1.1"> George ha appena acquistato una stampante 3D e pensa seriamente di avviare un\'impresa sociale, il cui prodotto/servizio principale dovrebbe essere sviluppato da una stampante 3D. Quale dovrebbe essere il suo primo passo?</string>
 	<string name="a1.1_a"> Consultare online per trovare ispirazione </string>
 	<string name="a1.1_b"> Chiedere idee a tutti i conoscenti </string>
 	<string name="a1.1_c"> Chiedersi quali siano i valori sociali/ambientali più vicini al proprio cuore. </string>
-	<string name="short_revision_1_1"> Il primo passo da compiere prima di creare un'impresa in generale è pensare a ciò che vi appassiona e, naturalmente, a quali valori sociali/ambientali corrispondono le vostre convinzioni, idee ed emozioni.</string>
+	<string name="short_revision_1_1"> Il primo passo da compiere prima di creare un\'impresa in generale è pensare a ciò che vi appassiona e, naturalmente, a quali valori sociali/ambientali corrispondono le vostre convinzioni, idee ed emozioni.</string>
 	<!-- 1.2 SHAKE -->
 	<string name="q1.2_instruction">Scegliete una risposta scuotendo il dispositivo! Una volta per a, due volte per b e tre volte per c. La risposta scelta sarà evidenziata in verde. In caso di risposta errata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scuotere il dispositivo.</string>
-	<string name="q1.2">">Cosa c'è di nuovo per George?</string>
+	<string name="q1.2">">Cosa c\'è di nuovo per George?</string>
 	<string name="a1.2_a">Registrarsi alla camera di commercio</string>
 	<string name="a1.2_b">Cercare una stampante 3D </string>
 	<string name="a1.2_c"> Verifica della sua idea con il suo potenziale gruppo target </string>
-	<string name="short_revision_1_2"> Il secondo passo prima di creare un'impresa è quello di "testare" la vostra idea discutendola, preferibilmente con persone che la utilizzeranno, e chiedendo un feedback.</string>
+	<string name="short_revision_1_2"> Il secondo passo prima di creare un\'impresa è quello di "testare" la vostra idea discutendola, preferibilmente con persone che la utilizzeranno, e chiedendo un feedback.</string>
 	<!-- 1.3 SCAN QR -->
-	<string name="q1.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scelta.</string>
+	<string name="q1.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scelta.</string>
 	<string name="q1.3"> Cosa poteva fare George dopo questo?</string>
 	<string name="a1.3_a">cercare investitori</string>
 	<string name="a1.3_b">Comprare una stampante 3D</string>
-	<string name="a1.3_c"> Modificare l'idea in base al feedback del gruppo target. </string>
+	<string name="a1.3_c"> Modificare l\'idea in base al feedback del gruppo target. </string>
 	<string name="short_revision_1_3"> Se il feedback viene fornito da persone del vostro gruppo target, dovrete rivedere opportunamente la vostra idea imprenditoriale.</string>
 	<!-- 2.1 SCAN QR -->
 	<string name="q2_1_instruction">Scegliere una risposta scansionando due codici QR che corrispondono a immagini sul tabellone di gioco, che combinate formano una delle tre risposte possibili. Nel caso in cui la metà della risposta sia corretta, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scelta.</string>
-	<string name="q2.1">George ha ora un'idea chiara per la sua impresa sociale utilizzando la sua stampante 3D. Ora sta per documentarsi su tutto ciò che deve sapere prima di avviare la sua impresa sociale. Quali sono i 2 argomenti principali su cui George dovrebbe concentrarsi?</string>
+	<string name="q2.1">George ha ora un\'idea chiara per la sua impresa sociale utilizzando la sua stampante 3D. Ora sta per documentarsi su tutto ciò che deve sapere prima di avviare la sua impresa sociale. Quali sono i 2 argomenti principali su cui George dovrebbe concentrarsi?</string>
 	<string name="a2.1_a">Stampa 3D e modello di business sociale </string>
 	<string name="a2.1_b"> Il problema da risolvere e i relativi gruppi target </string>
 	<string name="a2.1_c">Inclusione sociale e questioni ambientali</string>
 	<string name="short_revision_2_1">Prima di avviare la vostra attività sociale dovete fare delle ricerche, concentrandovi sul problema, sul perché questo problema esiste, su quali sono le conseguenze della questione sociale, ecc. Prestare inoltre sufficiente attenzione ai gruppi target e a tutti i beneficiari.</string>
 	<!-- 2.2 SCAN QR -->
-	<string name="q2.2_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scelta.</string>
+	<string name="q2.2_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scelta.</string>
 	<string name="q2.2"> Che cosa non deve dimenticare George quando fa una ricerca sulla sua questione sociale?</string>
 	<string name="a2.2_a">Finanze</string>
 	<string name="a2.2_b">Target groups e tutti i beneficiari</string>
@@ -134,7 +134,7 @@
 	<string name="q3.1"> George vuole ottenere un punto di vista globale sulla sua impresa sociale basata sulla stampa 3D. Inizia con il Positioning Statement della sua impresa. Quale domanda importante deve porsi?</string>
 	<string name="a3.1_a"> Perché il mio social business è migliore degli altri?</string>
 	<string name="a3.1_b"> Cosa offrirò di preciso?</string>
-	<string name="a3.1_c"> Qual è l'aspetto sociale del mio social business?</string>
+	<string name="a3.1_c"> Qual è l\'aspetto sociale del mio social business?</string>
 	<string name="short_revision_3_1"> Un Positioning Statement è una risposta al perché il vostro prodotto/servizio basato sulla stampa 3D è migliore di altri esistenti.</string>
 	<!-- 3.2 SHAKE -->
 	<string name="q3.2_instruction">Scegliete una risposta scuotendo il dispositivo! Una volta per a, due volte per b e tre volte per c. La risposta scelta sarà evidenziata in verde. In caso di risposta errata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scuotere il dispositivo.</string>
@@ -151,7 +151,7 @@
 	<string name="a3.3_c"> Approfondite altre questioni, come le strutture legali e le opportunità di finanziamento. </string>
 	<string name="short_revision_3_3"> Dopo aver acquisito un punto di vista globale sulla vostra impresa sociale, potete iniziare a risolvere altre questioni come le strutture legali e le opportunità di finanziamento.</string>
 	<!-- 4.1 SCAN -->
-	<string name="q4_1_instruction"> Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
+	<string name="q4_1_instruction"> Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
 	<string name="q4.1"> George si chiede quale tipo di forma giuridica debba avere la sua impresa sociale. Qual è uno dei tipi esistenti?</string>
 	<string name="a4.1_a"> Aziende partecipate </string>
 	<string name="a4.1_b"> Organizzazioni a scopo di lucro </string>
@@ -165,10 +165,10 @@
 	<string name="a4.2_c">Membri</string>
 	<string name="short_revision_4_2"> Le cooperative sono generalmente possedute e controllate su base democratica da tutti gli iscritti e distribuiscono i profitti delle attività commerciali ai loro membri.</string>
 	<!-- 4.3 SCAN -->
-	<string name="q4.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
+	<string name="q4.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
 	<string name="q4.3"> Cosa può fare George per avere una conoscenza più approfondita delle strutture legali del suo Paese in termini di impresa sociale?</string>
 	<string name="a4.3_a"> Google tutto </string>
-	<string name="a4.3_b"> Contattare un'organizzazione di supporto alle imprese </string>
+	<string name="a4.3_b"> Contattare un\'organizzazione di supporto alle imprese </string>
 	<string name="a4.3_c">Leggere libri sul tema</string>
 	<string name="short_revision_4_3"> Quando si tratta di strutture legali, le informazioni di base sono importanti, ma cercate di andare oltre contattando le organizzazioni di supporto che potrebbero aiutarvi con la vostra attività.</string>
 	<!-- 5.1 CLICK -->
@@ -176,7 +176,7 @@
 	<string name="q5.1"> George vuole fare un business plan per la sua start-up di stampa 3D. Conosce già la missione della sua azienda, ma non sa quale dovrebbe essere la visione. Cosa è importante considerare per George?</string>
 	<string name="a5.1_a">Quanti soldi ci sono</string>
 	<string name="a5.1_b"> Dove vuole andare la sua azienda?</string>
-	<string name="a5.1_c"> Cosa fa l'azienda?</string>
+	<string name="a5.1_c"> Cosa fa l\'azienda?</string>
 	<string name="short_revision_5_1"> Per realizzare un piano aziendale chiaro, deve essere il più vicino possibile ai vostri desideri ed è importante tenere a mente dove volete che la vostra azienda vada.</string>
 	<!-- 5.2 COLOR -->
 	<string name="q5.2_instruction"> Scegliete una risposta scansionando una superficie rossa intorno a voi per scegliere a, una verde per scegliere b, o una blu per scegliere c. In caso di errore, vi verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
@@ -193,26 +193,26 @@
 	<string name="a5.3_c"> Quando il business plan è molto esteso </string>
 	<string name="short_revision_5_3"> Per realizzare un business plan efficace, deve essere il più vicino possibile a ciò che desiderate.</string>
 	<!-- 6.1 QR SCAN -->
-	<string name="q6.1_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
+	<string name="q6.1_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
 	<string name="q6.1"> George sta cercando un modo per finanziare la sua azienda. Che cosa è importante prima che possa cercare fondi?</string>
 	<string name="a6.1_a"> Dovrebbe sapere se ha bisogno di fondi </string>
 	<string name="a6.1_b">dovrebbe conoscere le persone</string>
 	<string name="a6.1_c">dovrebbe già avere dei fondi</string>
-	<string name="short_revision_6_1"> Tenendo conto dei costi dell'attività, è possibile individuare l'importo necessario per l'azienda e quindi la necessità di un finanziamento.</string>
+	<string name="short_revision_6_1"> Tenendo conto dei costi dell\'attività, è possibile individuare l\'importo necessario per l\'azienda e quindi la necessità di un finanziamento.</string>
 	<!-- 6.2 SPEAK -->
 	<string name="q6.2_instruction"> Scegliete una risposta leggendola! La verifica testuale con funzionalità di modifica sarà utilizzata per verificare la registrazione. In caso di errore, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di lettura.</string>
 	<string name="q6.2"> George ha concluso che ha bisogno di fondi. Che cosa deve avere chiaro prima di cercare fondi?</string>
 	<string name="a6.2_a"> I costi della sua azienda </string>
-	<string name="a6.2_b"> L'influenza del mercato sul prezzo del prodotto </string>
+	<string name="a6.2_b"> L\'influenza del mercato sul prezzo del prodotto </string>
 	<string name="a6.2_c">Il mercato</string>
-	<string name="short_revision_6_2"> Tenendo conto dei costi, è possibile individuare l'entità del finanziamento necessario per la propria azienda.</string>
+	<string name="short_revision_6_2">Tenendo conto dei costi, è possibile individuare l\'entità del finanziamento necessario per la propria azienda.</string>
 	<!-- 6.3 QR SCAN -->
-	<string name="q6.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
+	<string name="q6.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di scelta sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
 	<string name="q6.3"> George vuole che qualcuno lo aiuti a finanziare la sua start-up di stampa 3D. Cosa è importante considerare?</string>
-	<string name="a6.3_a"> Ha un'opzione?</string>
-	<string name="a6.3_b"> L'investitore è quello giusto per me?</string>
+	<string name="a6.3_a"> Ha un\'opzione?</string>
+	<string name="a6.3_b"> L\'investitore è quello giusto per me?</string>
 	<string name="a6.3_c"> Vuole fare un grande investimento?</string>
-	<string name="short_revision_6_3"> Il fattore più importante per quanto riguarda il finanziamento da parte di altri è considerare quello che si adatta meglio alla vostra azienda, che può essere più di un'opportunità.</string>
+	<string name="short_revision_6_3"> Il fattore più importante per quanto riguarda il finanziamento da parte di altri è considerare quello che si adatta meglio alla vostra azienda, che può essere più di un\'opportunità.</string>
 	<!-- 7.1 SPEAK -->
 	<string name="q7_1_instruction">Scegliete una risposta leggendola! La verifica testuale con funzionalità di modifica sarà utilizzata per verificare la registrazione. In caso di errore, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di lettura.</string>
 	<string name="q7.1"> George è alla ricerca di un mentore, dove può trovarlo?</string>
@@ -222,11 +222,11 @@
 	<string name="short_revision_7_1"> Quando si cerca un mentore, si può utilizzare la propria rete di contatti per trovare qualcuno che sia adatto come mentore.</string>
 	<!-- 7.2 COLOR -->
 	<string name="q7.2_instruction">Scegliete una risposta scansionando una superficie verde intorno a voi per scegliere a, una blu per scegliere b o una rossa per scegliere c. In caso di errore, vi verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
-	<string name="q7.2"> George vuole trovare un mentore che lo aiuti a migliorare la sua start-up. A George piace avere un mentore con esperienza. Come fa George a sapere se c'è sintonia tra lui e il mentore?</string>
-	<string name="a7.2_a"> Quando non c'è connessione tra loro </string>
+	<string name="q7.2"> George vuole trovare un mentore che lo aiuti a migliorare la sua start-up. A George piace avere un mentore con esperienza. Come fa George a sapere se c\'è sintonia tra lui e il mentore?</string>
+	<string name="a7.2_a"> Quando non c\'è connessione tra loro </string>
 	<string name="a7.2_b"> Quando il mentore si comporta in modo superiore </string>
 	<string name="a7.2_c"> Quando il mentore conosce le start-up </string>
-	<string name="short_revision_7_2"> Un mentore può aiutarvi nel panorama delle start-up, poiché ha un'esperienza che voi non avete ancora.</string>
+	<string name="short_revision_7_2"> Un mentore può aiutarvi nel panorama delle start-up, poiché ha un\'esperienza che voi non avete ancora.</string>
 	<!-- 7.3 SHAKE -->
 	<string name="q7.3_instruction">Scegliete una risposta scuotendo il dispositivo! Una volta per a, due volte per b e tre volte per c. La risposta scelta sarà evidenziata in verde. Nel caso in cui sia sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scuotere.</string>
 	<string name="q7.3">George ha trovato un mentore per la sua start up. Quale sarebbe il suo prossimo passo?</string>
@@ -234,20 +234,20 @@
 	<string name="a7.3_b">Discutere con il suo mentore se ha bisogno di dipendenti, per cosa, ecc.</string>
 	<string name="a7.3_c">Chiedere al mentore se questo mentore può assumere parte del suo lavoro</string>.
 	<string name="short_revision_7_3">Con la consulenza facilmente disponibile, potete valutare se avete bisogno di più persone nella vostra azienda. Il mentore può aiutarvi a capire per cosa e perché avete bisogno di dipendenti.</string><!-- 8.1 QR SCAN -->
-	<string name="q8_1_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
-	<string name="q8.1">Quali altre competenze, oltre a quelle tecniche o accademiche, sono importanti per l'assunzione di personale? </string>
+	<string name="q8_1_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
+	<string name="q8.1">Quali altre competenze, oltre a quelle tecniche o accademiche, sono importanti per l\'assunzione di personale? </string>
 	<string name="a8.1_a">Competenze trasversali </string>
 	<string name="a8.1_b">Competenze imprenditoriali</string>
 	<string name="a8.1_c">Competenze creative</string>
 	<string name="short_revision_8_1">Quando si decide di assumere un dipendente, ci sono diversi fattori da considerare. È importante non concentrarsi solo sulle competenze accademiche o tecniche, ma anche sulle soft skills.</string><!-- 8.2 CLICK -->
 	<string name="q8.2_instruction">Scegli una risposta cliccando su di essa! Nel caso in cui sia sbagliata, verrà fornita una revisione più breve delle informazioni riguardanti la domanda e una seconda possibilità di cliccare.</string>
-	<string name="q8.2">George vuole assumere diversi dipendenti nel corso del prossimo anno. Qual è una buona opzione da prendere in considerazione per lui?
+	<string name="q8.2">George vuole assumere diversi dipendenti nel corso del prossimo anno. Qual è una buona opzione da prendere in considerazione per lui?</string>
 	<string name="a8.2_a">Assumere qualcuno che si occupi del reclutamento</string>.
 	<string name="a8.2_b">Continuare a reclutare da solo</string>
 	<string name="a8.2_c">Assumere una società esterna per il reclutamento</string>
 	<string name="short_revision_8_2">Quando si vogliono assumere diverse persone nei prossimi anni e non solo in quelli successivi, potrebbe valere la pena di assumere qualcuno come parte della propria azienda, invece di una società esterna.</string>
 	<!-- 8.3 COLORE -->
-	<string name="q8.3_instruction">Scegliete una risposta scansionando una superficie rossa dall'intorno per scegliere a, una verde per scegliere b, o una blu per scegliere c. Nel caso in cui sia sbagliata, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
+	<string name="q8.3_instruction">Scegliete una risposta scansionando una superficie rossa dall\'intorno per scegliere a, una verde per scegliere b, o una blu per scegliere c. Nel caso in cui sia sbagliata, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
 	<string name="q8.3">Cosa succede dopo aver saputo chi George vuole assumere? </string>.
 	<string name="a8.3_a">Definizione della cultura aziendale preferita</string>
 	<string name="a8.3_b">Pensare al tipo di background culturale che i suoi dipendenti dovrebbero avere</string>.
@@ -255,44 +255,47 @@
 	<string name="short_revision_8_3">Una volta che si ha un aspetto chiaro di chi si vuole assumere, è bene sapere che tipo di cultura aziendale si vuole avere.</string>
 	<!-- 9.1 SPEAK -->
     <string name="q9.1">George sta cercando di espandere la sua azienda. Mentre lo fa, si accorge che la cultura non è ancora presente. Che cosa dovrebbe prendere in considerazione George per creare una cultura aziendale adeguata? </string>.
-	<string name="a9.1_a">I valori dell'azienda</string>
+	<string name="a9.1_a">I valori dell\'azienda</string>
 	<string name="a9.1_b">La sua missione</string>
 	<string name="a9.1_c">Gli obiettivi</string>
-	<string name="short_revision_9_1">La cultura della vostra azienda aiuta a stabilire i valori fondamentali dell'azienda. Questi valori rappresentano ciò che l'azienda fa e come raggiunge i propri obiettivi.</string>
+	<string name="short_revision_9_1">La cultura della vostra azienda aiuta a stabilire i valori fondamentali dell\'azienda. Questi valori rappresentano ciò che l\'azienda fa e come raggiunge i propri obiettivi.</string>
 	<!-- 9.2 COLOR -->
 	<string name="q9.2_instruction">Scegliete una risposta scansionando una superficie blu intorno a voi per scegliere a, una rossa per scegliere b o una verde per scegliere c. Nel caso in cui sia sbagliata, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
-	<string name="q9.2">George si sta assicurando di avere dei valori aziendali. Che cosa c'è di importante in questi valori per assicurarsi che ci siano più idee innovative?
+	<string name="q9.2">George si sta assicurando di avere dei valori aziendali. Che cosa c\'è di importante in questi valori per assicurarsi che ci siano più idee innovative?</string>
 	<string name="a9.2_a">Le persone dovrebbero essere in grado di fare ciò che vogliono</string>.
 	<string name="a9.2_b">Il luogo di lavoro deve essere inclusivo</string>
 	<string name="a9.2_c">I dipendenti non dovrebbero essere in grado di fornire nuovi input</string>
 	<string name="short_revision_9_2">Un ambiente di lavoro inclusivo è importante, poiché un luogo di lavoro in cui lavorano persone diverse porta a idee più innovative.</string>
 	<!-- 9.3 CLICK -->
 	<string name="q9.3_instruction">Scegli una risposta cliccando su di essa! Nel caso in cui sia sbagliata, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di cliccare.</string>
-	<string name="q9.3">George ha stabilito alcuni valori aziendali. Che cosa dovrebbe fare con questi valori?
+	<string name="q9.3">George ha stabilito alcuni valori aziendali. Che cosa dovrebbe fare con questi valori?</string>
 	<string name="a9.3_a">Deve assicurarsi che sia chiaro a tutti quali sono questi valori</string>.
 	<string name="a9.3_b">Deve averli e non usarli</string>
 	<string name="a9.3_c">Dovrebbe assicurarsi che i dipendenti li seguano fino ad un certo punto</string>.
 	<string name="short_revision_9_3">I valori della vostra azienda devono essere chiari ai dipendenti, ai potenziali investitori e ai clienti. È vostra responsabilità raggiungere questo obiettivo! </string>
 	<!-- 10.1 SHAKE -->
 	<string name="q10_1_instruction">Scegliere una risposta scuotendo il dispositivo! Una volta per a, due volte per b e tre volte per c. La risposta scelta sarà evidenziata in verde. Nel caso in cui sia sbagliata, verrà fornita una breve revisione delle informazioni relative alla domanda e una seconda possibilità di scuotere.</string>
-	<string name="q10.1">George sta cercando di espandere la sua azienda a livello globale. Che cosa deve prendere in considerazione prima di poterlo fare?
-	<string name="a10.1_a">Quali paesi si adattano all'azienda di George? </string>
+	<string name="q10.1">George sta cercando di espandere la sua azienda a livello globale. Che cosa deve prendere in considerazione prima di poterlo fare?</string>
+	<string name="a10.1_a">Quali paesi si adattano all\'azienda di George? </string>
 	<string name="a10.1_b">In quali paesi questa idea è nuova? </string>
-	<string name="a10.1_c">Di cosa ha bisogno l'azienda di George per diventare globale? </string>
+	<string name="a10.1_c">Di cosa ha bisogno l\'azienda di George per diventare globale? </string>
 	<string name="short_revision_10_1">Quando decidete di raggiungere un livello globale, dovreste iniziare a considerare quali paesi sono rilevanti per voi.</string>
 	<!-- 10.2 CLICK -->
 	<string name="q10.2_instruction">Scegli una risposta cliccando su di essa! Nel caso in cui sia sbagliata, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di cliccare.</string>
-	<string name="q10.2">George ha scelto diversi Paesi in cui la sua idea potrebbe funzionare. Che cos'altro deve prendere in considerazione?
+	<string name="q10.2">George ha scelto diversi Paesi in cui la sua idea potrebbe funzionare. Che cos\'altro deve prendere in considerazione?</string>
 	<string name="a10.2_a">Le culture sono uguali in questi Paesi? </string>
 	<string name="a10.2_b">La cultura della sua azienda si adatta a questi Paesi? </string>
 	<string name="a10.2_c">La sua idea è nuova? </string>
-	<string name="short_revision_10_2">Dopo aver preparato un elenco di Paesi in cui espandere la propria attività, è importante considerare la cultura. Gli abitanti dei paesi parlano la stessa lingua, hanno un'etica lavorativa diversa, la cultura della vostra azienda si adatta alla loro.</string>
+	<string name="short_revision_10_2">Dopo aver preparato un elenco di Paesi in cui espandere la propria attività, è importante considerare la cultura. Gli abitanti dei paesi parlano la stessa lingua, hanno un\'etica lavorativa diversa, la cultura della vostra azienda si adatta alla loro.</string>
 	<!-- 10.3 QR SCAN -->
-	<string name="q10.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
-	<string name="q10.3">George sta prendendo in considerazione un Paese che ha una lingua diversa da quella del suo Paese d'origine. Di che cosa deve tenere conto? </string>.
+	<string name="q10.3_instruction">Scegliere una risposta scansionando un codice QR corrispondente a un\'immagine appropriata sul tabellone di gioco. In caso di errore, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di scansione.</string>
+	<string name="q10.3">George sta prendendo in considerazione un Paese che ha una lingua diversa da quella del suo Paese d\'origine. Di che cosa deve tenere conto? </string>.
 	<string name="a10.3_a">Potrebbero esserci problemi di traduzione</string>.
 	<string name="a10.3_b">Assumere un traduttore può essere utile per evitare problemi di traduzione</string>.
 	<string name="a10.3_c">Si dovrebbe sempre scegliere un paese in cui la lingua è la stessa</string>.
 	<string name="short_revision_10_3">Quando si espande la propria attività in un paese in cui la lingua parlata è diversa da quella del paese di origine, è molto probabile che si presentino problemi di traduzione che necessitano di soluzioni.</string>
 	<string name="q9_1_instruction">Scegli una risposta leggendola! La verifica testuale con funzionalità di modifica sarà utilizzata per verificare la registrazione. In caso di errore, verrà fornita una revisione più breve delle informazioni relative alla domanda e una seconda possibilità di lettura.</string>
+	<string name="scan_2_qr_code">Scansiona il secondo codice QR</string>
+	<string name="scan_1_qr_code">Scansiona il primo codice QR</string>
+	<string name="scan_qr_code">Scansiona il codice QR</string>
 </resources>

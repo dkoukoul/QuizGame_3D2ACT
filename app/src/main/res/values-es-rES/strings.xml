@@ -318,4 +318,7 @@ El factor más importante es considerar cuál encaja mejor con tu empresa, que p
     <string name="a10.3_b">Contratar a un traductor puede ayudar para prevenir problemas de traducción</string>
     <string name="a10.3_c">Debes elegir siempre un país en el que el idioma sea el mismo</string>
     <string name="short_revision_10_3">Cuando abres tu negocio a un país donde se habla una lengua diferente, es fácil encontrarte con problemas de traducción que necesitan solución.</string>
+    <string name="scan_2_qr_code">Escanea el segundo código QR</string>
+    <string name="scan_1_qr_code">Escanea el primer código QR</string>
+    <string name="scan_qr_code">Escanear código QR</string>
 </resources>
