@@ -1,0 +1,316 @@
+<resources>
+    <string name="app_name">3D2ACT SE Quiz</string>
+    <string name="eu_project_disclaimer"> Dit project is gefinancierd met steun van het Erasmus+-programma van de Europese Unie. Deze mededeling geeft uitsluitend de mening van de auteurs weer en noch de Europese Commissie, noch het Uitvoerend Agentschap Onderwijs, audiovisuele media en cultuur kunnen verantwoordelijk worden gesteld voor het gebruik van de informatie die erin is vervat. Projectnummer: 2020-1-EL01-KA202-078957</string>
+    <string name="reading_prompt">Lees het antwoord</string>
+    <string name="reading_prompt_no_results">Geen resultaten gevonden</string>
+    <!--Buttons-->
+    <string name="button_next">VOLGENDE</string>
+    <string name="button_try">PROBEER OPNIEUW</string>
+    <string name="button_start">START</string>
+    <string name="button_end">EINDE</string>
+    <string name="dialog_resume_title">Onvoltooide Quiz</string>
+    <string name="dialog_resume_message">Wil je verdergaan?</string>
+    <string name="dialog_resume_resume">Verdergaan</string>
+    <string name="dialog_resume_restart">Opnieuw</string>
+    <!--Section Generic-->
+    <string name="section_why">WAAROM?</string>
+    <string name="section_how">HOE?</string>
+    <string name="section_next">VOLGENDE</string>
+
+    <string name="a">a)</string>
+    <string name="b">b)</string>
+    <string name="c">c)</string>
+
+    <string name="toast_back_button">Klik nogmaals om af te sluiten</string>
+    <string name="dialog_wrong_answer_first_attempt">Goed geprobeerd, je krijgt een tweede kans.</string>
+    <string name="dialog_wrong_answer_second_attempt">Goed geprobeerd, misschien lukt het de volgende keer.</string>
+    <string name="dialog_correct_answer">Yes, je had het goed!</string>
+    <!--Score card -->
+    <string name="score_congratulations">Gefeliciteerd, je hebt het spel uitgespeeld</string>
+    <string name="score_title">Dit is je score</string>
+    <!--Quiz Generics-->
+    <string name="voice_recognition_confirm_message">Corrigeer en stuur je antwoord in.</string>
+    <string name="voice_recognition_confirm_title">Hebben we je goed begrepen?</string>
+    <string name="alert_submit_button">Indienen</string>
+    <string name="alert_cancel_button">Annuleren</string>
+    <string name="toast_wrong_answer">Verkeerde antwoord</string>
+    <string name="toast_wrong_color">Er is geen rood, groen of blauw gevonden. Probeer opnieuw.</string>
+    <string name="toast_wrong_speech">Er is geen antwoord gevonden. Probeer opnieuw.</string>
+
+    <!--Project description-->
+    <string name="project_description">Digitalisering en industrie 4.0 zijn misschien wel de belangrijkste drijvende krachten achter de ingrijpende transformatie van de arbeidsmarkt, de manier waarop mensen werken en de nieuwe digitale vaardigheden die nodig zijn om aan de behoeften van de gedigitaliseerde markt te voldoen. Beroepsonderwijs en -opleiding worden gewaardeerd voor het bevorderen van beroeps specifieke en transversale vaardigheden, het vergemakkelijken van de overgang naar de arbeidsmarkt en het onderhouden en actualiseren van de vaardigheden van de beroepsbevolking volgens sectorale, regionale en lokale behoeften. Het doel van deze app is het bevorderen van sleutelcompetenties gericht op ondernemersvaardigheden, maar met een sociale impact omdat ze inspelen op sociale uitdagingen/behoeften en een voordeel hebben voor de gemeenschap, het milieu of de cultuur. Het hebben van een ondernemersmentaliteit is een groot voordeel op de huidige arbeidsmarkt omdat het datgene is waardoor ideeën werkelijkheid worden. Creativiteit is de motor van ondernemerschap.</string>
+    <!--Section 1. Choose a social issue -->
+    <string name="section1_title">1. Kies een sociale kwestie/maatschappelijk probleem</string>
+    <string name="section1_why_text">Om een duidelijke visie en een specifieke missie voor een sociale onderneming te hebben, is de allereerste stap het definiëren van het sociale probleem dat bestaat. Vanaf dan zou je kunnen kijken hoe jouw sociale onderneming zou kunnen bijdragen aan het oplossen van dat maatschappelijke probleem. Wat is de maatschappelijke behoefte precies en wat is de specifieke doelgroep(en)? Is het een groot probleem of een kleine, maar toch de moeite waard om op te lossen? Wat is de oorzaak dat het probleem er is? Wat zijn jouw gedachten over hoe je kunt bijdragen aan de oplossing van dat specifieke probleem?</string>
+    <string name="section1_how_text">Voordat je de meeste van de bovenstaande vragen gaat beantwoorden, moet eerst tijd worden besteed aan het vinden van een maatschappelijk probleem waarvoor je gepassioneerd bent. Maar hoe doe je dat? Als je geen idee hebt, maar wel weet dat je graag 3D-printtechnieken wilt gebruiken, begin dan met na te gaan welke sociale/milieuwaarden je het meest interessant vindt.</string>
+    <string name="section1_next_text"> Heb je HET sociale bedrijfsidee waarbij 3D printtechnieken worden gebruikt om de oplossing te verbeteren? Geweldig! Nu kun je jouw idee "testen" door het te bespreken met bij voorkeur mensen uit je doelgroep(en). Check met hen wat ze ervan vinden en vraag om feedback om het idee te verbeteren, zodat het de perfecte oplossing is voor de doelgroep(en).</string>
+    <!--Section 2. research your issue -->
+    <string name="section2_title">2. Onderzoek je probleem</string>
+    <string name="section2_why_text"> Nadat je hebt vastgesteld wat je wilt nastreven met je sociale onderneming, is het belangrijk om uitgebreid onderzoek te doen naar alles wat te maken heeft met het sociale vraagstuk dat je wilt oplossen. Niet alleen de feiten over de doelgroep(en) en hun strijd, maar ook onderzoek naar je potentiële concurrentie. Zijn er al sociale ondernemingen die het sociale vraagstuk dat jij wilt aanpakken ook proberen aan te pakken?</string>
+    <string name="section2_how_text"> Nu is het belangrijk om dieper in te gaan op alles wat relevant is voor je maatschappelijk vraagstuk en niet te vergeten, hoe 3D printen hierbij betrokken kan worden. Maak een studie van je onderzoek, door echt te focussen op het probleem, waarom dit probleem bestaat, wat de gevolgen zijn van het sociale vraagstuk, wat zijn de kosten die gepaard gaan met jouw specifieke sociale vraagstuk en die je dus zou kunnen minimaliseren? Besteed ook voldoende aandacht aan de doelgroepen en alle begunstigden: wat zijn de directe doelstellingen van je project, wat zijn de menselijke en financiële gevolgen van de sociale kwestie, wat zijn de kenmerken van je begunstigden, hoeveel mensen zijn betrokken bij deze sociale kwestie?</string>
+    <string name="section2_next_text"> Na het onderzoek naar je sociale business idee, ga na hoe je jouw 3D-printer zou kunnen integreren in je sociale business. Dat kan je belangrijkste verkoopargument zijn en jou onderscheiden van je potentiële concurrentie. Welke andere voordelen kun je bedenken bij het produceren met een 3D-printer?</string>
+    <!--Section 3. Choose a social issue -->
+    <string name="section3_title">3. Een globaal beeld krijgen</string>
+    <string name="section3_why_text"> Ga na het onderzoeken van je vraagstuk nog eens en meer globaal na wat het is dat je als product/dienst zou willen hebben met betrekking tot 3D printen. Dit is belangrijk om een duidelijk beeld te hebben van wat je gaat leveren aan de geselecteerde doelgroep(en) en hoe je jouw sociale business wilt onderscheiden. Nadat je dit gedaan hebt, kun je nagaan of de manier waarop je 3D printing gerelateerde social business is opgezet volgens jouw wensen en of het dienovereenkomstig wordt gepresenteerd aan de doelgroep(en).</string>
+    <string name="section3_how_text"> Je kunt beginnen met het vaststellen van je Positioneringsverklaring. Dit betekent dat je jouw sociale 3D-printing business vergelijkt met andere relevante bedrijven en wat jij wilt dat anderen over jouw bedrijf denken. Een Positioneringsverklaring is een antwoord op de vraag waarom jouw op 3D printen gebaseerde product/dienst beter is dan de andere bestaande relevante producten/diensten.</string>
+    <string name="section3_next_text">Nadat je jouw positioneringsverklaring, slogan en metafoor hebt vastgesteld, heb je een globaal standpunt over jouw sociale onderneming. je kunt dan dieper ingaan op andere zaken zoals juridische structuren en financieringsmogelijkheden. Probeer te onthouden wat het creëren van een maatschappelijke waarde voor jou betekent, welke waarde het precies is en hoe jij anders dan anderen kunt bijdragen aan een maatschappelijk doel.</string>
+    <!--Section 4. Choose a social issue -->
+    <string name="section4_title">4. juridische structuren begrijpen</string>
+    <string name="section4_why_text"> Voordat je een bedrijf begint, is het ook belangrijk om voldoende aandacht te besteden aan de wetgeving, aan wat mogelijk is en waar je voorzichtig mee moet zijn, in je eigen land/regio. Dit zal voorkomen dat je voor onaangename verrassingen komt te staan, die alleen maar een belemmering zullen vormen voor het goed runnen van jouw sociale onderneming. Het is dus een must om alle belangrijke feiten en informatie over wetgevingskwesties voor je bedrijf bij de hand te hebben.</string>
+    <string name="section4_how_text">De wetgeving is hier een complex onderwerp, omdat deze per land verschilt. Je kunt echter beginnen met de basisinformatie, die in alle landen vergelijkbaar is. Er zijn drie verschillende 'soorten' rechtsvormen voor sociale ondernemingen:\1. Non-Profit Organisaties: kunnen democratisch zijn of gecontroleerd worden door managers, ze maken geen winst en handelen voor een sociaal doel.\2.Coöperaties: zijn meestal eigendom van en worden democratisch gecontroleerd door leden. Zij keren winst uit handelsactiviteiten uit aan de leden. Zij kunnen een maatschappelijk doel hebben dat verder gaat dan het voordeel voor de leden, dat in de statuten is vastgelegd, of zij voeren een dienst van algemeen belang uit.\3.Aandelenvennootschappen: zijn over het algemeen eigendom van en worden gecontroleerd door aandeelhouders op een pro-rata basis. Deze kunnen worden verhandeld ter bevordering van een sociaal doel en kunnen ook andere bestuur kenmerken hebben om winst ondergeschikt te maken aan het doel..</string>
+    <string name="section4_next_text">Natuurlijk is basisinformatie belangrijk, maar probeer nog verder te gaan door contact op te nemen met organisaties die jou verder kunnen helpen als het gaat om juridische structuren. Je kunt daarvoor contact opnemen met bedrijfsondersteunende organisaties, maar kijk ook binnen je netwerk wie je zou kunnen helpen. Een idee zou kunnen zijn om een dag in je agenda te reserveren voor informatie over de juridische structuren die je nodig hebt voor je sociale onderneming.</string>
+    <!--Section 5. Choose a social issue -->
+    <string name="section5_title">5. een solide sociaal bedrijfsplan opstellen </string>
+    <string name="section5_why_text">Na het opzetten van de juridische structuur is het belangrijk een ondernemingsplan op te stellen. Zonder ondernemingsplan kan men onderweg verdwalen. Zeker als starter loop je het risico om opgeslokt te worden door praktische taken. Bovendien helpt het maken van een ondernemingsplan je na te denken over waar je met jouw bedrijf wilt zijn. Dit kan je nog meer motiveren om je doelen te bereiken. Een ondernemingsplan geeft je de duidelijkheid die nodig is om je bedrijf te starten en succesvol te maken.</string>
+    <string name="section5_how_text">Om een duidelijk ondernemingsplan te maken is het belangrijk in gedachten te houden waar je met jouw bedrijf naartoe wilt. Een ondernemingsplan moet zo dicht mogelijk bij jouw wensen liggen. Zorg ervoor dat de missie en visie die je voor je bedrijf hebt duidelijk zijn. De missie is wat het bedrijf doet, en de visie is waar jij wilt dat het bedrijf naartoe gaat. Je moet nadenken over hoeveel 3D-printers je wilt hebben, hoe lang ze mee kunnen, en waar je over vijf jaar wilt staan. Hoeveel tijd wil je investeren in marketing? Wanneer moet je werknemers aannemen? Er zijn veel vragen om te overwegen, dus moet je beginnen met wat jij wilt en dan kijken naar wat jij nodig hebt om jouw doel mogelijk te maken.</string>
+    <string name="section5_next_text">Nu je weet wat je bedrijf doet en waar het naartoe wil, heb je de basis voor de volgende stap, de financiering. Met de gestelde doelen voor jouw bedrijf kun je nu uitzoeken hoeveel je nodig hebt om je doelen mogelijk te maken.</string>
+    <!--Section 6. investigate funding options -->
+    <string name="section6_title">6. Financieringsmogelijkheden onderzoeken</string>
+    <string name="section6_why_text"> Financiering is een belangrijke factor om ervoor te zorgen dat je jouw bedrijf kunt financieren. Zonder de juiste financiering is het niet mogelijk om financieel stabiel te zijn.</string>
+    <string name="section6_how_text"> Om vast te stellen welke kosten je zult hebben is het belangrijk te kijken naar de kosten die je zult hebben om je product te maken. Met de kosten in gedachten is het mogelijk om te bepalen hoeveel geld je nodig hebt voor je bedrijf. Dit geeft jou verschillende opties om de benodigde fondsen te vinden:
+   - Je eigen spaargeld
+    - Je netwerk, zoals vrienden en familie
+    - Crowdfunding
+    - Zoek een incubator voor bedrijven
+    - Vraag om subsidies
+    - Sponsoring
+    - Business angels
+De belangrijkste factor is te overwegen welke het beste bij jouw bedrijf past, wat meer dan één mogelijkheid kan zijn. </string>
+    <string name="section6_next_text">Zodra je jouw opties voor financiering hebt vastgesteld, wordt het gemakkelijker om je te omringen met de juiste mensen, hetzij degenen die je kunnen helpen, hetzij degenen die je kunt inhuren. Je kent nu je opties en kosten, dus je weet of je inhuur kunt betalen. Je mentor kan vaststellen hoe het geld wordt besteed. </string>
+    <!--Section 7.  -->
+    <string name="section7_title">7. voortdurend steun zoeken bij een mentor </string>
+    <string name="section7_why_text">Nadat je hebt uitgezocht wat je bedrijf doet, waar je naartoe wilt en hoeveel financiering je nodig hebt, is het een goede stap om een mentor te zoeken. Een mentor kan je door het opstartlandschap heen helpen, omdat zij ervaring hebben die jij nog niet hebt. Daarnaast kan een mentor je helpen je gedachten over je bedrijf te structureren. Daarnaast zorgt een mentor ook voor een netwerk, dat je nog verder kan helpen met je start-up.. </string>
+    <string name="section7_how_text"> Wanneer je een mentor zoekt, moet je bedenken wat je van een mentor verlangt. Dit kan advies, een goed netwerk of ondersteuning zijn. Heb je een mentor nodig met ervaring in start-ups of heb je een mentor nodig die veel weet van 3D-printen? Ook is het belangrijk dat er een match is tussen de mentor en de mentee. Dit kan zijn op basis van een hobby, interesses of levensstijl. Als u een incubator gebruikt als financieringsbron, zouden zij ook als mentor kunnen fungeren. Andere manieren om een mentor te zoeken zijn door je netwerk te gebruiken om iemand te vinden die geschikt is als mentor. </string>
+    <string name="section7_next_text">Met advies dat gemakkelijk beschikbaar is, is het een gemakkelijke stap om te overwegen of je meer mensen in uw bedrijf nodig hebt. Heb je hulp nodig van werknemers? De mentor kan je helpen structureren waarvoor en waarom jij een medewerker nodig hebt.</string>
+    <!--Section 8.  -->
+    <string name="section8_title">8. neem de juiste mensen aan</string>
+    <string name="section8_why_text">Als je eenmaal doelen voor jezelf hebt gesteld, kun je het waarschijnlijk niet meer alleen. Je wilt groeien of je wilt iemand met andere kennis dan jij hebt. Nieuwe mensen kunnen andere ideeën en andere perspectieven hebben, wat jouw bedrijf beter maakt. </string>
+    <string name="section8_how_text">Wanneer je besluit dat je een werknemer in dienst moet nemen, zijn er verschillende factoren waarmee je rekening moet houden. Wil je iemand inhuren die jou kan helpen met het werk dat je al doet of wil je iemand die andere kennis heeft en zich dus op andere onderwerpen kan richten? Het is belangrijk om je niet alleen te richten op de academische of technische vaardigheden, maar ook op de soft skills. Past de persoonlijkheid van iemand die je aanneemt, bij jou en de doelstellingen van het bedrijf? Het is ook goed om te overwegen iemand in te huren met een andere achtergrond dan jij al hebt. Daarnaast moet je overwegen hoeveel mensen je wilt aannemen en wanneer. Je kunt ook overwegen om de werving niet zelf te doen. Wil je iemand anders inhuren om het te doen of een extern bedrijf inhuren? Dit hangt allemaal af van hoeveel mensen je wilt aannemen. Wanneer je meerdere mensen wilt aannemen en de komende jaren nog meer wilt uitbreiden, kan het de moeite waard zijn om iemand in te huren als onderdeel van jouw bedrijf, in plaats van een extern bedrijf. </string>
+    <string name="section8_next_text"> Zodra je een duidelijk beeld hebt van wie je wilt aannemen, is het goed om te weten wat voor bedrijfscultuur je wilt hebben. Dit bouwt voort op het soort mensen dat je in jouw bedrijf wilt hebben. </string>
+    <!--Section 9.  -->
+    <string name="section9_title">9. een bedrijfscultuur opbouwen </string>
+    <string name="section9_why_text">Om de ideeën van je bedrijf af te maken, is het belangrijk te weten wat voor soort bedrijf je zou willen zijn. Jouw medewerkers vormen een aspect van de cultuur van jouw bedrijf, maar ook het beeld dat je van het bedrijf hebt. Je hebt een doel voor jezelf gesteld en hoe je dat doel wilt bereiken, wat ook inhoudt hoe groot je bedrijf is en gaat worden. </string>
+    <string name="section9_how_text">Om je bedrijfscultuur te vormen, moet je nagaan in wat voor omgeving jij graag werkt, en wat het beste past bij het product dat je verkoopt. Wil je dat je bedrijf klein is of wil je verder uitbreiden? Hou je van een meer hiërarchische vorm of wil je dat alle werknemers gelijk zijn? Het bedrijf en dus ook de cultuur moeten vertegenwoordigen wie je bent en wat je verkoopt. Een inclusieve werkomgeving is ook belangrijk, want een werkplek waar verschillende mensen werken, leidt tot meer innovatieve ideeën. Ten slotte helpt het om kernwaarden van het bedrijf vast te stellen. Deze waarden vertegenwoordigen wat het bedrijf doet en hoe het zijn doelen bereikt.. </string>
+    <string name="section9_next_text">Nu je een bedrijfscultuur hebt ingesteld, kun je je een weg banen naar de wereld. Je hebt waarden vastgesteld, wat potentiële investeerders of degenen die jouw product willen kopen een idee geeft van jouw bedrijf en of het voor hen relevant is..</string>
+    <!--Section 10.  -->
+    <string name="section10_title">10. wereldwijd bereiken</string>
+    <string name="section10_why_text">In een wereld waarin alles zo nauw met elkaar verbonden is als nu, kan het een nuttige stap zijn om je bedrijf wereldwijd uit te breiden. Een reden om wereldwijd te willen uitbreiden kan zijn dat je niet afhankelijk wilt zijn van één nationale economische markt of dat jouw idee potentie heeft in andere landen. Daarnaast kan het wereldwijd uitbouwen van je start-up jouw bedrijf sterker maken. </string>
+    <string name="section10_how_text">Wanneer je besluit wereldwijd actief te worden, moet je eerst nagaan welke landen voor jou relevant zijn. Waarom wil je naar een land en wat bied je daar aan, dat anders is dan wat zij al hebben? Door de positionering is het al duidelijk welke mogelijkheden wereldwijd kunnen gaan. Daarna is het belangrijk om na te denken over de cultuur. Spreekt het land waar je wilt uitbreiden dezelfde taal, hebben ze een andere werkethiek en past jouw bedrijfscultuur bij die van hen. Houdt jouw bedrijfsmodel rekening met differentiatie op basis van cultuur??</string>
+    <string name="section10_next_text"> Je kunt nu vaststellen wat nodig is voor jouw bedrijf. Met de laatste stap, begrijpen hoe je wereldwijd kunt bereiken, is het mogelijk om je eigen bedrijf in 3D printen te creëren..</string>
+
+    <!--QnA-->
+    <!--1.1 CLICK-->
+    <string name="q1_1_instruction"> Kies een antwoord door erop te klikken! Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken.</string>
+    <string name="q1.1"> George heeft net een 3D-printer gekocht en overweegt serieus een sociale onderneming te beginnen, waarvan het belangrijkste product/dienst door een 3D-printer moet worden ontwikkeld. Wat zou zijn eerste stap moeten zijn?</string>
+    <string name="a1.1_a">Online zoeken naar inspiratie</string>
+    <string name="a1.1_b">Iedereen die hij kent om ideeën vragen</string>
+    <string name="a1.1_c"> Zich afvragen welke sociale/milieuwaarden hem het meest na aan het hart liggen </string>
+    <string name="short_revision_1_1"> De eerste stap voor het opzetten van een onderneming in het algemeen, is na te denken over waar je gepassioneerd voor bent, en natuurlijk welke sociale/milieuwaarden passen bij je overtuigingen, ideeën en emoties..</string>
+    <!--1.2 SHAKE-->
+    <string name="q1.2_instruction">Kies een antwoord door het apparaat te schudden! Eenmaal voor a, tweemaal voor b en driemaal voor c. Het gekozen antwoord wordt groen gemarkeerd. Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te schudden..</string>
+    <string name="q1.2">Wat is de volgende stap voor George?</string>
+    <string name="a1.2_a">Inschrijving in de Kamer van Koophandel</string>
+    <string name="a1.2_b">Een 3D printer zoeken</string>
+    <string name="a1.2_c">Zijn idee testen bij zijn potentiële doelgroep</string>
+    <string name="short_revision_1_2"> De tweede stap voor het opzetten van een onderneming is het "testen" van jouw idee door het te bespreken, bij voorkeur met mensen die het zullen gebruiken, en om feedback te vragen.</string>
+    <!--1.3 SCAN QR-->
+    <string name="q1.3_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te kiezen..</string>
+    <string name="q1.3">Wat kon George daarna doen?</string>
+    <string name="a1.3_a">Investeerders zoeken</string>
+    <string name="a1.3_b">Een 3D printer kopen</string>
+    <string name="a1.3_c"> Het idee aanpassen op basis van de feedback van de doelgroep </string>
+    <string name="short_revision_1_3"> Als je feedback krijgt van mensen uit jouw doelgroep, moet je jouw ondernemersidee op passende wijze herzien.</string>
+    <!--2.1 SCAN QR-->
+    <string name="q2_1_instruction">Kies een antwoord door twee QR-codes te scannen die overeenkomen met afbeeldingen op het bord, die samen een van de drie mogelijke antwoorden vormen. Als de helft van het antwoord juist is, wordt een kortere herziening van de informatie over de vraag gegeven, samen met een tweede kans om te kiezen..</string>
+    <string name="q2.1">George heeft nu een duidelijk idee voor zijn sociale onderneming met behulp van zijn 3D-printer. Hij gaat nu onderzoek doen naar alles wat hij moet weten voordat hij zijn sociale onderneming start. Wat zijn de 2 belangrijkste onderwerpen waar George zich op moet richten?</string>
+    <string name="a2.1_a">3D printen en sociaal business model canvas </string>
+    <string name="a2.1_b"> Het op te lossen probleem en de betrokken doelgroepen </string>
+    <string name="a2.1_c"> Sociale integratie en milieuvraagstukken </string>
+    <string name="short_revision_2_1">Alvorens je sociale onderneming te starten moet je onderzoek doen, door je echt te richten op het probleem, waarom dit probleem bestaat, wat de gevolgen zijn van de sociale kwestie, enz. Besteed ook voldoende aandacht aan de doelgroepen en alle begunstigden.</string>
+    <!--2.2 SCAN QR-->
+    <string name="q2.2_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te kiezen..</string>
+    <string name="q2.2"> Wat mag George niet vergeten bij het onderzoek naar zijn sociale kwestie?</string>
+    <string name="a2.2_a"> Financiën </string>
+    <string name="a2.2_b"> Doelgroepen en alle begunstigden </string>
+    <string name="a2.2_c"> Hoe de 3D-printer in te passen als troef om het sociale vraagstuk op te lossen </string>
+    <string name="short_revision_2_2">Je moet altijd voldoende aandacht besteden aan de doelgroepen en alle begunstigden: de directe doelstellingen van je project, de menselijke en financiële gevolgen, de kenmerken van de begunstigden en hoeveel mensen erbij betrokken zijn..</string>
+    <!--2.3 CLICK-->
+    <string name="q2.3_instruction"> Kies een antwoord door erop te klikken!  Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
+    <string name="q2.3"> Wat zou George's belangrijkste verkoopargument kunnen zijn?</string>
+    <string name="a2.3_a"> Een 3D-printer als belangrijkste troef om uw maatschappelijk probleem op te lossen </string>
+    <string name="a2.3_b"> Een zeer innovatief product/dienst hebben </string>
+    <string name="a2.3_c"> Samenwerking met andere bedrijven op zijn sociaal gebied </string>
+    <string name="short_revision_2_3"> Ten slotte moet je altijd onderzoek doen naar jouw potentiële concurrentie. Zijn er al sociale ondernemingen die de sociale kwestie die je wilt aanpakken ook proberen aan te pakken?</string>
+    <!--3.1 SPEAK-->
+    <string name="q3_1_instruction">Kies het antwoord door het te lezen!  Tekstverificatie met bewerkingsfunctie zal worden gebruikt om de opname te controleren. Als het fout is, zal een kortere herziening van de informatie over de vraag worden verstrekt en een tweede kans om te lezen.</string>
+    <string name="q3.1"> George wil een globaal beeld krijgen van zijn sociale onderneming gebaseerd op 3D printen. Hij begint met de Positioning Statement van zijn onderneming. Welke belangrijke vraag moet hij zichzelf stellen?</string>
+    <string name="a3.1_a"> Waarom is mijn sociaal bedrijf beter dan de andere relevante bedrijven??</string>
+    <string name="a3.1_b"> Wat ga ik precies aanbieden?</string>
+    <string name="a3.1_c"> Wat is het sociale aspect in mijn sociale onderneming?</string>
+    <string name="short_revision_3_1"> Een Positioneringsverklaring is een antwoord op de vraag waarom je op 3D printen gebaseerde product/dienst beter is dan de andere bestaande relevante producten/diensten..</string>
+    <!--3.2 SHAKE-->
+    <string name="q3.2_instruction">Kies een antwoord door het apparaat te schudden!  Eenmaal voor a, tweemaal voor b en driemaal voor c. Het gekozen antwoord wordt groen gemarkeerd. Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te schudden..</string>
+    <string name="q3.2"> Wat moet George altijd in gedachten houden?</string>
+    <string name="a3.2_a"> Hoe hij zijn ondernemingsplan wil schrijven </string>
+    <string name="a3.2_b"> Hoe hij anders dan anderen bijdraagt aan een maatschappelijk doel </string>
+    <string name="a3.2_c"> Welke kosten zijn gemoeid met zijn bedrijf </string>
+    <string name="short_revision_3_2"> Je moet altijd onthouden wat het creëren van een maatschappelijke waarde voor jou betekent, welke waarde het precies is en hoe je anders dan anderen kunt bijdragen aan een maatschappelijk doel.</string>
+    <!--3.3 CLICK-->
+    <string name="q3.3_instruction"> Kies een antwoord door erop te klikken!  Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
+    <string name="q3.3"> Wat kan er nu nog verder gedaan worden?</string>
+    <string name="a3.3_a"> Contact opnemen met doelgroepen </string>
+    <string name="a3.3_b"> Doe meer onderzoek </string>
+    <string name="a3.3_c"> Dieper ingaan op andere zaken, zoals juridische structuren en financieringsmogelijkheden </string>
+    <string name="short_revision_3_3"> Nadat je een globaal beeld hebt van jouw sociale onderneming kun je beginnen met het oplossen van andere zaken zoals juridische structuren en financieringsmogelijkheden..</string>
+    <!--4.1 SCAN-->
+    <string name="q4_1_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. Bij een verkeerde keuze wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te scannen..</string>
+    <string name="q4.1"> George vraagt zich af welk type rechtsvorm zijn sociale onderneming moet hebben. Welke is een van de bestaande types?</string>
+    <string name="a4.1_a">Bedrijven delen</string>
+    <string name="a4.1_b">Profit organisaties</string>
+    <string name="a4.1_c"> Niet-operationele organisaties </string>
+    <string name="short_revision_4_1"> De belangrijkste "soorten" rechtsvormen die door sociale ondernemingen worden gebruikt, zijn organisaties zonder winstoogmerk, coöperaties en aandelenvennootschappen..</string>
+    <!--4.2 SPEAK-->
+    <string name="q4.2_instruction">Kies een antwoord door het te lezen!  Tekstuele verificatie met bewerkingsfunctie zal worden gebruikt om de opname te controleren. Als het fout is, zal een kortere herziening van de informatie over de vraag worden gegeven en een tweede kans om te lezen.</string>
+    <string name="q4.2"> Coöperaties zijn over het algemeen eigendom van en worden gecontroleerd op democratische basis door...?</string>
+    <string name="a4.2_a">Stakeholders</string>
+    <string name="a4.2_b">Verschillende entiteiten</string>
+    <string name="a4.2_c">Leden</string>
+    <string name="short_revision_4_2"> Coöperaties zijn over het algemeen eigendom van en worden op democratische basis gecontroleerd door alle ingeschrevenen en zij verdelen de winst uit handelsactiviteiten onder hun leden..</string>
+    <!--4.3 SCAN-->
+    <string name="q4.3_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. In geval van een verkeerde keuze wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te scannen..</string>
+    <string name="q4.3"> Wat kan George doen om meer inzicht te krijgen in de juridische structuren in zijn land met betrekking tot een sociale onderneming??</string>
+    <string name="a4.3_a">Zoek alles op Google</string>
+    <string name="a4.3_b"> Neem contact op met een organisatie voor bedrijfsondersteuning </string>
+    <string name="a4.3_c"> Lees er boeken over </string>
+    <string name="short_revision_4_3"> Als het gaat om juridische structuren is basisinformatie belangrijk, maar probeer nog verder te gaan door contact op te nemen met ondersteunende organisaties die jou kunnen helpen met je bedrijf.</string>
+    <!--5.1 CLICK-->
+    <string name="q5_1_instruction"> Kies een antwoord door erop te klikken! Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
+    <string name="q5.1"> George wil een businessplan maken voor zijn 3D printing start-up. De missie van zijn bedrijf kent hij al, maar hij weet niet wat de visie moet zijn. Wat is belangrijk voor George om te overwegen?</string>
+    <string name="a5.1_a">Hoeveel geld er is</string>
+    <string name="a5.1_b">Waar wil George dat zijn bedrijf naartoe gaat?</string>
+    <string name="a5.1_c">Wat doet het bedrijf?</string>
+    <string name="short_revision_5_1"> Om een duidelijk bedrijfsplan te maken moet het zo dicht mogelijk bij jouw wensen liggen en is het belangrijk in gedachten te houden waar jij met je bedrijf naartoe wilt..</string>
+    <!--5.2 COLOR-->
+    <string name="q5.2_instruction">Kies een antwoord door een rood vlak rondom te scannen om a te kiezen, een groen om b te kiezen, of een blauw om c te kiezen. In het geval het fout is, zal een kortere herziening van info over de vraag worden gegeven en een tweede kans om te scannen..</string>
+    <string name="q5.2"> George heeft besloten een businessplan te maken voor zijn 3D printing start up. Nu hij de visie kent, waar moet hij rekening mee houden?</string>
+    <string name="a5.2_a"> Wat moet hij doen om de visie mogelijk te maken??</string>
+    <string name="a5.2_b"> Of deze visie zijn klanten zal aanspreken?</string>
+    <string name="a5.2_c"> Hoe formuleert hij zijn visie in een slogan??</string>
+    <string name="short_revision_5_2"> Er zijn veel vragen te overwegen bij het maken van je ondernemingsplan, dus je moet beginnen met wat je wilt en dan kijken wat je nodig hebt om je doel mogelijk te maken..</string>
+    <!--5.3 CLICK-->
+    <string name="q5.3_instruction"> Kies een antwoord door erop te klikken!  Als het fout is, krijg je een kortere herziening van de informatie over de vraag en een tweede kans om te klikken.</string>
+    <string name="q5.3"> George heeft een geweldige start gemaakt met zijn 3D printing start up. Hoe kan het business plan zo effectief mogelijk zijn?</string>
+    <string name="a5.3_a"> Als het zo dicht bij zijn wensen is als het maar kan... </string>
+    <string name="a5.3_b"> Als het voldoet aan wat zijn investeerders willen </string>
+    <string name="a5.3_c"> Wanneer het ondernemingsplan zeer uitgebreid is </string>
+    <string name="short_revision_5_3"> Om een effectief bedrijfsplan te maken moet het zo dicht mogelijk bij jouw wensen liggen..</string>
+
+    <!--6.1 QR SCAN-->
+    <string name="q6.1_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. In geval van een verkeerde keuze wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te scannen..</string>
+    <string name="q6.1"> George is op zoek naar een manier om zijn bedrijf te financieren. Wat is belangrijk voordat hij fondsen kan zoeken?</string>
+    <string name="a6.1_a"> Hij moet weten of hij überhaupt fondsen nodig heeft </string>
+    <string name="a6.1_b"> Hij zou mensen moeten kennen </string>
+    <string name="a6.1_c"> Hij zou al fondsen moeten hebben </string>
+    <string name="short_revision_6_1"> Met de kosten voor je bedrijf in gedachten is het mogelijk te bepalen hoeveel geld je nodig hebt voor je bedrijf en dus of financiering noodzakelijk is..</string>
+    <!--6.2 SPEAK-->
+    <string name="q6.2_instruction">Kies een antwoord door het te lezen!  Tekstuele verificatie met bewerkingsfunctie zal worden gebruikt om de opname te controleren. Als het fout is, zal een kortere herziening van de informatie over de vraag worden gegeven en een tweede kans om te lezen.</string>
+    <string name="q6.2"> George is tot de conclusie gekomen dat hij financiering nodig heeft. Wat moet voor hem duidelijk zijn voordat hij fondsen kan zoeken?</string>
+    <string name="a6.2_a">De kosten van zijn bedrijf</string>
+    <string name="a6.2_b">De invloed van de mark op de prijs van zijn product</string>
+    <string name="a6.2_c">De markt</string>
+    <string name="short_revision_6_2"> Met de kosten in gedachten is het mogelijk om te bepalen hoeveel financiering je nodig heeft voor jouw bedrijf.</string>
+    <!--6.3 QR SCAN-->
+    <string name="q6.3_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. In geval van een verkeerde keuze wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te scannen..</string>
+    <string name="q6.3"> George wil dat iemand hem helpt om zijn 3D printing start up te financieren. Wat belangrijk is om te overwegen?</string>
+    <string name="a6.3_a"> Heeft hij een optie?</string>
+    <string name="a6.3_b"> Is de investeerder de juiste voor mij?</string>
+    <string name="a6.3_c"> Wil hij een enorme investering doen?</string>
+    <string name="short_revision_6_3"> De belangrijkste factor met betrekking tot financiering door anderen is te overwegen welke het beste bij jouw bedrijf past, wat meer dan één mogelijkheid kan zijn..</string>
+
+    <!--7.1 SPEAK-->
+    <string name="q7_1_instruction">Kies een antwoord door het te lezen!  Tekstuele verificatie met bewerkingsfunctie zal worden gebruikt om de opname te controleren. Als het fout is, zal een kortere herziening van de informatie over de vraag worden gegeven en een tweede kans om te lezen.</string>
+    <string name="q7.1"> George is op zoek naar een mentor, waar kan hij deze mentor vinden?</string>
+    <string name="a7.1_a">Hij zou kunnen rondvragen</string>
+    <string name="a7.1_b">Hij zou in zijn eigen network kunnen kijken</string>
+    <string name="a7.1_c">Hij zou een vriend kunnen vragen om zijn mentor te zijn</string>
+    <string name="short_revision_7_1"> Bij het zoeken naar een mentor kun je je eigen netwerk gebruiken om iemand te vinden die geschikt is als mentor..</string>
+    <!--7.2 COLOR-->
+    <string name="q7.2_instruction">Kies een antwoord door een groen vlak rondom te scannen om a te kiezen, een blauw om b te kiezen, of een rood om c te kiezen. Als het fout is, zal een kortere herziening van info over de vraag worden gegeven en een tweede kans om te scannen..</string>
+    <string name="q7.2"> George wil een mentor vinden om zijn start-up nog beter te maken. George wil graag een mentor met ervaring. Hoe kan George weten of er een match is tussen hem en de mentor?</string>
+    <string name="a7.2_a"> Als er geen verband is tussen hen </string>
+    <string name="a7.2_b"> Wanneer de mentor zich superieur gedraagt </string>
+    <string name="a7.2_c"> Als de mentor kennis heeft van startende ondernemingen </string>
+    <string name="short_revision_7_2"> Een mentor kan u door het opstartlandschap helpen, omdat hij ervaring heeft die jij nog niet hebt..</string>
+    <!--7.3 SHAKE-->
+    <string name="q7.3_instruction">Kies een antwoord door het apparaat te schudden!  Eenmaal voor a, tweemaal voor b en driemaal voor c. Het gekozen antwoord wordt groen gemarkeerd. Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te schudden..</string>
+    <string name="q7.3"> George heeft een mentor gevonden voor zijn start-up. Wat zou zijn volgende stap zijn?</string>
+    <string name="a7.3_a"> Betrek er ook een andere mentor bij </string>
+    <string name="a7.3_b"> Bespreek met zijn mentor of hij medewerkers nodig heeft, waarvoor, enz..</string>
+    <string name="a7.3_c"> Vraag de mentor of deze een deel van zijn werk kan overnemen </string>
+    <string name="short_revision_7_3"> Nu advies gemakkelijk beschikbaar is, kun je overwegen of je meer mensen in je bedrijf nodig hebt. De mentor kan jou helpen in wat voor en waarom je werknemers nodig hebt..</string>
+
+    <!--8.1 QR SCAN-->
+    <string name="q8_1_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. Als het antwoord fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te scannen..</string>
+    <string name="q8.1"> Welke andere vaardigheden dan technische of academische vaardigheden zijn belangrijk om op te letten bij de aanwerving van werknemers?</string>
+    <string name="a8.1_a">Soft skills </string>
+    <string name="a8.1_b">Ondernemende skills</string>
+    <string name="a8.1_c">Creatieve skills</string>
+    <string name="short_revision_8_1"> Wanneer je besluit dat je een werknemer in dienst moet nemen, zijn er verschillende factoren waarmee je rekening moet houden. Het is belangrijk dat je je niet alleen richt op de academische of technische vaardigheden, maar ook op de zachte vaardigheden.</string>
+    <!--8.2 CLICK-->
+    <string name="q8.2_instruction"> Kies een antwoord door erop te klikken! Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
+    <string name="a8.2_a"> Om iemand aan te werven </string>
+    <string name="a8.2_b"> Om de werving zelf te blijven doen </string>
+    <string name="a8.2_c"> Een extern bedrijf inhuren voor de aanwerving </string>
+    <string name="short_revision_8_2"> Wanneer je de komende jaren meerdere mensen wilt aannemen en niet alleen de volgende, kan het de moeite waard zijn om iemand aan te nemen als onderdeel van jouw bedrijf, in plaats van een extern bedrijf..</string>
+    <!--8.3 COLOR-->
+    <string name="q8.3_instruction">Kies een antwoord door een rood vlak rondom te scannen om a te kiezen, een groen om b te kiezen, of een blauw om c te kiezen. In het geval het fout is, zal een kortere herziening van info over de vraag worden gegeven en een tweede kans om te scannen..</string>
+    <string name="q8.3"> Wat komt er nu nadat we weten wie George wil aannemen??</string>
+    <string name="a8.3_a"> Bepalen van de gewenste bedrijfscultuur </string>
+    <string name="a8.3_b"> Nadenken over wat voor soort culturele achtergrond zijn werknemers moeten hebben </string>
+    <string name="a8.3_c"> Bedenken hoe hij zoveel mogelijk kon besparen op zijn nieuwe werknemers </string>
+    <string name="short_revision_8_3"> Als je eenmaal een duidelijk beeld hebt van wie je wilt aannemen, is het goed om te weten wat voor soort bedrijfscultuur je wilt hebben.</string>
+
+    <!--9.1 SPEAK-->
+    <string name="q9_1_instruction">Kies een antwoord door het te lezen!  Tekstuele verificatie met bewerkingsfunctie zal worden gebruikt om de opname te controleren. Als het fout is, zal een kortere herziening van de informatie over de vraag worden gegeven en een tweede kans om te lezen.</string>
+    <string name="q9.1"> George probeert zijn bedrijf uit te breiden. Terwijl hij dat doet, merkt hij dat er nog geen cultuur is. Wat moet George overwegen om een passende bedrijfscultuur te maken?</string>
+    <string name="a9.1_a"> Zijn bedrijfswaarden </string>
+    <string name="a9.1_b"> Zijn missie </string>
+    <string name="a9.1_c">De doelen</string>
+    <string name="short_revision_9_1"> De cultuur van jouw bedrijf helpt de kernwaarden van het bedrijf vast te stellen. Deze waarden staan voor wat het bedrijf doet en hoe het zijn doelen bereikt..</string>
+    <!--9.2 COLOR-->
+    <string name="q9.2_instruction">Kies een antwoord door een blauw vlak rondom te scannen om a te kiezen, een rood om b te kiezen, of een groen om c te kiezen. In het geval het fout is, zal een kortere herziening van info over de vraag worden gegeven en een tweede kans om te scannen..</string>
+    <string name="q9.2"> George zorgt voor een aantal bedrijfswaarden. Wat is belangrijk in deze waarden om ervoor te zorgen dat er meer innovatieve ideeën zijn?</string>
+    <string name="a9.2_a"> Mensen moeten kunnen doen wat ze willen </string>
+    <string name="a9.2_b"> De werkplek moet inclusief zijn </string>
+    <string name="a9.2_c"> De werknemers moeten geen nieuwe input kunnen leveren </string>
+    <string name="short_revision_9_2"> Een inclusieve werkomgeving is belangrijk, want een werkplek waar verschillende mensen werken, leidt tot meer innovatieve ideeën.</string>
+    <!--9.3 CLICK-->
+    <string name="q9.3_instruction"> Kies een antwoord door erop te klikken! Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
+    <string name="q9.3"> George heeft een aantal bedrijfswaarden vastgesteld. Wat moet hij doen met deze waarden?</string>
+    <string name="a9.3_a"> Hij moet ervoor zorgen dat het voor iedereen duidelijk is wat deze waarden zijn. </string>
+    <string name="a9.3_b"> Hij zou ze moeten hebben en niet gebruiken.</string>
+    <string name="a9.3_c"> Hij moet ervoor zorgen dat de werknemers ze tot op zekere hoogte volgen. </string>
+    <string name="short_revision_9_3"> De waarden van jouw bedrijf moeten duidelijk zijn voor werknemers, potentiële investeerders en klanten. Het is jouw verantwoordelijkheid om dit doel te bereiken! </string>
+
+    <!--10.1 SHAKE-->
+    <string name="q10_1_instruction">Kies een antwoord door het apparaat te schudden!  Eenmaal voor a, tweemaal voor b en driemaal voor c. Het gekozen antwoord wordt groen gemarkeerd. Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te schudden..</string>
+    <string name="q10.1"> George wil zijn bedrijf wereldwijd uitbreiden. Waar moet hij rekening mee houden voordat hij dat kan doen?</string>
+    <string name="a10.1_a"> Welke landen passen bij George's bedrijf?</string>
+    <string name="a10.1_b"> Voor welke landen is dit idee nieuw?</string>
+    <string name="a10.1_c"> Wat heeft George's bedrijf nodig om wereldwijd te gaan??</string>
+    <string name="short_revision_10_1"> Wanneer je besluit wereldwijd te gaan werken, moet je eerst nagaan welke landen voor jou relevant zijn..</string>
+    <!--10.2 CLICK-->
+    <string name="q10.2_instruction"> Kies een antwoord door erop te klikken!  Als het fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te klikken..</string>
+    <string name="q10.2"> George heeft verschillende landen gekozen waar zijn idee zou kunnen werken. Wat moet hij nog meer overwegen?</string>
+    <string name="a10.2_a"> Zijn de culturen hetzelfde in deze landen?</string>
+    <string name="a10.2_b"> Past zijn bedrijfscultuur in deze landen?</string>
+    <string name="a10.2_c"> Is zijn idee nieuw?</string>
+    <string name="short_revision_10_2">Na het opstellen van een lijst van landen waarnaar je jouw bedrijf wilt uitbreiden, is het belangrijk rekening te houden met de cultuur. Spreken de mensen in de landen dezelfde taal, hebben ze een verschillende werkethiek, past jouw bedrijfscultuur bij die van hen?.</string>
+    <!--10.3 QR SCAN-->
+    <string name="q10.3_instruction">Kies een antwoord door een QR-code te scannen die overeenkomt met een passende afbeelding op het bord. Als het antwoord fout is, wordt een kortere herziening van de informatie over de vraag gegeven en een tweede kans om te scannen..</string>
+    <string name="q10.3"> George overweegt een land met een andere taal dan zijn eigen land. Waarmee moet hij rekening houden?</string>
+    <string name="a10.3_a"> Er kunnen vertaalproblemen zijn </string>
+    <string name="a10.3_b"> Het inhuren van een vertaler kan helpen om vertaalproblemen te voorkomen </string>
+    <string name="a10.3_c"> Je moet altijd een land kiezen waar de taal hetzelfde is </string>
+    <string name="short_revision_10_3"> Wanneer je jouw bedrijf uitbreidt naar een land waar de gesproken taal anders is dan in je eigen land, is het zeer waarschijnlijk dat je te maken krijgt met vertaalproblemen die oplossingen behoeven..</string>
+</resources>
