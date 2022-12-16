@@ -4,7 +4,7 @@ This Augmented Reality (AR) learning game was developed by University of Crete a
 
 Website: https://3d2act.eu 
 
-It aims to support VET trainers in reaching our educational objectives i.e. the acquisition of social entrepreneurial skills and setting up a social enterprise. The mobile app should be used alongside the [Social Entrepreneurship Educational Pack](https://3d2act.eu/io3/). The AR game was defined as a multiple-choice quiz, accompanied by a gameboard, which includes images and QR codes that are used as answers to some of the quiz questions. The gameboard can be found [here].
+It aims to support VET trainers in reaching our educational objectives i.e. the acquisition of social entrepreneurial skills and setting up a social enterprise. The mobile app should be used alongside the [Social Entrepreneurship Educational Pack](https://3d2act.eu/io3/). The AR game was defined as a multiple-choice quiz, accompanied by a gameboard, which includes images and QR codes that are used as answers to some of the quiz questions. The gameboard can be found [here](GameBoard_draft_final.pdf).
 
 CONSORTIUM:
   * NATIONAL CENTER FOR SCIENTIFIC RESEARCH "DEMOKRITOS" (Greece)
